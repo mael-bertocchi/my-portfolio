@@ -10,7 +10,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Maël Bertocchi - Développeur",
-  description: "Portfolio de Maël Bertocchi, étudiant en ingénierie logicielle et développeur."
+  description: "Portfolio de Maël Bertocchi, étudiant en ingénierie logicielle et développeur.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
