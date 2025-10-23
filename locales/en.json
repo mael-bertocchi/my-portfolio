@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "jobTitle": "Developer",
+    "location": "Mulhouse, France",
+    "contactButton": "Contact me",
+    "portraitAlt": "Portrait of Maël Bertocchi"
+  },
+  "about": {
+    "title": "About me",
+    "p1": "I'm a motivated computer science student, always ready to take on new challenges and learn new things. I've worked on a variety of projects which helped me strengthen both my technical skills and ability to work in teams, even under pressure.",
+    "p2": "I love web and software development and continually explore new technologies to stay up to date. I also enjoy sharing knowledge so we can all get better together.",
+    "p3": "I'm in the third year of the Epitech Grande École program and I'm always looking for opportunities to apply what I learn and contribute to interesting projects."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Feel free to reach out to discuss projects or opportunities",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location"
+  },
+  "projects": {
+    "title": "Projects",
+    "status": {
+      "inProgress": "In progress"
+    },
+    "viewProject": "View project",
+    "codeSource": "Source code"
+  },
+  "data": {
+    "projects": [
+      {
+        "title": "Logeler Finka Website",
+        "description": "Full web application for an Alsatian theatre company. Complete infrastructure with advanced CI/CD systems.",
+        "technologies": ["React", "Fastify", "MongoDB", "Node.js", "Docker"],
+        "period": "Aug 2024 - Present",
+        "status": "In progress",
+        "link": "https://www.logelerfinka.fr",
+        "github": null
+      },
+      {
+        "title": "HungryNo",
+        "description": "Showcase website allowing culinary influencer HungryNo to manage and share her latest gastronomic discoveries and publish blog articles.",
+        "technologies": ["React", "Express", "MongoDB", "Node", "Docker"],
+        "period": "Jun 2025 - Dec 2025",
+        "status": "Completed",
+        "link": "https://www.hungryno.fr",
+        "github": null
+      }
+    ],
+    "experiences": [
+      {
+        "title": "Teaching Assistant",
+        "company": "Epitech",
+        "logo": "/logos/epitech.png",
+        "location": "Mulhouse, France",
+        "period": "Mar 2025 - Present",
+        "description": "Mentoring and training new students throughout their academic journey, providing comprehensive support to help them succeed. Responsibilities include supervising educational activities, providing technical assistance and proctoring exams.",
+        "skills": ["Mentoring", "Pedagogy", "Technical support"]
+      },
+      {
+        "title": "Developer",
+        "company": "CAP Vision",
+        "logo": "/logos/cap-vision.png",
+        "location": "Rouffach, France",
+        "period": "Jul 2024 - Dec 2024",
+        "description": "6-month internship that strengthened technical and interpersonal skills while gaining project management experience in a professional development environment.",
+        "skills": ["ASP.NET", "C#", "Angular", "Ionic", "DevOps", "Azure", "Microsoft Dynamics 365", "AI"],
+        "achievements": [
+          "Developed web applications with ASP.NET in C# and integrated online payment systems",
+          "Collaborated on mobile app development with Angular and Ionic",
+          "Implemented DevOps practices with Azure",
+          "Built an AI-powered invoice automation extension for Microsoft Dynamics 365"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "category": "Programming languages",
+        "skills": ["JavaScript", "TypeScript", "C#", "C", "Python", "C++"]
+      },
+      {
+        "category": "Frontend",
+        "skills": ["React", "Angular", "Next", "HTML", "CSS", "Ionic"]
+      },
+      {
+        "category": "Backend",
+        "skills": ["Node", "Fastify", "ASP.NET", "Express", "Actix"]
+      },
+      {
+        "category": "Databases",
+        "skills": ["MongoDB", "PostgreSQL", "MySQL"]
+      },
+      {
+        "category": "DevOps & Cloud",
+        "skills": ["Azure", "Git", "GitHub", "Continuous Deployment", "Continuous Integration", "Docker"]
+      },
+      {
+        "category": "Tools & Methodologies",
+        "skills": ["Jira", "Visual Studio Code", "Visual Studio"]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master in Information Technology",
+        "school": "Epitech",
+        "logo": "/logos/epitech.png",
+        "location": "Mulhouse, France",
+        "period": "2023 - 2028",
+        "description": "Student in the Grande École program focused on developing advanced software engineering skills and IT project management."
+      },
+      {
+        "degree": "Teaching & Coaching Training",
+        "school": "Ionis-STM",
+        "logo": "/logos/ionis-stm.png",
+        "location": "Mulhouse, France",
+        "period": "2024 - 2026",
+        "description": "Specialized training in educational fundamentals, focused on assessing student needs and adaptive teaching methods."
+      },
+      {
+        "degree": "High School Diploma (Honors)",
+        "school": "Lycée Bartholdi",
+        "logo": "/logos/bartholdi.png",
+        "location": "Colmar, France",
+        "period": "2020 - 2023",
+        "description": "Graduated with honors in Mathematics and Physics specialization."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title": "Work experience",
+    "contributionsTitle": "Key technical contributions:"
+  },
+  "education": {
+    "title": "Education"
+  }
+}
