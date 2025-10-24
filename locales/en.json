@@ -12,6 +12,7 @@
     "jobTitle": "Developer",
     "location": "Mulhouse, France",
     "contactButton": "Contact me",
+    "cvButton": "Download my resume",
     "portraitAlt": "Portrait of Maël Bertocchi"
   },
   "about": {
@@ -39,7 +40,7 @@
     "projects": [
       {
         "title": "Logeler Finka",
-        "description": "Full web application for an Alsatian theatre company. Complete infrastructure with advanced CI/CD systems.",
+        "description": "Full web application for an theatre company. Complete infrastructure with advanced CI/CD systems.",
         "technologies": ["React", "Fastify", "MongoDB", "Node.js", "Docker"],
         "period": "Aug. 2024 - Sep. 2025",
         "status": "Completed",
@@ -140,7 +141,7 @@
         "description": "Completed specialized training in educational fundamentals, focusing on student needs assessment and adaptive teaching methods for diverse learning styles. Gained expertise in designing and supervising educational activities, with particular emphasis on accommodating various learning disabilities and challenges."
       },
       {
-        "degree": "High School Diploma (Honors)",
+        "degree": "High School Diploma",
         "school": "Lycée Bartholdi",
         "logo": "/logos/bartholdi.png",
         "location": "Colmar, France",

@@ -12,6 +12,7 @@
     "jobTitle": "Développeur",
     "location": "Mulhouse, France",
     "contactButton": "Me contacter",
+    "cvButton": "Télécharger mon CV",
     "portraitAlt": "Portrait de Maël Bertocchi"
   },
   "about": {
@@ -140,7 +141,7 @@
         "description": "Formation spécialisée en fondamentaux de l'éducation, axée sur l'évaluation des besoins des étudiants et les méthodes d'enseignement adaptatives pour divers styles d'apprentissage. Acquisition d'une expertise dans la conception et la supervision d'activités éducatives, avec un accent particulier sur l'adaptation aux différentes difficultés et handicaps d'apprentissage."
       },
       {
-        "degree": "Baccalauréat avec Mention",
+        "degree": "Baccalauréat",
         "school": "Lycée Bartholdi",
         "logo": "/logos/bartholdi.png",
         "location": "Colmar, France",

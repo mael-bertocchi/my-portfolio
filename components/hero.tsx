@@ -1,12 +1,12 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, MapPin } from "lucide-react"
+import { Download, Github, Linkedin, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import { useTranslator } from "./translator-provider"
 
 export function Hero() {
-  const { t } = useTranslator()
+  const { t, locale } = useTranslator()
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-6 sm:px-8 md:px-12 lg:px-20">
@@ -29,6 +29,13 @@ export function Hero() {
                 <a href="#contact">
                   <Mail className="h-4 w-4 mr-2" />
                   {t("hero.contactButton")}
+                </a>
+              </Button>
+
+              <Button asChild variant="outline" size="lg">
+                <a href={locale !== "fr" ? "/files/cv-mael-bertocchi-en.pdf" : "/files/cv-mael-bertocchi-fr.pdf"} download={locale !== "fr" ? "cv-mael-bertocchi-en.pdf" : "cv-mael-bertocchi-fr.pdf"}>
+                  <Download className="h-4 w-4 mr-2" />
+                  {t("hero.cvButton")}
                 </a>
               </Button>
             </div>
