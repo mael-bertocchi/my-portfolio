@@ -75,9 +75,9 @@
         "description": "Mentorat et soutien technique pour les étudiants en informatique, avec un accent sur l'adaptation des méthodes d'enseignement aux besoins individuels des étudiants.",
         "skills": ["Mentorat", "Pédagogie", "Support technique"],
         "achievements": [
-          "Supervision et encadrement d'activités éducatives et d'examens",
-          "Assistance technique et pédagogique sur les projets",
-          "Adaptation des méthodes d'enseignement aux besoins individuels des étudiants"
+          "Supervision et encadrement d'activités éducatives et d'examens.",
+          "Assistance technique et pédagogique sur les projets.",
+          "Adaptation des méthodes d'enseignement aux besoins individuels des étudiants."
         ]
       },
       {
@@ -89,10 +89,10 @@
         "description": "Stage complet de 6 mois qui a renforcé les compétences techniques et interpersonnelles tout en acquérant une expérience de gestion de projet dans un environnement de développement professionnel.",
         "skills": ["Razor", "C#", "Angular", "Ionic", "DevOps", "Azure", "Microsoft Dynamics 365", "IA"],
         "achievements": [
-          "Développement d'applications web avec Razor en C# et intégration de systèmes de paiement en ligne",
-          "Collaboration sur le développement d'applications mobiles avec Angular et Ionic",
-          "Implémentation de pratiques DevOps avec Azure",
-          "Création d'une extension d'automatisation de factures alimentée par l'IA pour Microsoft Dynamics 365"
+          "Développement d'applications web avec Razor en C# et intégration de systèmes de paiement en ligne.",
+          "Collaboration sur le développement d'applications mobiles avec Angular et Ionic.",
+          "Création d'une extension d'automatisation de factures alimentée par l'IA pour Microsoft Dynamics 365",
+          "Implémentation de pratiques DevOps avec Azure DevOps."
         ]
       }
     ],

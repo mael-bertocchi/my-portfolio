@@ -41,7 +41,7 @@
         "title": "Logeler Finka",
         "description": "Full web application for an Alsatian theatre company. Complete infrastructure with advanced CI/CD systems.",
         "technologies": ["React", "Fastify", "MongoDB", "Node.js", "Docker"],
-        "period": "Aug 2024 - Sep 2025",
+        "period": "Aug. 2024 - Sep. 2025",
         "status": "Completed",
         "link": "https://www.logelerfinka.fr",
         "github": null
@@ -50,7 +50,7 @@
         "title": "HungryNo",
         "description": "Showcase website allowing culinary influencer HungryNo to manage and share her latest gastronomic discoveries and publish blog articles.",
         "technologies": ["React", "Express", "MongoDB", "Node", "Docker"],
-        "period": "Jun 2025 - Oct 2025",
+        "period": "Jun. 2025 - Oct. 2025",
         "status": "Completed",
         "link": "https://www.hungryno.fr",
         "github": null
@@ -59,7 +59,7 @@
         "title": "France Équipement",
         "description": "Development of an AI-powered intelligent chatbot to enhance product search and customer support on France Équipement's e-commerce site.",
         "technologies": ["React", "Node", "Express", "Mistral", "MongoDB"],
-        "period": "Apr 2025 - Dec 2025",
+        "period": "Apr. 2025 - Dec. 2025",
         "status": "In progress",
         "link": null,
         "github": null
@@ -71,13 +71,13 @@
         "company": "Epitech",
         "logo": "/logos/epitech.png",
         "location": "Mulhouse, France",
-        "period": "Mar 2025 - Present",
+        "period": "Mar. 2025 - Present",
         "description": "Mentoring and technical support for computer science students, with a focus on adapting teaching methods to individual student needs.",
         "skills": ["Mentoring", "Pedagogy", "Technical support"],
         "achievements": [
-          "Supervised and guided educational activities and exams",
-          "Provided technical and pedagogical assistance on projects",
-          "Adapted teaching methods to individual student needs"
+          "Supervised and guided educational activities and exams.",
+          "Provided technical and pedagogical assistance on projects.",
+          "Adapted teaching methods to individual student needs."
         ]
       },
       {
@@ -85,14 +85,14 @@
         "company": "CAP Vision",
         "logo": "/logos/cap-vision.png",
         "location": "Rouffach, France",
-        "period": "Jul 2024 - Dec 2024",
+        "period": "Jul. 2024 - Dec. 2024",
         "description": "6-month internship that strengthened technical and interpersonal skills while gaining project management experience in a professional development environment.",
         "skills": ["Razor", "C#", "Angular", "Ionic", "DevOps", "Azure", "Microsoft Dynamics 365", "AI"],
         "achievements": [
-          "Developed web applications with Razor in C# and integrated online payment systems",
-          "Collaborated on mobile app development with Angular and Ionic",
-          "Implemented DevOps practices with Azure",
-          "Built an AI-powered invoice automation extension for Microsoft Dynamics 365"
+          "Developed web applications with Razor in C# and integrated online payment systems.",
+          "Collaborated on mobile app development with Angular and Ionic that helps drivers track deliveries.",
+          "Built an AI-powered invoice automation extension for Business Central, significantly reducing manual data entry tasks.",
+          "Implemented DevOps practices with Azure DevOps."
         ]
       }
     ],
