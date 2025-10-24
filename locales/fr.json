@@ -99,7 +99,7 @@
     "skills": [
       {
         "category": "Langages de programmation",
-        "skills": ["JavaScript", "TypeScript", "C#", "C", "Python", "C++", "HTML", "CSS"]
+        "skills": ["JavaScript", "TypeScript", "C#", "C", "Python", "C++", "HTML", "CSS", "Rust"]
       },
       {
         "category": "Frontend",
@@ -107,7 +107,7 @@
       },
       {
         "category": "Backend",
-        "skills": ["Node", "Fastify", "Razor", "Express", "Actix", "Vite"]
+        "skills": ["Node", "Fastify", "Razor", "Express", "Actix Web", "Vite"]
       },
       {
         "category": "Base de données",
