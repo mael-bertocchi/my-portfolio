@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { useTranslator } from "./translator-provider"
 
@@ -33,6 +33,9 @@ export function Education() {
                   </div>
                 </div>
               </CardHeader>
+              <CardContent>
+                {edu.description && <p className="text-sm text-muted-foreground">{edu.description}</p>}
+              </CardContent>
             </Card>
           ))}
         </div>

@@ -41,8 +41,8 @@
         "title": "Logeler Finka",
         "description": "Application web complète pour une compagnie de théâtre alsacienne. Infrastructure complète avec un systèmes avancés d'intégration et de déploiement continus.",
         "technologies": ["React", "Vite", "Fastify", "MongoDB", "Node", "Docker"],
-        "period": "Août 2024 - Présent",
-        "status": "En cours",
+        "period": "Août 2024 - Septembre 2025",
+        "status": "Terminé",
         "link": "https://www.logelerfinka.fr",
         "github": null
       },
@@ -50,9 +50,18 @@
         "title": "HungryNo",
         "description": "Site vitrine permettant à l'influenceur culinaire HungryNo de gérer et partager ses dernières découvertes gastronomiques et de publier des articles de blog.",
         "technologies": ["React", "Express", "MongoDB", "Node", "Docker"],
-        "period": "Juin 2025 - Décembre 2025",
+        "period": "Juin 2025 - Octobre 2025",
         "status": "Terminé",
         "link": "https://www.hungryno.fr",
+        "github": null
+      },
+      {
+        "title": "France Équipement",
+        "description": "Développement d'un chatbot intelligent alimentée par l'IA pour améliorer la recherche de produits et l'assistance client sur le site e-commerce de France Équipement.",
+        "technologies": ["React", "Node", "Express", "Mistral", "MongoDB"],
+        "period": "Avril 2025 - Décembre 2025",
+        "status": "En cours",
+        "link": null,
         "github": null
       }
     ],
@@ -62,9 +71,14 @@
         "company": "Epitech",
         "logo": "/logos/epitech.png",
         "location": "Mulhouse, France",
-        "period": "Mars 2025 - Présent",
-        "description": "Guidage et formation de nouveaux étudiants tout au long de leur parcours académique, fournissant un soutien complet pour faciliter leur réussite. Les responsabilités incluent la supervision des activités éducatives, la fourniture d'assistance technique et la surveillance des examens pour assurer le succès et la progression des étudiants.",
-        "skills": ["Mentorat", "Pédagogie", "Support technique"]
+        "period": "Mars 2025 - Mars 2026",
+        "description": "Mentorat et soutien technique pour les étudiants en informatique, avec un accent sur l'adaptation des méthodes d'enseignement aux besoins individuels des étudiants.",
+        "skills": ["Mentorat", "Pédagogie", "Support technique"],
+        "achievements": [
+          "Supervision et encadrement d'activités éducatives et d'examens",
+          "Assistance technique et pédagogique sur les projets",
+          "Adaptation des méthodes d'enseignement aux besoins individuels des étudiants"
+        ]
       },
       {
         "title": "Développeur",
@@ -73,9 +87,9 @@
         "location": "Rouffach, France",
         "period": "Juillet 2024 - Décembre 2024",
         "description": "Stage complet de 6 mois qui a renforcé les compétences techniques et interpersonnelles tout en acquérant une expérience de gestion de projet dans un environnement de développement professionnel.",
-        "skills": ["ASP.NET", "C#", "Angular", "Ionic", "DevOps", "Azure", "Microsoft Dynamics 365", "IA"],
+        "skills": ["Razor", "C#", "Angular", "Ionic", "DevOps", "Azure", "Microsoft Dynamics 365", "IA"],
         "achievements": [
-          "Développement d'applications web avec ASP.NET en C# et intégration de systèmes de paiement en ligne",
+          "Développement d'applications web avec Razor en C# et intégration de systèmes de paiement en ligne",
           "Collaboration sur le développement d'applications mobiles avec Angular et Ionic",
           "Implémentation de pratiques DevOps avec Azure",
           "Création d'une extension d'automatisation de factures alimentée par l'IA pour Microsoft Dynamics 365"
@@ -85,15 +99,15 @@
     "skills": [
       {
         "category": "Langages de programmation",
-        "skills": ["JavaScript", "TypeScript", "C#", "C", "Python", "C++"]
+        "skills": ["JavaScript", "TypeScript", "C#", "C", "Python", "C++", "HTML", "CSS"]
       },
       {
         "category": "Frontend",
-        "skills": ["React", "Angular", "Next", "HTML", "CSS", "Ionic"]
+        "skills": ["React", "Angular", "Vite", "Ionic"]
       },
       {
         "category": "Backend",
-        "skills": ["Node", "Fastify", "ASP.NET", "Express", "Actix"]
+        "skills": ["Node", "Fastify", "Razor", "Express", "Actix", "Vite"]
       },
       {
         "category": "Base de données",
@@ -101,14 +115,13 @@
       },
       {
         "category": "DevOps & Cloud",
-        "skills": ["Azure", "Git", "GitHub", "Déploiement continu", "Intégration continue", "Docker"]
+        "skills": ["Azure", "Git", "GitHub", "Jenkins", "Docker"]
       },
       {
         "category": "Outils & Méthodologies",
-        "skills": ["Jira", "Visual Studio Code", "Visual Studio"]
+        "skills": ["Jira", "Visual Studio Code", "Visual Studio", "Zed"]
       }
-    ]
-  ,
+    ],
     "education": [
       {
         "degree": "Expert en Technologie de l'Information",
@@ -116,7 +129,7 @@
         "logo": "/logos/epitech.png",
         "location": "Mulhouse, France",
         "period": "2023 - 2028",
-        "description": "Étudiant en Programme Grande École, axé sur le développement de compétences avancées en ingénierie logicielle, et gestion de projets informatiques."
+        "description": "Poursuite d'un diplôme d'Expert en Technologie de l'Information via le Programme Grande École d'Epitech. Apprentissage de compétences avancées en ingénierie logicielle et en gestion de projet."
       },
       {
         "degree": "Formation Teaching & Coaching",
@@ -124,7 +137,7 @@
         "logo": "/logos/ionis-stm.png",
         "location": "Mulhouse, France",
         "period": "2024 - 2026",
-        "description": "Formation spécialisée en fondamentaux éducatifs, axée sur l'évaluation des besoins des étudiants et les méthodes d'enseignement adaptatives. Expertise acquise dans la conception et la supervision d'activités éducatives, avec un accent particulier sur l'accompagnement de divers handicaps d'apprentissage et défis."
+        "description": "Formation spécialisée en fondamentaux de l'éducation, axée sur l'évaluation des besoins des étudiants et les méthodes d'enseignement adaptatives pour divers styles d'apprentissage. Acquisition d'une expertise dans la conception et la supervision d'activités éducatives, avec un accent particulier sur l'adaptation aux différentes difficultés et handicaps d'apprentissage."
       },
       {
         "degree": "Baccalauréat avec Mention",

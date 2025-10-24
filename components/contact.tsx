@@ -13,13 +13,13 @@ export function Contact() {
           <p className="text-muted-foreground mb-12">{t("contact.subtitle")}</p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <a href="mailto:mael.bertocchi@gmail.com" className="flex flex-col items-center gap-3 p-6 rounded-lg bg-background hover:bg-secondary transition-colors group">
+            <a href="mailto:contact@mael-bertocchi.fr" className="flex flex-col items-center gap-3 p-6 rounded-lg bg-background hover:bg-secondary transition-colors group">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 className="font-semibold mb-1">{t("contact.emailLabel")}</h3>
-                <p className="text-sm text-muted-foreground">mael.bertocchi@gmail.com</p>
+                <p className="text-sm text-muted-foreground">contact@mael-bertocchi.fr</p>
               </div>
             </a>
 

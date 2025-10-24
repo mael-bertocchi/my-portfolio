@@ -38,11 +38,11 @@
   "data": {
     "projects": [
       {
-        "title": "Logeler Finka Website",
+        "title": "Logeler Finka",
         "description": "Full web application for an Alsatian theatre company. Complete infrastructure with advanced CI/CD systems.",
         "technologies": ["React", "Fastify", "MongoDB", "Node.js", "Docker"],
-        "period": "Aug 2024 - Present",
-        "status": "In progress",
+        "period": "Aug 2024 - Sep 2025",
+        "status": "Completed",
         "link": "https://www.logelerfinka.fr",
         "github": null
       },
@@ -50,9 +50,18 @@
         "title": "HungryNo",
         "description": "Showcase website allowing culinary influencer HungryNo to manage and share her latest gastronomic discoveries and publish blog articles.",
         "technologies": ["React", "Express", "MongoDB", "Node", "Docker"],
-        "period": "Jun 2025 - Dec 2025",
+        "period": "Jun 2025 - Oct 2025",
         "status": "Completed",
         "link": "https://www.hungryno.fr",
+        "github": null
+      },
+      {
+        "title": "France Équipement",
+        "description": "Development of an AI-powered intelligent chatbot to enhance product search and customer support on France Équipement's e-commerce site.",
+        "technologies": ["React", "Node", "Express", "Mistral", "MongoDB"],
+        "period": "Apr 2025 - Dec 2025",
+        "status": "In progress",
+        "link": null,
         "github": null
       }
     ],
@@ -63,8 +72,13 @@
         "logo": "/logos/epitech.png",
         "location": "Mulhouse, France",
         "period": "Mar 2025 - Present",
-        "description": "Mentoring and training new students throughout their academic journey, providing comprehensive support to help them succeed. Responsibilities include supervising educational activities, providing technical assistance and proctoring exams.",
-        "skills": ["Mentoring", "Pedagogy", "Technical support"]
+        "description": "Mentoring and technical support for computer science students, with a focus on adapting teaching methods to individual student needs.",
+        "skills": ["Mentoring", "Pedagogy", "Technical support"],
+        "achievements": [
+          "Supervised and guided educational activities and exams",
+          "Provided technical and pedagogical assistance on projects",
+          "Adapted teaching methods to individual student needs"
+        ]
       },
       {
         "title": "Developer",
@@ -73,9 +87,9 @@
         "location": "Rouffach, France",
         "period": "Jul 2024 - Dec 2024",
         "description": "6-month internship that strengthened technical and interpersonal skills while gaining project management experience in a professional development environment.",
-        "skills": ["ASP.NET", "C#", "Angular", "Ionic", "DevOps", "Azure", "Microsoft Dynamics 365", "AI"],
+        "skills": ["Razor", "C#", "Angular", "Ionic", "DevOps", "Azure", "Microsoft Dynamics 365", "AI"],
         "achievements": [
-          "Developed web applications with ASP.NET in C# and integrated online payment systems",
+          "Developed web applications with Razor in C# and integrated online payment systems",
           "Collaborated on mobile app development with Angular and Ionic",
           "Implemented DevOps practices with Azure",
           "Built an AI-powered invoice automation extension for Microsoft Dynamics 365"
@@ -85,15 +99,15 @@
     "skills": [
       {
         "category": "Programming languages",
-        "skills": ["JavaScript", "TypeScript", "C#", "C", "Python", "C++"]
+        "skills": ["JavaScript", "TypeScript", "C#", "C", "Python", "C++", "HTML", "CSS"]
       },
       {
         "category": "Frontend",
-        "skills": ["React", "Angular", "Next", "HTML", "CSS", "Ionic"]
+        "skills": ["React", "Angular", "Vite", "Ionic"]
       },
       {
         "category": "Backend",
-        "skills": ["Node", "Fastify", "ASP.NET", "Express", "Actix"]
+        "skills": ["Node", "Fastify", "Razor", "Express", "Actix", "Vite"]
       },
       {
         "category": "Databases",
@@ -101,11 +115,11 @@
       },
       {
         "category": "DevOps & Cloud",
-        "skills": ["Azure", "Git", "GitHub", "Continuous Deployment", "Continuous Integration", "Docker"]
+        "skills": ["Azure", "Git", "GitHub", "Jenkins", "Docker"]
       },
       {
         "category": "Tools & Methodologies",
-        "skills": ["Jira", "Visual Studio Code", "Visual Studio"]
+        "skills": ["Jira", "Visual Studio Code", "Visual Studio", "Zed"]
       }
     ],
     "education": [
@@ -115,7 +129,7 @@
         "logo": "/logos/epitech.png",
         "location": "Mulhouse, France",
         "period": "2023 - 2028",
-        "description": "Student in the Grande École program focused on developing advanced software engineering skills and IT project management."
+        "description": "Pursuing a Master's degree in Information Technology through Epitech's Grande École Program. Learning advanced software engineering skills and project management."
       },
       {
         "degree": "Teaching & Coaching Training",
@@ -123,7 +137,7 @@
         "logo": "/logos/ionis-stm.png",
         "location": "Mulhouse, France",
         "period": "2024 - 2026",
-        "description": "Specialized training in educational fundamentals, focused on assessing student needs and adaptive teaching methods."
+        "description": "Completed specialized training in educational fundamentals, focusing on student needs assessment and adaptive teaching methods for diverse learning styles. Gained expertise in designing and supervising educational activities, with particular emphasis on accommodating various learning disabilities and challenges."
       },
       {
         "degree": "High School Diploma (Honors)",
@@ -131,7 +145,7 @@
         "logo": "/logos/bartholdi.png",
         "location": "Colmar, France",
         "period": "2020 - 2023",
-        "description": "Graduated with honors in Mathematics and Physics specialization."
+        "description": "Graduated with Honors. Mathematics and Physics specialization."
       }
     ]
   },

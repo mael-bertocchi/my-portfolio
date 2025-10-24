@@ -112,9 +112,9 @@ export function LanguageToggle({ mobile = false }: { mobile?: boolean }) {
   const handleToggle = () => setLocale(locale === "fr" ? "en" : "fr")
 
   return (
-    <Button variant="ghost" size={mobile ? "sm" : "sm"} onClick={handleToggle} className={mobile ? "justify-start" : "ml-2"}>
+    <Button variant="ghost" size={mobile ? "sm" : "sm"} onClick={handleToggle} className={mobile ? "justify-start cursor-pointer" : "ml-2 cursor-pointer"}>
       <Languages className="h-4 w-4 mr-2" />
-      {mounted && (mobile ? (locale === "fr" ? "English" : "Français") : (locale === "fr" ? "EN" : "FR"))}
+      {mounted && (mobile ? (locale !== "fr" ? "Français" : "English") : (locale !== "fr" ? "FR" : "EN"))}
     </Button>
   )
 }

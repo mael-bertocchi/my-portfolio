@@ -40,7 +40,7 @@ export function Hero() {
               <a href="https://linkedin.com/in/mael-bertocchi" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
-              <a href="mailto:mael.bertocchi@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="mailto:contact@mael-bertocchi.fr" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
