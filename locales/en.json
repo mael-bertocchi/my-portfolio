@@ -57,6 +57,15 @@
         "github": null
       },
       {
+        "title": "My Game Server",
+        "description": "Server part of the R-Type project at Epitech 3rd-year. C++ server providing game logic and networking. Built with CMake and vcpkg, uses PostgreSQL for database and Lua for wave scripting.",
+        "technologies": ["C++", "CMake", "vcpkg", "PostgreSQL", "Lua", "Doxygen"],
+        "period": "Sept. 2025 - Oct. 2025",
+        "status": "Completed",
+        "link": null,
+        "github": "https://github.com/mael-bertocchi/my-game-server"
+      },
+      {
         "title": "France Équipement",
         "description": "Development of an AI-powered intelligent chatbot to enhance product search and customer support on France Équipement's e-commerce site.",
         "technologies": ["React", "Node", "Express", "Mistral", "MongoDB"],
