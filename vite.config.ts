@@ -9,5 +9,13 @@ export default defineConfig({
       '@styles': '/src/styles',
       '@assets': '/src/assets'
     }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        legal: 'legal.html'
+      }
+    }
   }
 });

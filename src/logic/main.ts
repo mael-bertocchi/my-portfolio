@@ -4,6 +4,7 @@ import epitechLogo from '@assets/logos/epitech.webp';
 import ionisStmLogo from '@assets/logos/ionis-stm.webp';
 import zedIndustriesLogo from '@assets/logos/zed-industries.webp';
 import type { Maybe } from "@logic/models";
+import { startNavigation } from '@logic/navigation';
 
 /**
  * @constant components
@@ -58,7 +59,7 @@ function loadComponent(selector: string, name: string): void {
         if (!host) {
             throw new Error(`Host element not found for selector: ${selector}`);
         }
-;
+
         const html: Maybe<string> = components[`/src/components/${name}`];
 
         if (!html) {
@@ -85,7 +86,7 @@ function loadComponent(selector: string, name: string): void {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (): void => {
     loadComponent('#navigation-placeholder', 'navigation.html');
     loadComponent('#hero-placeholder', 'hero.html');
     loadComponent('#about-placeholder', 'about.html');
@@ -95,4 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('#projects-placeholder', 'projects.html');
     loadComponent('#contact-placeholder', 'contact.html');
     loadComponent('#footer-placeholder', 'footer.html');
+
+    startNavigation();
 });

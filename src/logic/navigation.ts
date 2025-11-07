@@ -4,7 +4,7 @@ import type { Maybe } from "./models";
  * @function startNavigation
  * @description Navigation logic for mobile menu handling and scroll effects.
  */
-function startNavigation(): void {
+export function startNavigation(): void {
     const mobileMenuToggle: Maybe<HTMLElement> = document.getElementById('mobile-menu-toggle');
     const mobileMenu: Maybe<HTMLElement> = document.getElementById('mobile-menu');
     const navigation: Maybe<HTMLElement> = document.getElementById('navigation');
@@ -85,5 +85,3 @@ function startNavigation(): void {
         }
     });
 }
-
-startNavigation();
