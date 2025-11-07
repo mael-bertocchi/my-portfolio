@@ -1,6 +1,7 @@
 import type { Maybe } from "./models";
 
 /**
+ * @function startNavigation
  * @description Navigation logic for mobile menu handling and scroll effects.
  */
 function startNavigation(): void {
@@ -14,6 +15,7 @@ function startNavigation(): void {
     const mobileMenuClose: Maybe<HTMLElement> = document.getElementById('mobile-menu-close');
 
     /**
+     * @function handleScroll
      * @description Handles navigation bar styling on scroll.
      */
     function handleScroll(): void {
@@ -30,6 +32,7 @@ function startNavigation(): void {
     handleScroll();
 
     /**
+     * @function openMobileMenu
      * @description Opens the mobile menu with animation.
      */
     function openMobileMenu(): void {
@@ -44,6 +47,7 @@ function startNavigation(): void {
     }
 
     /**
+     * @function closeMobileMenu
      * @description Closes the mobile menu with animation.
      */
     function closeMobileMenu(): void {

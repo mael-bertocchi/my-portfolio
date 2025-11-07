@@ -15,6 +15,16 @@
     "moduleDetection": "force",
     "noEmit": true,
 
+    /* Path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@logic/*": ["src/logic/*"],
+      "@styles/*": ["src/styles/*"],
+      "@assets/*": ["src/assets/*"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
