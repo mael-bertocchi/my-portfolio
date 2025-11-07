@@ -6,8 +6,7 @@ import type { Maybe } from "./models";
  * @param {string} selector - The CSS selector of the host element where the component will be injected.
  * @param {string} url - The URL of the HTML component to include.
  */
-async function getComponent(selector: string, url: string)
-{
+async function getComponent(selector: string, url: string) : Promise<void> {
     try {
         const host: Maybe<Element> = document.querySelector(selector);
 
