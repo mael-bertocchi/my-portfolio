@@ -47,5 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     getComponent('#about-placeholder', '/src/components/about.html');
     getComponent('#experience-placeholder', '/src/components/experience.html');
     getComponent('#education-placeholder', '/src/components/education.html');
+    getComponent('#skills-placeholder', '/src/components/skills.html');
     getComponent('#contact-placeholder', '/src/components/contact.html');
 });
