@@ -1,3 +1,5 @@
+import cvEn from '@assets/files/cv-mael-bertocchi-en.pdf';
+import cvFr from '@assets/files/cv-mael-bertocchi-fr.pdf';
 import actixWebLogo from '@assets/logos/actix-web.webp';
 import capVisionLogo from '@assets/logos/cap-vision.webp';
 import epitechLogo from '@assets/logos/epitech.webp';
@@ -29,6 +31,15 @@ const logos: Record<string, string> = {
 };
 
 /**
+ * @constant files
+ * @description Imports all file assets with proper Vite asset handling.
+ */
+const files: Record<string, string> = {
+    'cv-mael-bertocchi-fr.pdf': cvFr,
+    'cv-mael-bertocchi-en.pdf': cvEn,
+};
+
+/**
  * @function replaceAssetPaths
  * @description Replaces placeholder asset paths with actual imported asset URLs.
  *
@@ -41,6 +52,15 @@ function replaceAssetPaths(host: Element): void {
 
         if (filename && logos[filename]) {
             imgElement.src = logos[filename];
+        }
+    });
+
+    host.querySelectorAll('a[href^="/src/assets/files/"]').forEach((link: Element) => {
+        const linkElement = link as HTMLAnchorElement;
+        const filename = linkElement.href.split('/').pop();
+
+        if (filename && files[filename]) {
+            linkElement.href = files[filename];
         }
     });
 }
