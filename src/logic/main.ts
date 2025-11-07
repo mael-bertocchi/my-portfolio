@@ -44,4 +44,5 @@ async function getComponent(selector: string, url: string) : Promise<void> {
 document.addEventListener('DOMContentLoaded', () => {
     getComponent('#navigation-placeholder', '/src/components/navigation.html');
     getComponent('#home-placeholder', '/src/components/home.html');
+    getComponent('#experience-placeholder', '/src/components/experience.html');
 });
