@@ -46,5 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     getComponent('#hero-placeholder', '/src/components/hero.html');
     getComponent('#about-placeholder', '/src/components/about.html');
     getComponent('#experience-placeholder', '/src/components/experience.html');
+    getComponent('#education-placeholder', '/src/components/education.html');
     getComponent('#contact-placeholder', '/src/components/contact.html');
 });
