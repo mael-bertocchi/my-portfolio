@@ -1,16 +1,33 @@
 import type { Maybe } from "./models";
 
 /**
- * @description Navigation logic for mobile menu handling.
+ * @description Navigation logic for mobile menu handling and scroll effects.
  */
 function startNavigation(): void {
     const mobileMenuToggle: Maybe<HTMLElement> = document.getElementById('mobile-menu-toggle');
     const mobileMenu: Maybe<HTMLElement> = document.getElementById('mobile-menu');
+    const navigation: Maybe<HTMLElement> = document.getElementById('navigation');
 
     const mobileMenuBackdrop: Maybe<HTMLElement> = document.getElementById('mobile-menu-backdrop');
     const mobileMenuLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.mobile-menu-link');
     const mobileMenuPanel: Maybe<HTMLElement> = document.getElementById('mobile-menu-panel');
     const mobileMenuClose: Maybe<HTMLElement> = document.getElementById('mobile-menu-close');
+
+    /**
+     * @description Handles navigation bar styling on scroll.
+     */
+    function handleScroll(): void {
+        if (navigation) {
+            if (window.scrollY > 20) {
+                navigation.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md');
+            } else {
+                navigation.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-md');
+            }
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
     /**
      * @description Opens the mobile menu with animation.
