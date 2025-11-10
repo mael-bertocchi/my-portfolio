@@ -5,7 +5,6 @@ import type { Maybe } from "@logic/models";
  * @description Navigation logic for mobile menu handling and scroll effects.
  */
 export function startNavigation(): void {
-    const metaThemeColor: Maybe<HTMLMetaElement> = document.querySelector('meta[name="theme-color"]');
     const navigation: Maybe<HTMLElement> = document.getElementById('navigation');
 
     /**
@@ -16,16 +15,10 @@ export function startNavigation(): void {
         if (navigation) {
             if (window.scrollY > 20) {
                 navigation.classList.remove('bg-transparent');
-                navigation.classList.add('bg-white/90', 'backdrop-blur-sm', 'shadow-sm');
-                if (metaThemeColor) {
-                    metaThemeColor.content = '#ffffff';
-                }
+                navigation.classList.add('bg-gray-50/95', 'backdrop-blur-sm', 'shadow-sm');
             } else {
                 navigation.classList.add('bg-transparent');
-                navigation.classList.remove('bg-white/90', 'backdrop-blur-sm', 'shadow-sm');
-                if (metaThemeColor) {
-                    metaThemeColor.content = '#f9fafb';
-                }
+                navigation.classList.remove('bg-gray-50/95', 'backdrop-blur-sm', 'shadow-sm');
             }
         }
     }
