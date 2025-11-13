@@ -175,7 +175,7 @@ export function startTranslation(): void {
     if (languageToggle && languageLabel) {
         const updateLanguageLabel = () => {
             const currentLang = translation.getLanguage();
-            languageLabel.textContent = currentLang !== 'fr' ? 'FR' : 'EN';
+            languageLabel.textContent = currentLang !== 'fr' ? 'Français' : 'English';
         };
 
         updateLanguageLabel();

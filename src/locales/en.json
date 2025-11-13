@@ -19,9 +19,9 @@
     "title": "About",
     "title-accent": "me",
     "description": {
-      "0": "I am a highly motivated computer science student, always ready to take on new challenges and learn new things. I've worked on quite a few different projects, which has helped me develop both my technical skills and my ability to work effectively in a team, even under pressure.",
-      "1": "I love everything related to web and software development, and I'm constantly exploring new technologies to stay up to date. I also enjoy sharing my knowledge with others so we can grow together.",
-      "2": "I'm currently in my third year of the Grande École Program at Epitech. I'm always looking for opportunities to put what I learn into practice and to contribute to exciting projects."
+      "0": "I am a passionate and motivated computer science student, always ready to take on new challenges and keep learning. I've had the opportunity to work on a variety of projects, which has helped me develop both my technical skills and my ability to collaborate effectively, even under pressure.",
+      "1": "I'm particularly passionate about web and software development. I love discovering new technologies, experimenting, and sharing my knowledge with others so we can grow together.",
+      "2": "Currently a third-year student at Epitech in the Grande École Program, I'm constantly looking for opportunities to apply what I've learned and contribute to real-world projects."
     },
     "traits": {
       "motivated": "Motivated",
@@ -46,6 +46,11 @@
           "0": "Supervision and organization of educational activities and exams.",
           "1": "Technical and pedagogical assistance with projects.",
           "2": "Adapting teaching methods to students' individual needs."
+        },
+        "tags": {
+          "0": "Mentoring",
+          "1": "Pedagogy",
+          "2": "Technical Support"
         }
       },
       "cap-vision": {
@@ -175,5 +180,57 @@
   "footer": {
     "rights": "All rights reserved.",
     "legal-notice": "Legal Notice"
+  },
+  "legal": {
+    "title": "Legal",
+    "title-accent": "Notice",
+    "page-title": "Maël Bertocchi — Legal Notice",
+    "sections": {
+      "publisher": {
+        "title": "1. Website Publisher",
+        "content": "This website is published by Maël Bertocchi, an independent developer, to present his professional portfolio."
+      },
+      "hosting": {
+        "title": "2. Hosting",
+        "host": "Host:",
+        "host-name": "GitHub, Inc.",
+        "address": "Address:",
+        "address-value": "88 Colin P. Kelly Jr Street, San Francisco, CA 94107, United States"
+      },
+      "intellectual-property": {
+        "title": "3. Intellectual Property",
+        "content": {
+          "0": "All content on this site is subject to French and international copyright and intellectual property law. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.",
+          "1": "The reproduction of all or part of this site on any electronic medium is strictly prohibited without the express authorization of the publisher, in accordance with Article L.122-4 of the French Intellectual Property Code."
+        }
+      },
+      "personal-data": {
+        "title": "4. Personal Data Protection",
+        "content": {
+          "0": "In accordance with the General Data Protection Regulation and the French Data Protection Act, you have the right to access, rectify, delete and object to personal data concerning you.",
+          "1": "This site does not collect any personal data without your explicit consent. The contact information on the site is solely intended to facilitate communication."
+        }
+      },
+      "cookies": {
+        "title": "5. Cookies",
+        "content": "This site does not use tracking or data collection cookies. No personal information is stored during your browsing."
+      },
+      "external-links": {
+        "title": "6. External Links",
+        "content": "This site may contain hyperlinks to other websites. The publisher is not responsible for the content of these external sites or their privacy policies."
+      },
+      "liability": {
+        "title": "7. Limitation of Liability",
+        "content": {
+          "0": "The publisher strives to ensure the accuracy and currency of the information on this site. However, the publisher cannot guarantee the accuracy, precision or completeness of the information provided.",
+          "1": "Consequently, the publisher disclaims all responsibility for any inaccuracy, inexactitude or omission in the information available on the site."
+        }
+      },
+      "applicable-law": {
+        "title": "8. Applicable Law",
+        "content": "These legal notices are governed by French law. In case of dispute, French courts shall have sole jurisdiction."
+      }
+    },
+    "back-to-home": "Back to home"
   }
 }

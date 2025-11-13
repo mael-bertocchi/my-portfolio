@@ -1,4 +1,3 @@
-import { startTranslation } from '@/logic/translation';
 import cvEn from '@assets/files/cv-mael-bertocchi-en.pdf';
 import cvFr from '@assets/files/cv-mael-bertocchi-fr.pdf';
 import actixWebLogo from '@assets/logos/actix-web.webp';
@@ -7,21 +6,10 @@ import epitechLogo from '@assets/logos/epitech.webp';
 import ionisStmLogo from '@assets/logos/ionis-stm.webp';
 import zedIndustriesLogo from '@assets/logos/zed-industries.webp';
 import type { Maybe } from "@logic/models";
-import { startNavigation } from '@logic/navigation';
-
-/**
- * @constant components
- * @description Imports all HTML components as raw strings.
- */
-const components: Record<string, string> = import.meta.glob('/src/components/*.html', {
-    query: '?raw',
-    import: 'default',
-    eager: true
-});
 
 /**
  * @constant logos
- * @description Imports all logo images with proper Vite asset handling.
+ * @description Imports all logo images with proper asset handling.
  */
 const logos: Record<string, string> = {
     'actix-web.webp': actixWebLogo,
@@ -33,7 +21,7 @@ const logos: Record<string, string> = {
 
 /**
  * @constant files
- * @description Imports all file assets with proper Vite asset handling.
+ * @description Imports all file assets with proper asset handling.
  */
 const files: Record<string, string> = {
     'cv-mael-bertocchi-fr.pdf': cvFr,
@@ -42,7 +30,7 @@ const files: Record<string, string> = {
 
 /**
  * @function replaceAssetPaths
- * @description Replaces placeholder asset paths with actual imported asset URLs.
+ * @description Replaces placeholder asset paths with actual imported asset link.
  *
  * @param {Element} host - The host element containing images to update.
  */
@@ -68,12 +56,12 @@ function replaceAssetPaths(host: Element): void {
 
 /**
  * @function loadComponent
- * @description Dynamically includes an HTML component into the document.
+ * @description Dynamically includes an component into the document.
  *
- * @param {string} selector - The CSS selector of the host element where the component will be injected.
- * @param {string} name - The name of the HTML component file.
+ * @param {string} selector - The selector of the host element where the component will be injected.
+ * @param {string} content - The path to the component file.
  */
-function loadComponent(selector: string, name: string): void {
+export function loadComponent(selector: string, content: string): void {
     try {
         const host: Maybe<Element> = document.querySelector(selector);
 
@@ -81,13 +69,7 @@ function loadComponent(selector: string, name: string): void {
             throw new Error(`Host element not found for selector: ${selector}`);
         }
 
-        const html: Maybe<string> = components[`/src/components/${name}`];
-
-        if (!html) {
-            throw new Error(`Component not found: ${name}`);
-        }
-
-        host.innerHTML = html;
+        host.innerHTML = content;
         host.removeAttribute("aria-hidden");
 
         replaceAssetPaths(host);
@@ -103,21 +85,6 @@ function loadComponent(selector: string, name: string): void {
             oldScript.parentNode?.replaceChild(newScript, oldScript);
         });
     } catch (err: unknown) {
-        console.error(`Error loading component ${name}:`, err);
+        console.error(`Error loading component:`, err);
     }
 }
-
-document.addEventListener('DOMContentLoaded', (): void => {
-    loadComponent('#navigation-placeholder', 'navigation.html');
-    loadComponent('#hero-placeholder', 'hero.html');
-    loadComponent('#about-placeholder', 'about.html');
-    loadComponent('#experience-placeholder', 'experience.html');
-    loadComponent('#education-placeholder', 'education.html');
-    loadComponent('#skills-placeholder', 'skills.html');
-    loadComponent('#projects-placeholder', 'projects.html');
-    loadComponent('#contact-placeholder', 'contact.html');
-    loadComponent('#footer-placeholder', 'footer.html');
-
-    startTranslation();
-    startNavigation();
-});
