@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "education": "Éducation",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "Développeur",
+    "description": "Je conçois et développe des applications modernes et performantes.",
+    "location": "Mulhouse, Grand Est, France",
+    "download-cv": "Télécharger mon CV",
+    "contact-me": "Me contacter",
+    "find-me-on": "Me retrouver sur"
+  },
+  "about": {
+    "title": "À propos",
+    "title-accent": "de moi",
+    "description": {
+      "0": "Je suis un étudiant en informatique très motivé, toujours prêt à relever de nouveaux défis et à apprendre de nouvelles choses. J'ai déjà touché à pas mal de projets différents, ce qui m'a permis de développer à la fois mes compétences techniques et mon aisance à travailler en équipe, même quand la pression monte.",
+      "1": "J'aime tout ce qui touche au développement web et logiciel, et j'explore continuellement de nouvelles technologie pour rester à la page. J'aime aussi partager mes connaissances avec les autres pour qu'on progresse ensemble.",
+      "2": "Je suis en troisième année du Programme Grande École à Epitech. Je suis toujours à la recherche d'opportunités pour mettre en pratique ce que j'apprends et pour contribuer à des projets intéressants."
+    },
+    "traits": {
+      "motivated": "Motivé",
+      "team-spirit": "Esprit d'équipe",
+      "curious": "Curieux",
+      "learner": "Apprenant"
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "title-accent": "professionnelle",
+    "subtitle": "Mon parcours professionnel et mes contributions au monde du développement",
+    "key-contributions": "Contributions techniques clés :",
+    "jobs": {
+      "epitech": {
+        "title": "Assistant Pédagogique",
+        "company": "Epitech",
+        "location": "Mulhouse, France",
+        "period": "Mars 2025 - Aujourd'hui",
+        "description": "Mentorat et soutien technique pour les étudiants en informatique, avec un accent sur l'adaptation des méthodes d'enseignement aux besoins individuels des étudiants.",
+        "tasks": {
+          "0": "Supervision et encadrement d'activités éducatives et d'examens.",
+          "1": "Assistance technique et pédagogique sur les projets.",
+          "2": "Adaptation des méthodes d'enseignement aux besoins individuels des étudiants."
+        }
+      },
+      "cap-vision": {
+        "title": "Développeur",
+        "company": "CAP Vision",
+        "location": "Rouffach, France",
+        "period": "Juillet 2024 - Décembre 2024",
+        "description": "Stage complet de 6 mois qui m'a permis de renforcer mes compétences techniques et interpersonnelles tout en acquérant une expérience de gestion de projet dans un environnement de développement professionnel.",
+        "tasks": {
+          "0": "Développement d'applications web avec Razor en C# et intégration de systèmes de paiement en ligne.",
+          "1": "Collaboration sur le développement d'applications mobiles avec Angular et Ionic.",
+          "2": "Création d'une extension d'automatisation de factures alimentée par l'IA pour Microsoft Dynamics 365 Business Central avec Azure Foundry.",
+          "3": "Implémentation de pratiques DevOps avec Azure DevOps."
+        }
+      }
+    }
+  },
+  "education": {
+    "title": "Formation",
+    "title-accent": "académique",
+    "subtitle": "Mon parcours académique et mes formations spécialisées",
+    "schools": {
+      "epitech": {
+        "degree": "Expert en Technologie de l'Information",
+        "school": "Epitech",
+        "location": "Mulhouse, France",
+        "period": "2023 - 2028",
+        "description": "Poursuite d'un diplôme d'Expert en Technologie de l'Information via le Programme Grande École d'Epitech. Apprentissage de compétences avancées en ingénierie logicielle et en gestion de projet."
+      },
+      "ionis-stm": {
+        "degree": "Formation Teaching & Coaching",
+        "school": "Ionis-STM",
+        "location": "Mulhouse, France",
+        "period": "2024 - 2026",
+        "description": "Formation spécialisée en fondamentaux de l'éducation, axée sur l'évaluation des besoins des étudiants et les méthodes d'enseignement adaptatives pour divers styles d'apprentissage. Acquisition d'une expertise dans la conception et la supervision d'activités éducatives, avec un accent particulier sur l'adaptation aux différentes difficultés et handicaps d'apprentissage."
+      }
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "title-accent": "techniques",
+    "subtitle": "Technologies et outils que je maîtrise",
+    "categories": {
+      "languages": "Langages de programmation",
+      "frameworks": "Frameworks & Runtime",
+      "tools-methodologies": "Outils & Méthodologies",
+      "databases": "Base de données",
+      "devops-cloud": "DevOps & Cloud"
+    },
+    "tooltips": {
+      "javascript": "Langage de programmation polyvalent du web.",
+      "typescript": "Surensemble de JavaScript avec typage statique.",
+      "csharp": "Langage orienté objet pour l'écosystème Microsoft.",
+      "c": "Langage bas niveau utilisé pour les systèmes et performances.",
+      "python": "Langage polyvalent pour le scripting, la data et le web.",
+      "cplusplus": "Langage orienté performance et développement système.",
+      "html": "Langage de balisage pour structurer le contenu web.",
+      "css": "Langage de styles pour la mise en forme du web.",
+      "rust": "Langage moderne axé sur la sécurité et la performance.",
+      "bash": "Shell Unix et langage de scripting.",
+      "react": "Bibliothèque JavaScript pour interfaces web interactives.",
+      "angular": "Framework web complet pour applications dynamiques.",
+      "vite": "Bundler et serveur de développement rapide pour le frontend.",
+      "ionic": "Framework pour créer des applications mobiles hybrides.",
+      "node": "Environnement d'exécution JavaScript côté serveur.",
+      "fastify": "Framework web axé sur la performance.",
+      "razor": "Framework de templates pour applications .NET.",
+      "express": "Framework web minimaliste pour Node.js.",
+      "actix-web": "Framework web performant en Rust.",
+      "vite-backend": "Outil de build et serveur de dev moderne, aussi côté backend.",
+      "fastapi": "Framework web Python asynchrone et rapide.",
+      "mongodb": "Base de données NoSQL orientée documents.",
+      "postgresql": "Base de données relationnelle avancée et open-source.",
+      "mysql": "Système de gestion de bases de données relationnelles.",
+      "azure": "Plateforme cloud de Microsoft.",
+      "git": "Système de contrôle de version distribué.",
+      "github": "Plateforme d'hébergement de code et CI/CD.",
+      "azure-devops": "Plateforme DevOps et CI/CD de Microsoft.",
+      "jenkins": "Serveur d'intégration et de déploiement continu.",
+      "docker": "Outil de conteneurisation d'applications.",
+      "jira": "Outil de suivi de tickets et gestion agile.",
+      "vscode": "Éditeur de code léger, rapide et extensible.",
+      "visual-studio": "Environnement de développement complet pour .NET et C++.",
+      "zed": "Éditeur de code minimaliste et ultra-rapide."
+    }
+  },
+  "projects": {
+    "title": "Mes",
+    "title-accent": "projets",
+    "subtitle": "Découvrez les projets sur lesquels j'ai travaillé et les technologies que j'ai utilisées",
+    "view-website": "Voir le site",
+    "view-github": "Voir sur GitHub",
+    "technologies-used": "Technologies utilisées :",
+    "private-project": "Projet privé",
+    "items": {
+      "logeler-finka": {
+        "title": "Logeler Finka",
+        "period": "Août 2024 - Septembre 2025",
+        "description": "Application web complète pour une compagnie de théâtre alsacienne. Infrastructure complète avec un systèmes avancés d'intégration et de déploiement continus."
+      },
+      "hungry-no": {
+        "title": "HungryNo",
+        "period": "Juin 2025 - Novembre 2025",
+        "description": "Site vitrine permettant à l'influenceur culinaire HungryNo de gérer et partager ses dernières découvertes gastronomiques et de publier des articles de blog."
+      },
+      "baselhack": {
+        "title": "BaselHack 2025",
+        "period": "Octobre 2025",
+        "description": "Participation à la hackathon BaselHack 2025, développement d'un prototype d'application web en 48 heures permettant de recuillir des centaines d'opinions différentes puis d'utiliser l'IA pour faire émerger un consensus."
+      },
+      "france-equipement": {
+        "title": "France Équipement",
+        "period": "Avril 2025 - Aujourd'hui",
+        "description": "Développement d'un chatbot intelligent alimentée par l'IA pour améliorer la recherche de produits et l'assistance client sur un site e-commerce."
+      }
+    }
+  },
+  "contact": {
+    "title": "Restons en",
+    "title-accent": "contact",
+    "description": "N'hésitez pas à me contacter pour discuter d'opportunités professionnelles ou de collaboration sur des projets.",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "location-value": "Mulhouse, France"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "legal-notice": "Mentions Légales"
+  }
+}

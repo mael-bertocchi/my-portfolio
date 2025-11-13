@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "Developer",
+    "description": "I design and build modern, high-performance applications.",
+    "location": "Mulhouse, Grand Est, France",
+    "download-cv": "Download my CV",
+    "contact-me": "Contact me",
+    "find-me-on": "Find me on"
+  },
+  "about": {
+    "title": "About",
+    "title-accent": "me",
+    "description": {
+      "0": "I am a highly motivated computer science student, always ready to take on new challenges and learn new things. I've worked on quite a few different projects, which has helped me develop both my technical skills and my ability to work effectively in a team, even under pressure.",
+      "1": "I love everything related to web and software development, and I'm constantly exploring new technologies to stay up to date. I also enjoy sharing my knowledge with others so we can grow together.",
+      "2": "I'm currently in my third year of the Grande École Program at Epitech. I'm always looking for opportunities to put what I learn into practice and to contribute to exciting projects."
+    },
+    "traits": {
+      "motivated": "Motivated",
+      "team-spirit": "Team player",
+      "curious": "Curious",
+      "learner": "Learner"
+    }
+  },
+  "experience": {
+    "title": "Professional",
+    "title-accent": "experience",
+    "subtitle": "My professional journey and contributions to the development world",
+    "key-contributions": "Key technical contributions:",
+    "jobs": {
+      "epitech": {
+        "title": "Teaching Assistant",
+        "company": "Epitech",
+        "location": "Mulhouse, France",
+        "period": "March 2025 - Present",
+        "description": "Mentoring and technical support for computer science students, focusing on adapting teaching methods to individual student needs.",
+        "tasks": {
+          "0": "Supervision and organization of educational activities and exams.",
+          "1": "Technical and pedagogical assistance with projects.",
+          "2": "Adapting teaching methods to students' individual needs."
+        }
+      },
+      "cap-vision": {
+        "title": "Developer",
+        "company": "CAP Vision",
+        "location": "Rouffach, France",
+        "period": "July 2024 - December 2024",
+        "description": "A full 6-month internship that allowed me to strengthen my technical and interpersonal skills while gaining project management experience in a professional development environment.",
+        "tasks": {
+          "0": "Developed web applications using Razor in C# and integrated online payment systems.",
+          "1": "Collaborated on mobile app development with Angular and Ionic.",
+          "2": "Created an AI-powered invoice automation extension for Microsoft Dynamics 365 Business Central using Azure Foundry.",
+          "3": "Implemented DevOps practices with Azure DevOps."
+        }
+      }
+    }
+  },
+  "education": {
+    "title": "Academic",
+    "title-accent": "education",
+    "subtitle": "My academic background and specialized training",
+    "schools": {
+      "epitech": {
+        "degree": "Expert in Information Technology",
+        "school": "Epitech",
+        "location": "Mulhouse, France",
+        "period": "2023 - 2028",
+        "description": "Pursuing a degree as an Expert in Information Technology through Epitech's Grande École Program. Learning advanced skills in software engineering and project management."
+      },
+      "ionis-stm": {
+        "degree": "Teaching & Coaching Training",
+        "school": "Ionis-STM",
+        "location": "Mulhouse, France",
+        "period": "2024 - 2026",
+        "description": "Specialized training in educational fundamentals, focused on assessing student needs and adapting teaching methods for diverse learning styles. Gained expertise in designing and supervising educational activities, with a strong emphasis on accommodating learning difficulties and disabilities."
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical",
+    "title-accent": "skills",
+    "subtitle": "Technologies and tools I'm proficient with",
+    "categories": {
+      "languages": "Programming languages",
+      "frameworks": "Frameworks & Runtime",
+      "tools-methodologies": "Tools & Methodologies",
+      "databases": "Databases",
+      "devops-cloud": "DevOps & Cloud"
+    },
+    "tooltips": {
+      "javascript": "Versatile web programming language.",
+      "typescript": "Superset of JavaScript with static typing.",
+      "csharp": "Object-oriented language for the Microsoft ecosystem.",
+      "c": "Low-level language used for systems and performance.",
+      "python": "Versatile language for scripting, data, and web development.",
+      "cplusplus": "High-performance and system development language.",
+      "html": "Markup language for structuring web content.",
+      "css": "Style language for web design and layout.",
+      "rust": "Modern language focused on safety and performance.",
+      "bash": "Unix shell and scripting language.",
+      "react": "JavaScript library for building interactive UIs.",
+      "angular": "Full web framework for dynamic applications.",
+      "vite": "Fast frontend bundler and development server.",
+      "ionic": "Framework for creating hybrid mobile apps.",
+      "node": "Server-side JavaScript runtime environment.",
+      "fastify": "High-performance web framework.",
+      "razor": "Template framework for .NET applications.",
+      "express": "Minimalist web framework for Node.js.",
+      "actix-web": "High-performance web framework for Rust.",
+      "vite-backend": "Modern build tool and dev server, also for backend use.",
+      "fastapi": "Asynchronous and fast Python web framework.",
+      "mongodb": "Document-oriented NoSQL database.",
+      "postgresql": "Advanced open-source relational database.",
+      "mysql": "Relational database management system.",
+      "azure": "Microsoft's cloud platform.",
+      "git": "Distributed version control system.",
+      "github": "Code hosting and CI/CD platform.",
+      "azure-devops": "Microsoft's DevOps and CI/CD platform.",
+      "jenkins": "Continuous integration and deployment server.",
+      "docker": "Application containerization tool.",
+      "jira": "Agile project and issue tracking tool.",
+      "vscode": "Lightweight, fast, and extensible code editor.",
+      "visual-studio": "Comprehensive IDE for .NET and C++ development.",
+      "zed": "Minimalist and ultra-fast code editor."
+    }
+  },
+  "projects": {
+    "title": "My",
+    "title-accent": "projects",
+    "subtitle": "Discover the projects I've worked on and the technologies I've used",
+    "view-website": "View website",
+    "view-github": "View on GitHub",
+    "technologies-used": "Technologies used:",
+    "private-project": "Private project",
+    "items": {
+      "logeler-finka": {
+        "title": "Logeler Finka",
+        "period": "August 2024 - September 2025",
+        "description": "Complete web application for an Alsatian theater company. Full infrastructure with advanced continuous integration and deployment systems."
+      },
+      "hungry-no": {
+        "title": "HungryNo",
+        "period": "June 2025 - November 2025",
+        "description": "Showcase website allowing culinary influencer HungryNo to manage and share his latest gastronomic discoveries and publish blog articles."
+      },
+      "baselhack": {
+        "title": "BaselHack 2025",
+        "period": "October 2025",
+        "description": "Participation in the BaselHack 2025 hackathon, developing a web app prototype in 48 hours to collect hundreds of opinions and use AI to generate consensus."
+      },
+      "france-equipement": {
+        "title": "France Équipement",
+        "period": "April 2025 - Present",
+        "description": "Development of an AI-powered chatbot to improve product search and customer support on an e-commerce website."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's stay in",
+    "title-accent": "touch",
+    "description": "Feel free to contact me to discuss professional opportunities or project collaborations.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "location-value": "Mulhouse, France"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "legal-notice": "Legal Notice"
+  }
+}

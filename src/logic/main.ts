@@ -1,7 +1,8 @@
+import { startTranslation } from '@/logic/translation';
 import cvEn from '@assets/files/cv-mael-bertocchi-en.pdf';
 import cvFr from '@assets/files/cv-mael-bertocchi-fr.pdf';
 import actixWebLogo from '@assets/logos/actix-web.webp';
-import capVisionLogo from '@assets/logos/cap-vision.webp';
+import capvisionLogo from '@assets/logos/cap-vision.webp';
 import epitechLogo from '@assets/logos/epitech.webp';
 import ionisStmLogo from '@assets/logos/ionis-stm.webp';
 import zedIndustriesLogo from '@assets/logos/zed-industries.webp';
@@ -24,7 +25,7 @@ const components: Record<string, string> = import.meta.glob('/src/components/*.h
  */
 const logos: Record<string, string> = {
     'actix-web.webp': actixWebLogo,
-    'cap-vision.webp': capVisionLogo,
+    'cap-vision.webp': capvisionLogo,
     'epitech.webp': epitechLogo,
     'ionis-stm.webp': ionisStmLogo,
     'zed-industries.webp': zedIndustriesLogo,
@@ -117,5 +118,6 @@ document.addEventListener('DOMContentLoaded', (): void => {
     loadComponent('#contact-placeholder', 'contact.html');
     loadComponent('#footer-placeholder', 'footer.html');
 
+    startTranslation();
     startNavigation();
 });

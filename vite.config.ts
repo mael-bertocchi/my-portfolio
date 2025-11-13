@@ -5,6 +5,7 @@ export default defineConfig({
     alias: {
       '@': '/src',
       '@components': '/src/components',
+      '@locales': '/src/locales',
       '@logic': '/src/logic',
       '@styles': '/src/styles',
       '@assets': '/src/assets'
