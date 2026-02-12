@@ -1,4 +1,4 @@
-import type { Maybe } from "@logic/models";
+import type { Maybe } from '@logic/models';
 
 /**
  * @function startNavigation
@@ -7,23 +7,21 @@ import type { Maybe } from "@logic/models";
 export function startNavigation(): void {
     const navigation: Maybe<HTMLElement> = document.getElementById('navigation');
 
-    /**
-     * @function handleScroll
-     * @description Handles navigation bar styling on scroll.
-     */
-    function handleScroll(): void {
-        if (navigation) {
-            if (window.scrollY > 20) {
-                navigation.classList.remove('bg-transparent');
-                navigation.classList.add('bg-gray-50/95', 'backdrop-blur-sm', 'shadow-sm');
-            } else {
-                navigation.classList.add('bg-transparent');
-                navigation.classList.remove('bg-gray-50/95', 'backdrop-blur-sm', 'shadow-sm');
-            }
-        }
+    if (!navigation) {
+        return;
     }
+    const updateNavigationStyle = (): void => {
+        const isScrolled = window.scrollY > 20;
 
-    window.addEventListener('scroll', handleScroll);
+        if (isScrolled) {
+            navigation.classList.remove('bg-transparent');
+            navigation.classList.add('bg-gray-50/95', 'backdrop-blur-sm', 'shadow-sm');
+        } else {
+            navigation.classList.add('bg-transparent');
+            navigation.classList.remove('bg-gray-50/95', 'backdrop-blur-sm', 'shadow-sm');
+        }
+    };
 
-    handleScroll();
+    window.addEventListener('scroll', updateNavigationStyle);
+    updateNavigationStyle();
 }

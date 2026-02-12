@@ -58,7 +58,7 @@ class Translation {
      *
      * @returns {Language} - The current language.
      */
-    public getLanguage(): Language {
+    getLanguage(): Language {
         return this.language;
     }
 
@@ -68,7 +68,7 @@ class Translation {
      *
      * @param {Language} lang - The language to set.
      */
-    public setLanguage(lang: Language): void {
+    setLanguage(lang: Language): void {
         this.language = lang;
         localStorage.setItem(STORAGE_KEY, lang);
         document.documentElement.lang = lang;
@@ -80,7 +80,7 @@ class Translation {
      *
      * @returns {Language} - The new language after toggling.
      */
-    public toggleLanguage(): Language {
+    toggleLanguage(): Language {
         const next: Language = this.language !== 'en' ? 'en' : 'fr';
         this.setLanguage(next);
         return next;
@@ -93,7 +93,7 @@ class Translation {
      * @param {string} key - The translation key, dot-separated for nested keys.
      * @returns {string} - The translated string or the key if not found.
      */
-    public t(key: string): string {
+    t(key: string): string {
         let value: string | string[] | Translations = this.language !== 'en' ? fr : en;
         const keys: string[] = key.split('.');
 
@@ -113,7 +113,7 @@ class Translation {
      * @function updateContent
      * @description Update all elements with the attributes to the current language.
      */
-    public updateContent(): void {
+    updateContent(): void {
         document.querySelectorAll('[data-translation]').forEach((element: Element) => {
             const key = element.getAttribute('data-translation');
             if (key) {

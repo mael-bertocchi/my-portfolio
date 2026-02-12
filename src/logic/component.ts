@@ -5,86 +5,71 @@ import capvisionLogo from '@assets/logos/cap-vision.webp';
 import epitechLogo from '@assets/logos/epitech.webp';
 import ionisStmLogo from '@assets/logos/ionis-stm.webp';
 import zedIndustriesLogo from '@assets/logos/zed-industries.webp';
-import type { Maybe } from "@logic/models";
+import profileImage from '@assets/profile.png';
+import type { Maybe } from '@logic/models';
 
-/**
- * @constant logos
- * @description Imports all logo images with proper asset handling.
- */
-const logos: Record<string, string> = {
-    'actix-web.webp': actixWebLogo,
-    'cap-vision.webp': capvisionLogo,
-    'epitech.webp': epitechLogo,
-    'ionis-stm.webp': ionisStmLogo,
-    'zed-industries.webp': zedIndustriesLogo,
+const assetRegistry = {
+    images: {
+        logos: {
+            'actix-web.webp': actixWebLogo,
+            'cap-vision.webp': capvisionLogo,
+            'epitech.webp': epitechLogo,
+            'ionis-stm.webp': ionisStmLogo,
+            'zed-industries.webp': zedIndustriesLogo,
+        },
+        profile: profileImage,
+    },
+    files: {
+        'cv-mael-bertocchi-fr.pdf': cvFr,
+        'cv-mael-bertocchi-en.pdf': cvEn,
+    },
 };
 
-/**
- * @constant files
- * @description Imports all file assets with proper asset handling.
- */
-const files: Record<string, string> = {
-    'cv-mael-bertocchi-fr.pdf': cvFr,
-    'cv-mael-bertocchi-en.pdf': cvEn,
-};
-
-/**
- * @function replaceAssetPaths
- * @description Replaces placeholder asset paths with actual imported asset link.
- *
- * @param {Element} host - The host element containing images to update.
- */
-function replaceAssetPaths(host: Element): void {
-    host.querySelectorAll('img[src^="/src/assets/logos/"]').forEach((img: Element) => {
-        const imgElement = img as HTMLImageElement;
-        const filename = imgElement.src.split('/').pop();
-
-        if (filename && logos[filename]) {
-            imgElement.src = logos[filename];
+function replaceAssets(host: Element): void {
+    host.querySelectorAll('img[src^="/src/assets/logos/"]').forEach((img) => {
+        const filename = (img as HTMLImageElement).src.split('/').pop();
+        if (filename && filename in assetRegistry.images.logos) {
+            (img as HTMLImageElement).src = assetRegistry.images.logos[filename as keyof typeof assetRegistry.images.logos];
         }
     });
 
-    host.querySelectorAll('a[href^="/src/assets/files/"]').forEach((link: Element) => {
-        const linkElement = link as HTMLAnchorElement;
-        const filename = linkElement.href.split('/').pop();
+    host.querySelectorAll('img[src="/src/assets/profile.png"]').forEach((img) => {
+        (img as HTMLImageElement).src = assetRegistry.images.profile;
+    });
 
-        if (filename && files[filename]) {
-            linkElement.href = files[filename];
+    host.querySelectorAll('a[href^="/src/assets/files/"]').forEach((link) => {
+        const filename = (link as HTMLAnchorElement).href.split('/').pop();
+        if (filename && filename in assetRegistry.files) {
+            (link as HTMLAnchorElement).href = assetRegistry.files[filename as keyof typeof assetRegistry.files];
         }
     });
 }
 
-/**
- * @function loadComponent
- * @description Dynamically includes an component into the document.
- *
- * @param {string} selector - The selector of the host element where the component will be injected.
- * @param {string} content - The path to the component file.
- */
-export function loadComponent(selector: string, content: string): void {
-    try {
-        const host: Maybe<Element> = document.querySelector(selector);
-
-        if (!host) {
-            throw new Error(`Host element not found for selector: ${selector}`);
-        }
-
-        host.innerHTML = content;
-        host.removeAttribute("aria-hidden");
-
-        replaceAssetPaths(host);
-
-        host.querySelectorAll("script").forEach((oldScript: HTMLScriptElement) => {
-            const newScript: HTMLScriptElement = document.createElement("script");
-
-            Array.from(oldScript.attributes).forEach((attr: Attr) => {
-                newScript.setAttribute(attr.name, attr.value);
-            });
-
-            newScript.text = oldScript.text;
-            oldScript.parentNode?.replaceChild(newScript, oldScript);
+function executeScripts(host: Element): void {
+    host.querySelectorAll('script').forEach((oldScript) => {
+        const newScript = document.createElement('script');
+        Array.from(oldScript.attributes).forEach((attr) => {
+            newScript.setAttribute(attr.name, attr.value);
         });
-    } catch (err: unknown) {
-        console.error(`Error loading component:`, err);
+        newScript.text = oldScript.text;
+        oldScript.parentNode?.replaceChild(newScript, oldScript);
+    });
+}
+
+export function loadComponent(selector: string, content: string): void {
+    const host: Maybe<Element> = document.querySelector(selector);
+
+    if (!host) {
+        console.error(`Component host not found: ${selector}`);
+        return;
+    }
+
+    try {
+        host.innerHTML = content;
+        host.removeAttribute('aria-hidden');
+        replaceAssets(host);
+        executeScripts(host);
+    } catch (error) {
+        console.error(`Failed to load component at ${selector}:`, error);
     }
 }
