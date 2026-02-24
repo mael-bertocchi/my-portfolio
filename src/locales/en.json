@@ -111,6 +111,7 @@
       "css": "Style language for web design and layout.",
       "rust": "Modern language focused on safety and performance.",
       "bash": "Unix shell and scripting language.",
+      "go": "Fast and efficient programming language for backend development.",
       "react": "JavaScript library for building interactive UIs.",
       "angular": "Full web framework for dynamic applications.",
       "vite": "Fast frontend bundler and development server.",

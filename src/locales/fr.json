@@ -111,6 +111,7 @@
       "css": "Langage de styles pour la mise en forme du web.",
       "rust": "Langage moderne axé sur la sécurité et la performance.",
       "bash": "Shell Unix et langage de scripting.",
+      "go": "Langage de programmation rapide et efficace pour le backend.",
       "react": "Bibliothèque JavaScript pour interfaces web interactives.",
       "angular": "Framework web complet pour applications dynamiques.",
       "vite": "Bundler et serveur de développement rapide pour le frontend.",
