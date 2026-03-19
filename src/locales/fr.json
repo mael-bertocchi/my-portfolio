@@ -1,4 +1,9 @@
 {
+  "language": {
+    "id:": "fr",
+    "name": "Français",
+    "label": "Langue"
+  },
   "nav": {
     "about": "À propos",
     "experience": "Expérience",

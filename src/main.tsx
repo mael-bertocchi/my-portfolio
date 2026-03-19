@@ -4,7 +4,7 @@ import FooterComponent from '@components/footer'
 import NavigationComponent from '@components/navigation'
 import HomePage from '@pages/home/home'
 import LegalPage from '@pages/legal/legal'
-import { Fragment, StrictMode } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 
@@ -14,11 +14,11 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
  */
 function Layout() {
     return (
-        <Fragment>
+        <div className="font-sans bg-gray-50 text-gray-900">
             <NavigationComponent />
             <Outlet />
             <FooterComponent />
-        </Fragment>
+        </div>
     )
 }
 
