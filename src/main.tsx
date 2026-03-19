@@ -2,6 +2,7 @@ import '@/styles/index.css'
 import '@/utils/i18n'
 import FooterComponent from '@components/footer'
 import NavigationComponent from '@components/navigation'
+import ScrollManager from '@components/scroll-manager'
 import HomePage from '@pages/home/home'
 import LegalPage from '@pages/legal/legal'
 import { StrictMode } from 'react'
@@ -14,8 +15,9 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
  */
 export function Layout() {
     return (
-        <div className="font-sans bg-gray-50 text-gray-900">
+        <div className="font-sans text-gray-900">
             <NavigationComponent />
+            <ScrollManager />
             <Outlet />
             <FooterComponent />
         </div>

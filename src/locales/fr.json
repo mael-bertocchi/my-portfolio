@@ -15,7 +15,6 @@
   "hero": {
     "role": "Développeur",
     "description": "Je conçois et développe des applications modernes et performantes.",
-    "location": "Mulhouse, Grand Est, France",
     "download-cv": "Télécharger mon CV",
     "contact-me": "Me contacter",
     "find-me-on": "Me retrouver sur"
@@ -45,7 +44,7 @@
         "title": "Assistant Pédagogique",
         "company": "Epitech",
         "location": "Mulhouse, France",
-        "period": "Mars 2025 - Aujourd'hui",
+        "period": "Février 2025 - Mars 2026",
         "description": "Mentorat et soutien technique pour les étudiants en informatique, avec un accent sur l'adaptation des méthodes d'enseignement aux besoins individuels des étudiants.",
         "tasks": {
           "0": "Supervision et encadrement d'activités éducatives et d'examens.",

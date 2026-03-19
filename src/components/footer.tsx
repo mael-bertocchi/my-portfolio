@@ -20,11 +20,11 @@ function FooterComponent(): Maybe<JSX.Element> {
     const isLegalPage: boolean = pathname !== '/';
 
     return (
-        <footer className="bg-gray-50 py-6">
-            <div className="max-w-7xl mx-auto px-10 sm:px-14 md:px-18 lg:px-22">
-                <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-gray-600">© {CURRENT_YEAR} Maël Bertocchi. <span>{t('footer.rights')}</span></p>
-                    <Link to={isLegalPage ? '/' : '/legal'} className="text-sm text-gray-600 hover:text-accent transition-colors duration-200">
+        <footer className='bg-gray-50 py-6'>
+            <div className='max-w-7xl mx-auto px-10 sm:px-14 md:px-18 lg:px-22'>
+                <div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
+                    <p className='text-sm text-gray-600'>© {CURRENT_YEAR} Maël Bertocchi. <span>{t('footer.rights')}</span></p>
+                    <Link to={isLegalPage ? '/' : '/legal'} className='text-sm text-gray-600 hover:text-accent transition-colors duration-200'>
                         {isLegalPage ? t('legal.back-to-home') : t('footer.legal-notice')}
                     </Link>
                 </div>

@@ -1,11 +1,11 @@
+import HomeAboutSection from '@/pages/home/sections/about';
+import HomeContactSection from '@/pages/home/sections/contact';
+import HomeEducationSection from '@/pages/home/sections/education';
+import HomeExperienceSection from '@/pages/home/sections/experience';
+import HomeHeroSection from '@/pages/home/sections/hero';
+import HomeProjectSection from '@/pages/home/sections/projects';
+import HomeSkillSection from '@/pages/home/sections/skills';
 import { Fragment, type JSX } from 'react';
-import HomeAboutSection from './sections/about';
-import HomeContactSection from './sections/contact';
-import HomeEducationSection from './sections/education';
-import HomeExperienceSection from './sections/experience';
-import HomeHeroSection from './sections/hero';
-import HomeProjectSection from './sections/projects';
-import HomeSkillSection from './sections/skills';
 
 /**
  * @function HomePage

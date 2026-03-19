@@ -1,6 +1,6 @@
 import type { Maybe } from '@/models';
 import { Globe } from 'lucide-react';
-import type { JSX } from 'react';
+import { useEffect, useState, type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -18,6 +18,8 @@ interface NavigationItem {
  * @description Contains the navigation bar of the application, providing links to different sections and a language toggle button.
  */
 function NavigationComponent(): Maybe<JSX.Element> {
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
     const { t, i18n } = useTranslation();
     const { pathname } = useLocation();
 
@@ -62,27 +64,45 @@ function NavigationComponent(): Maybe<JSX.Element> {
         }
     };
 
+    useEffect(() => {
+        const handleScroll = (): void => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
-                    <Link to="/" className="text-xl font-bold" aria-label="Home">
-                        <span className="text-accent">M</span><span className="text-gray-900">B</span>
-                    </Link>
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-50/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+            <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+                <div className='flex items-center justify-between h-16'>
+
+                    {pathname !== '/legal' ? (
+                        <button onClick={() => scrollToSection('hero')} className='text-xl font-bold' aria-label='Home'>
+                            <span className='text-accent'>M</span><span className='text-gray-900'>B</span>
+                        </button>
+                    ) : (
+                        <Link to='/' className='text-xl font-bold' aria-label='Home'>
+                            <span className='text-accent'>M</span><span className='text-gray-900'>B</span>
+                        </Link>
+                    )}
 
                     {pathname !== '/legal' && (
-                        <div className="hidden md:flex items-center gap-1">
+                        <div className='hidden md:flex items-center gap-1'>
                             {navItems.map((item: NavigationItem) => (
-                                <button key={item.id} onClick={() => scrollToSection(item.id)} className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100">
+                                <button key={item.id} onClick={() => scrollToSection(item.id)} className='px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100'>
                                     {t(item.labelKey)}
                                 </button>
                             ))}
                         </div>
                     )}
 
-                    <button onClick={toggleLanguage} className="ml-2 px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100 border border-gray-300 flex items-center gap-2" aria-label="Toggle language" title={isEnglish ? 'Français' : 'English'}>
-                        <Globe className="h-4 w-4" />
-                        <span className="hidden sm:inline">{t('language.name')}</span>
+                    <button onClick={toggleLanguage} className='ml-2 px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100 border border-gray-300 flex items-center gap-2' aria-label='Toggle language' title={isEnglish ? 'Français' : 'English'}>
+                        <Globe className='h-4 w-4' />
+                        <span className='hidden sm:inline'>{t('language.name')}</span>
                     </button>
                 </div>
             </div>

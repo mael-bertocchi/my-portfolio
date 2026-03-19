@@ -15,7 +15,6 @@
   "hero": {
     "role": "Developer",
     "description": "I design and build modern, high-performance applications.",
-    "location": "Mulhouse, Grand Est, France",
     "download-cv": "Download my CV",
     "contact-me": "Contact me",
     "find-me-on": "Find me on"
@@ -45,7 +44,7 @@
         "title": "Teaching Assistant",
         "company": "Epitech",
         "location": "Mulhouse, France",
-        "period": "March 2025 - Present",
+        "period": "February 2025 - March 2026",
         "description": "Mentoring and technical support for computer science students, focusing on adapting teaching methods to individual student needs.",
         "tasks": {
           "0": "Supervision and organization of educational activities and exams.",
