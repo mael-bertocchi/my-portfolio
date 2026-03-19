@@ -2,7 +2,7 @@ import type { Maybe } from '@/models';
 import { Globe } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 /**
  * @interface NavigationItem
@@ -19,6 +19,7 @@ interface NavigationItem {
  */
 function NavigationComponent(): Maybe<JSX.Element> {
     const { t, i18n } = useTranslation();
+    const { pathname } = useLocation();
 
     const currentLanguage: string = i18n.resolvedLanguage ?? i18n.language;
     const isEnglish: boolean = currentLanguage.toLowerCase().startsWith('en');
@@ -69,7 +70,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
                         <span className="text-[#821b29]">M</span><span className="text-gray-900">B</span>
                     </Link>
 
-                    {window.location.pathname !== '/legal' && (
+                    {pathname !== '/legal' && (
                         <div className="hidden md:flex items-center gap-1">
                             {navItems.map((item: NavigationItem) => (
                                 <button key={item.id} onClick={() => scrollToSection(item.id)} className="px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100">

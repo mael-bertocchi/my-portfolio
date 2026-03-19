@@ -1,4 +1,11 @@
-import { type JSX } from 'react';
+import { Fragment, type JSX } from 'react';
+import HomeAboutSection from './sections/about';
+import HomeContactSection from './sections/contact';
+import HomeEducationSection from './sections/education';
+import HomeExperienceSection from './sections/experience';
+import HomeHeroSection from './sections/hero';
+import HomeProjectSection from './sections/projects';
+import HomeSkillSection from './sections/skills';
 
 /**
  * @function HomePage
@@ -6,9 +13,15 @@ import { type JSX } from 'react';
  */
 function HomePage(): JSX.Element {
     return (
-        <div>
-            <h1>Page content</h1>
-        </div>
+        <Fragment>
+            <HomeHeroSection />
+            <HomeAboutSection />
+            <HomeExperienceSection />
+            <HomeEducationSection />
+            <HomeSkillSection />
+            <HomeProjectSection />
+            <HomeContactSection />
+        </Fragment>
     );
 }
 
