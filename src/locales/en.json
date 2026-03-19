@@ -186,6 +186,12 @@
     "rights": "All rights reserved.",
     "legal-notice": "Legal Notice"
   },
+  "notfound": {
+    "title": "Page not",
+    "title-accent": "found",
+    "description": "Oops! It seems the page you're looking for doesn't exist. But don't worry, you can always go back to the home page.",
+    "back-home": "Back to home"
+  },
   "legal": {
     "title": "Legal",
     "title-accent": "Notice",
