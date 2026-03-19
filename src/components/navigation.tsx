@@ -67,7 +67,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Link to="/" className="text-xl font-bold" aria-label="Home">
-                        <span className="text-[#821b29]">M</span><span className="text-gray-900">B</span>
+                        <span className="text-accent">M</span><span className="text-gray-900">B</span>
                     </Link>
 
                     {pathname !== '/legal' && (

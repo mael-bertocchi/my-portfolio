@@ -193,47 +193,44 @@
     "page-title": "Maël Bertocchi — Legal Notice",
     "sections": {
       "publisher": {
-        "title": "1. Website Publisher",
+        "title": "Website Publisher",
         "content": "This website is published by Maël Bertocchi, an independent developer, to present his professional portfolio."
       },
       "hosting": {
-        "title": "2. Hosting",
-        "host": "Host:",
-        "host-name": "GitHub, Inc.",
-        "address": "Address:",
-        "address-value": "88 Colin P. Kelly Jr Street, San Francisco, CA 94107, United States"
+        "title": "Hosting",
+        "content": "This site is hosted by OVH SAS, located at 2 rue Kellermann, 59100 Roubaix, France. Contact: +33 9 72 10 10 07."
       },
       "intellectual-property": {
-        "title": "3. Intellectual Property",
+        "title": "Intellectual Property",
         "content": {
           "0": "All content on this site is subject to French and international copyright and intellectual property law. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.",
           "1": "The reproduction of all or part of this site on any electronic medium is strictly prohibited without the express authorization of the publisher, in accordance with Article L.122-4 of the French Intellectual Property Code."
         }
       },
       "personal-data": {
-        "title": "4. Personal Data Protection",
+        "title": "Personal Data Protection",
         "content": {
           "0": "In accordance with the General Data Protection Regulation and the French Data Protection Act, you have the right to access, rectify, delete and object to personal data concerning you.",
           "1": "This site does not collect any personal data without your explicit consent. The contact information on the site is solely intended to facilitate communication."
         }
       },
       "cookies": {
-        "title": "5. Cookies",
+        "title": "Cookies",
         "content": "This site does not use tracking or data collection cookies. No personal information is stored during your browsing."
       },
       "external-links": {
-        "title": "6. External Links",
+        "title": "External Links",
         "content": "This site may contain hyperlinks to other websites. The publisher is not responsible for the content of these external sites or their privacy policies."
       },
       "liability": {
-        "title": "7. Limitation of Liability",
+        "title": "Limitation of Liability",
         "content": {
           "0": "The publisher strives to ensure the accuracy and currency of the information on this site. However, the publisher cannot guarantee the accuracy, precision or completeness of the information provided.",
           "1": "Consequently, the publisher disclaims all responsibility for any inaccuracy, inexactitude or omission in the information available on the site."
         }
       },
       "applicable-law": {
-        "title": "8. Applicable Law",
+        "title": "Applicable Law",
         "content": "These legal notices are governed by French law. In case of dispute, French courts shall have sole jurisdiction."
       }
     },

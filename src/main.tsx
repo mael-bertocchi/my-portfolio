@@ -12,7 +12,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
  * @function Layout
  * @description The Layout component serves as a wrapper for the main content of the application.
  */
-function Layout() {
+export function Layout() {
     return (
         <div className="font-sans bg-gray-50 text-gray-900">
             <NavigationComponent />
