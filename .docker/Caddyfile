@@ -1,0 +1,19 @@
+:80 {
+    # Enable gzip compression
+    encode gzip
+
+    # Serve static files
+    root * /usr/share/caddy
+
+    # Handle all other requests
+    handle {
+        try_files {path} /index.html
+        file_server
+    }
+
+    # Log requests
+    log {
+        output stdout
+        format json
+    }
+}
