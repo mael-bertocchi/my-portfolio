@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "role": "Developer",
+    "description": "I design and build modern, high-performance applications.",
+    "location": "Mulhouse, Grand Est, France",
+    "download-cv": "Download my CV",
+    "contact-me": "Contact me",
+    "find-me-on": "Find me on"
+  },
+  "about": {
+    "title": "About",
+    "title-accent": "me",
+    "description": {
+      "0": "I am a passionate and motivated computer science student, always ready to take on new challenges and keep learning. I've had the opportunity to work on a variety of projects, which has helped me develop both my technical skills and my ability to collaborate effectively, even under pressure.",
+      "1": "I'm particularly passionate about web and software development. I love discovering new technologies, experimenting, and sharing my knowledge with others so we can grow together.",
+      "2": "Currently a third-year student at Epitech in the Grande École Program, I'm constantly looking for opportunities to apply what I've learned and contribute to real-world projects."
+    },
+    "traits": {
+      "motivated": "Motivated",
+      "team-spirit": "Team player",
+      "curious": "Curious",
+      "learner": "Learner"
+    }
+  },
+  "experience": {
+    "title": "Professional",
+    "title-accent": "experience",
+    "subtitle": "My professional journey and contributions to the development world",
+    "key-contributions": "Key technical contributions:",
+    "jobs": {
+      "epitech": {
+        "title": "Teaching Assistant",
+        "company": "Epitech",
+        "location": "Mulhouse, France",
+        "period": "March 2025 - Present",
+        "description": "Mentoring and technical support for computer science students, focusing on adapting teaching methods to individual student needs.",
+        "tasks": {
+          "0": "Supervision and organization of educational activities and exams.",
+          "1": "Technical and pedagogical assistance with projects.",
+          "2": "Adapting teaching methods to students' individual needs."
+        },
+        "tags": {
+          "0": "Mentoring",
+          "1": "Pedagogy",
+          "2": "Technical Support"
+        }
+      },
+      "cap-vision": {
+        "title": "Developer",
+        "company": "CAP Vision",
+        "location": "Rouffach, France",
+        "period": "July 2024 - December 2024",
+        "description": "A full 6-month internship that allowed me to strengthen my technical and interpersonal skills while gaining project management experience in a professional development environment.",
+        "tasks": {
+          "0": "Developed web applications using Razor in C# and integrated online payment systems.",
+          "1": "Collaborated on mobile app development with Angular and Ionic.",
+          "2": "Created an AI-powered invoice automation extension for Microsoft Dynamics 365 Business Central using Azure Foundry.",
+          "3": "Implemented DevOps practices with Azure DevOps."
+        }
+      }
+    }
+  },
+  "education": {
+    "title": "Academic",
+    "title-accent": "education",
+    "subtitle": "My academic background and specialized training",
+    "schools": {
+      "epitech": {
+        "degree": "Expert in Information Technology",
+        "school": "Epitech",
+        "location": "Mulhouse, France",
+        "period": "2023 - 2028",
+        "description": "Pursuing a degree as an Expert in Information Technology through Epitech's Grande École Program. Learning advanced skills in software engineering and project management."
+      },
+      "ionis-stm": {
+        "degree": "Teaching & Coaching Training",
+        "school": "Ionis-STM",
+        "location": "Mulhouse, France",
+        "period": "2024 - 2026",
+        "description": "Specialized training in educational fundamentals, focused on assessing student needs and adapting teaching methods for diverse learning styles. Gained expertise in designing and supervising educational activities, with a strong emphasis on accommodating learning difficulties and disabilities."
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical",
+    "title-accent": "skills",
+    "subtitle": "Technologies and tools I'm proficient with",
+    "categories": {
+      "languages": "Programming languages",
+      "frameworks": "Frameworks & Runtime",
+      "tools-methodologies": "Tools & Methodologies",
+      "databases": "Databases",
+      "devops-cloud": "DevOps & Cloud"
+    },
+    "tooltips": {
+      "javascript": "Versatile web programming language.",
+      "typescript": "Superset of JavaScript with static typing.",
+      "csharp": "Object-oriented language for the Microsoft ecosystem.",
+      "c": "Low-level language used for systems and performance.",
+      "python": "Versatile language for scripting, data, and web development.",
+      "cplusplus": "High-performance and system development language.",
+      "html": "Markup language for structuring web content.",
+      "css": "Style language for web design and layout.",
+      "rust": "Modern language focused on safety and performance.",
+      "bash": "Unix shell and scripting language.",
+      "go": "Fast and efficient programming language for backend development.",
+      "react": "JavaScript library for building interactive UIs.",
+      "angular": "Full web framework for dynamic applications.",
+      "vite": "Fast frontend bundler and development server.",
+      "ionic": "Framework for creating hybrid mobile apps.",
+      "node": "Server-side JavaScript runtime environment.",
+      "fastify": "High-performance web framework.",
+      "razor": "Template framework for .NET applications.",
+      "express": "Minimalist web framework for Node.js.",
+      "actix-web": "High-performance web framework for Rust.",
+      "fastapi": "Asynchronous and fast Python web framework.",
+      "mongodb": "Document-oriented NoSQL database.",
+      "postgresql": "Advanced open-source relational database.",
+      "mysql": "Relational database management system.",
+      "prisma": "Type-safe database toolkit and ORM.",
+      "azure": "Microsoft's cloud platform.",
+      "git": "Distributed version control system.",
+      "github": "Code hosting and CI/CD platform.",
+      "azure-devops": "Microsoft's DevOps and CI/CD platform.",
+      "jenkins": "Continuous integration and deployment server.",
+      "docker": "Application containerization tool.",
+      "jira": "Agile project and issue tracking tool.",
+      "vscode": "Lightweight, fast, and extensible code editor.",
+      "visual-studio": "Comprehensive IDE for .NET and C++ development.",
+      "zed": "Minimalist and ultra-fast code editor."
+    }
+  },
+  "projects": {
+    "title": "My",
+    "title-accent": "projects",
+    "subtitle": "Discover the projects I've worked on and the technologies I've used",
+    "view-website": "View website",
+    "view-github": "View on GitHub",
+    "technologies-used": "Technologies used:",
+    "private-project": "Private project",
+    "items": {
+      "logeler-finka": {
+        "title": "Logeler Finka",
+        "period": "August 2024 - September 2025",
+        "description": "Complete web application for an Alsatian theater company. Full infrastructure with advanced continuous integration and deployment systems."
+      },
+      "hungry-no": {
+        "title": "HungryNo",
+        "period": "June 2025 - November 2025",
+        "description": "Showcase website allowing culinary influencer HungryNo to manage and share his latest gastronomic discoveries and publish blog articles."
+      },
+      "baselhack": {
+        "title": "BaselHack 2025",
+        "period": "October 2025",
+        "description": "Participation in the BaselHack 2025 hackathon, developing a web app prototype in 48 hours to collect hundreds of opinions and use AI to generate consensus."
+      },
+      "france-equipement": {
+        "title": "France Équipement",
+        "period": "April 2025 - Present",
+        "description": "Development of an AI-powered chatbot to improve product search and customer support on an e-commerce website."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's stay in",
+    "title-accent": "touch",
+    "description": "Feel free to contact me to discuss professional opportunities or project collaborations.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "location-value": "Mulhouse, France"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "legal-notice": "Legal Notice"
+  },
+  "legal": {
+    "title": "Legal",
+    "title-accent": "Notice",
+    "page-title": "Maël Bertocchi — Legal Notice",
+    "sections": {
+      "publisher": {
+        "title": "1. Website Publisher",
+        "content": "This website is published by Maël Bertocchi, an independent developer, to present his professional portfolio."
+      },
+      "hosting": {
+        "title": "2. Hosting",
+        "host": "Host:",
+        "host-name": "GitHub, Inc.",
+        "address": "Address:",
+        "address-value": "88 Colin P. Kelly Jr Street, San Francisco, CA 94107, United States"
+      },
+      "intellectual-property": {
+        "title": "3. Intellectual Property",
+        "content": {
+          "0": "All content on this site is subject to French and international copyright and intellectual property law. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.",
+          "1": "The reproduction of all or part of this site on any electronic medium is strictly prohibited without the express authorization of the publisher, in accordance with Article L.122-4 of the French Intellectual Property Code."
+        }
+      },
+      "personal-data": {
+        "title": "4. Personal Data Protection",
+        "content": {
+          "0": "In accordance with the General Data Protection Regulation and the French Data Protection Act, you have the right to access, rectify, delete and object to personal data concerning you.",
+          "1": "This site does not collect any personal data without your explicit consent. The contact information on the site is solely intended to facilitate communication."
+        }
+      },
+      "cookies": {
+        "title": "5. Cookies",
+        "content": "This site does not use tracking or data collection cookies. No personal information is stored during your browsing."
+      },
+      "external-links": {
+        "title": "6. External Links",
+        "content": "This site may contain hyperlinks to other websites. The publisher is not responsible for the content of these external sites or their privacy policies."
+      },
+      "liability": {
+        "title": "7. Limitation of Liability",
+        "content": {
+          "0": "The publisher strives to ensure the accuracy and currency of the information on this site. However, the publisher cannot guarantee the accuracy, precision or completeness of the information provided.",
+          "1": "Consequently, the publisher disclaims all responsibility for any inaccuracy, inexactitude or omission in the information available on the site."
+        }
+      },
+      "applicable-law": {
+        "title": "8. Applicable Law",
+        "content": "These legal notices are governed by French law. In case of dispute, French courts shall have sole jurisdiction."
+      }
+    },
+    "back-to-home": "Back to home"
+  }
+}
