@@ -13,7 +13,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "role": "Développeur",
+    "role": "Ingénieur Logiciel",
     "description": "Je conçois et développe des applications modernes et performantes.",
     "download-cv": "Télécharger mon CV",
     "contact-me": "Me contacter",
@@ -40,6 +40,18 @@
     "subtitle": "Mon parcours professionnel et mes contributions au monde du développement",
     "key-contributions": "Contributions techniques clés :",
     "jobs": {
+      "jet-aviation": {
+        "title": "Ingénieur Logiciel Stagiaire",
+        "company": "Jet Aviation",
+        "location": "Bâle, Suisse",
+        "period": "Avril 2026 - Août 2026",
+        "description": "Lead technique sur le développement d'une plateforme interne d'automatisation des processus, un projet stratégique visant à améliorer la productivité au sein de Jet Aviation à l'échelle mondiale.",
+        "tasks": {
+          "0": "Conception d'un écosystème permettant aux utilisateurs autorisés de déployer des agents autonomes capables d'orchestrer des chaînes d'automatisation complexes sous une politique de permissions stricte.",
+          "1": "Architecture d'une solution full-stack scalable avec TypeScript et React pour garantir des performances optimales sous forte charge utilisateur.",
+          "2": "Pilotage du déploiement end-to-end sur Microsoft Azure pour un accès rapide, sécurisé et fluide à toutes les entités de Jet Aviation dans le monde."
+        }
+      },
       "epitech": {
         "title": "Assistant Pédagogique",
         "company": "Epitech",
@@ -58,7 +70,7 @@
         }
       },
       "cap-vision": {
-        "title": "Développeur",
+        "title": "Ingénieur Logiciel Stagiaire",
         "company": "CAP Vision",
         "location": "Rouffach, France",
         "period": "Juillet 2024 - Décembre 2024",
@@ -195,11 +207,11 @@
   "legal": {
     "title": "Mentions",
     "title-accent": "Légales",
-    "page-title": "Maël Bertocchi — Mentions Légales",
+    "page-title": "Maël Bertocchi - Mentions Légales",
     "sections": {
       "publisher": {
         "title": "Éditeur du site",
-        "content": "Ce site est édité par Maël Bertocchi, développeur indépendant afin de présenter son portfolio professionnel."
+        "content": "Ce site est édité par Maël Bertocchi, ingénieur logiciel indépendant afin de présenter son portfolio professionnel."
       },
       "hosting": {
         "title": "Hébergement",

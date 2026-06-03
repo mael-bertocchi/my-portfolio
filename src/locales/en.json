@@ -13,7 +13,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "role": "Developer",
+    "role": "Software Engineer",
     "description": "I design and build modern, high-performance applications.",
     "download-cv": "Download my CV",
     "contact-me": "Contact me",
@@ -40,6 +40,18 @@
     "subtitle": "My professional journey and contributions to the development world",
     "key-contributions": "Key technical contributions:",
     "jobs": {
+      "jet-aviation": {
+        "title": "Software Engineer Intern",
+        "company": "Jet Aviation",
+        "location": "Basel, Switzerland",
+        "period": "April 2026 - August 2026",
+        "description": "Technical lead on the development of an internal process automation platform, a strategic initiative aimed at boosting productivity across Jet Aviation entities worldwide.",
+        "tasks": {
+          "0": "Designed an ecosystem letting authorized users deploy autonomous agents capable of orchestrating complex automation chains under a strict permissions policy.",
+          "1": "Architected a scalable full-stack solution with TypeScript and React to ensure optimal performance under heavy user load.",
+          "2": "Owned the end-to-end deployment on Microsoft Azure for fast, secure, and seamless access across all Jet Aviation entities worldwide."
+        }
+      },
       "epitech": {
         "title": "Teaching Assistant",
         "company": "Epitech",
@@ -58,7 +70,7 @@
         }
       },
       "cap-vision": {
-        "title": "Developer",
+        "title": "Software Engineer Intern",
         "company": "CAP Vision",
         "location": "Rouffach, France",
         "period": "July 2024 - December 2024",
@@ -195,11 +207,11 @@
   "legal": {
     "title": "Legal",
     "title-accent": "Notice",
-    "page-title": "Maël Bertocchi — Legal Notice",
+    "page-title": "Maël Bertocchi - Legal Notice",
     "sections": {
       "publisher": {
         "title": "Website Publisher",
-        "content": "This website is published by Maël Bertocchi, an independent developer, to present his professional portfolio."
+        "content": "This website is published by Maël Bertocchi, an independent software engineer, to present his professional portfolio."
       },
       "hosting": {
         "title": "Hosting",

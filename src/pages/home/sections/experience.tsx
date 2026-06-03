@@ -38,7 +38,7 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                                 <div className='inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-4 py-2 rounded-full border border-accent/20'>
                                     <Calendar className='w-4 h-4' />
                                     <span>
-                                        {t('experience.jobs.epitech.period')}
+                                        {t('experience.jobs.jet-aviation.period')}
                                     </span>
                                 </div>
                             </div>
@@ -48,6 +48,81 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                             </div>
 
                             <div className='lg:pl-12'>
+                                <div className='bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-accent/20'>
+                                    <div className='p-6 sm:p-8'>
+                                        <div className='flex items-start gap-4'>
+                                            <div className='flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden shadow-md'>
+                                                <img src='/logos/jet-aviation.webp' alt='Jet Aviation Logo' className='w-full h-full object-cover' />
+                                            </div>
+
+                                            <div className='flex-1 min-w-0'>
+                                                <h3 className='text-xl sm:text-2xl font-bold text-gray-900 mb-1'>
+                                                    {t('experience.jobs.jet-aviation.title')}
+                                                </h3>
+                                                <p className='text-gray-600 font-medium mb-1'>{t('experience.jobs.jet-aviation.company')}</p>
+                                                <div className='flex items-center gap-2 text-sm text-gray-500'>
+                                                    <MapPin className='w-4 h-4' />
+                                                    <span>
+                                                        {t('experience.jobs.jet-aviation.location')}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='mt-4 lg:hidden'>
+                                            <div className='inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-4 py-2 rounded-full border border-accent/20'>
+                                                <Calendar className='w-4 h-4' />
+                                                <span>
+                                                    {t('experience.jobs.jet-aviation.period')}
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <p className='mt-6 text-gray-600 leading-relaxed'>
+                                            {t('experience.jobs.jet-aviation.description')}
+                                        </p>
+
+                                        <div className='mt-6'>
+                                            <h4 className='text-sm font-semibold text-gray-900 mb-3'>
+                                                {t('experience.key-contributions')}
+                                            </h4>
+                                            <ul className='space-y-2'>
+                                                <li className='flex items-start gap-2 text-sm text-gray-600'>
+                                                    <CheckCircle2 className='w-5 h-5 text-accent flex-shrink-0 mt-0.5' />
+                                                    <span>
+                                                        {t('experience.jobs.jet-aviation.tasks.0')}
+                                                    </span>
+                                                </li>
+                                                <li className='flex items-start gap-2 text-sm text-gray-600'>
+                                                    <CheckCircle2 className='w-5 h-5 text-accent flex-shrink-0 mt-0.5' />
+                                                    <span>
+                                                        {t('experience.jobs.jet-aviation.tasks.1')}
+                                                    </span>
+                                                </li>
+                                                <li className='flex items-start gap-2 text-sm text-gray-600'>
+                                                    <CheckCircle2 className='w-5 h-5 text-accent flex-shrink-0 mt-0.5' />
+                                                    <span>
+                                                        {t('experience.jobs.jet-aviation.tasks.2')}
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div className='mt-6 flex flex-wrap gap-2'>
+                                            <span className='px-3 py-1 text-xs font-medium bg-accent/5 text-accent rounded-full border border-accent/20'>TypeScript</span>
+                                            <span className='px-3 py-1 text-xs font-medium bg-accent/5 text-accent rounded-full border border-accent/20'>React</span>
+                                            <span className='px-3 py-1 text-xs font-medium bg-accent/5 text-accent rounded-full border border-accent/20'>Azure</span>
+                                            <span className='px-3 py-1 text-xs font-medium bg-accent/5 text-accent rounded-full border border-accent/20'>Cloud</span>
+                                            <span className='px-3 py-1 text-xs font-medium bg-accent/5 text-accent rounded-full border border-accent/20'>Full-stack</span>
+                                            <span className='px-3 py-1 text-xs font-medium bg-accent/5 text-accent rounded-full border border-accent/20'>AI Agents</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='relative lg:grid lg:grid-cols-2 lg:gap-8 group'>
+                            <div className='lg:order-1 lg:pr-12'>
                                 <div className='bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-accent/20'>
                                     <div className='p-6 sm:p-8'>
                                         <div className='flex items-start gap-4'>
@@ -122,10 +197,36 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className='hidden lg:block absolute left-1/2 top-2 transform -translate-x-1/2'>
+                                <div className='w-4 h-4 rounded-full bg-white border-4 border-accent shadow-lg group-hover:scale-110 transition-transform duration-300'></div>
+                            </div>
+
+                            <div className='hidden lg:flex lg:order-2 lg:pl-12 lg:items-start'>
+                                <div className='inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-4 py-2 rounded-full border border-accent/20'>
+                                    <Calendar className='w-4 h-4' />
+                                    <span>
+                                        {t('experience.jobs.epitech.period')}
+                                    </span>
+                                </div>
+                            </div>
                         </div>
 
                         <div className='relative lg:grid lg:grid-cols-2 lg:gap-8 group'>
-                            <div className='lg:order-1 lg:pr-12'>
+                            <div className='hidden lg:flex lg:text-right lg:pr-12 lg:justify-end lg:items-start'>
+                                <div className='inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-4 py-2 rounded-full border border-accent/20'>
+                                    <Calendar className='w-4 h-4' />
+                                    <span>
+                                        {t('experience.jobs.cap-vision.period')}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div className='hidden lg:block absolute left-1/2 top-2 transform -translate-x-1/2'>
+                                <div className='w-4 h-4 rounded-full bg-white border-4 border-accent shadow-lg group-hover:scale-110 transition-transform duration-300'></div>
+                            </div>
+
+                            <div className='lg:pl-12'>
                                 <div className='bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-accent/20'>
                                     <div className='p-6 sm:p-8'>
                                         <div className='flex items-start gap-4'>
@@ -205,19 +306,6 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                                             <span className='px-3 py-1 text-xs font-medium bg-accent/5 text-accent rounded-full border border-accent/20'>IA</span>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className='hidden lg:block absolute left-1/2 top-2 transform -translate-x-1/2'>
-                                <div className='w-4 h-4 rounded-full bg-white border-4 border-accent shadow-lg group-hover:scale-110 transition-transform duration-300'></div>
-                            </div>
-
-                            <div className='hidden lg:block lg:order-2 lg:pl-12 lg:items-start'>
-                                <div className='inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-4 py-2 rounded-full border border-accent/20'>
-                                    <Calendar className='w-4 h-4' />
-                                    <span>
-                                        {t('experience.jobs.cap-vision.period')}
-                                    </span>
                                 </div>
                             </div>
                         </div>
