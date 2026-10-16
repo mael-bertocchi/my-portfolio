@@ -3,6 +3,7 @@ import { Globe } from 'lucide-react';
 import { useEffect, useState, type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router';
+import { storeLanguage, type Language } from '@utils/i18n';
 
 /**
  * @interface NavigationItem
@@ -25,15 +26,16 @@ function NavigationComponent(): Maybe<JSX.Element> {
 
     const currentLanguage: string = i18n.resolvedLanguage ?? i18n.language;
     const isEnglish: boolean = currentLanguage.toLowerCase().startsWith('en');
+    const isHome: boolean = pathname === '/';
 
     /**
      * @function toggleLanguage
      * @description Toggles the application's language, and saves the user's preference.
      */
     const toggleLanguage = (): void => {
-        const newLanguage = isEnglish ? 'fr' : 'en';
-        i18n.changeLanguage(newLanguage);
-        localStorage.setItem('preferred-language', newLanguage);
+        const newLanguage: Language = isEnglish ? 'fr' : 'en';
+        void i18n.changeLanguage(newLanguage);
+        storeLanguage(newLanguage);
     };
 
     /**
@@ -69,7 +71,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
             setIsScrolled(window.scrollY > 50);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -80,7 +82,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
             <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
 
-                    {pathname !== '/legal' ? (
+                    {isHome ? (
                         <button onClick={() => scrollToSection('hero')} className='text-xl font-bold' aria-label='Home'>
                             <span className='text-accent'>M</span><span className='text-gray-900'>B</span>
                         </button>
@@ -90,7 +92,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
                         </Link>
                     )}
 
-                    {pathname !== '/legal' && (
+                    {isHome && (
                         <div className='hidden md:flex items-center gap-1'>
                             {navItems.map((item: NavigationItem) => (
                                 <button key={item.id} onClick={() => scrollToSection(item.id)} className='px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100'>

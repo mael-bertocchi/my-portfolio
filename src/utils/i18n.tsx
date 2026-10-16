@@ -1,17 +1,30 @@
+import type { Maybe } from '@/models';
 import en from '@locales/en.json';
 import fr from '@locales/fr.json';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 /**
+ * @type Language
+ * @description Represents a language supported by the application
+ */
+export type Language = 'en' | 'fr';
+
+/**
  * @constant STORAGE_KEY
- * @description The key used to store the user's preferred language in localStorage. This allows the application to remember the user's language choice across sessions.
+ * @description The key used to store the user's preferred language in localStorage
  */
 const STORAGE_KEY = 'preferred-language';
 
 /**
+ * @constant DEFAULT_LANGUAGE
+ * @description The language used when no valid preference has been stored
+ */
+const DEFAULT_LANGUAGE: Language = 'fr';
+
+/**
  * @constant resources
- * @description An object containing the translation resources for the supported languages. Each language is represented as a key (e.g., 'en' for English, 'fr' for French) with a nested 'translation' object that holds the actual translation key-value pairs.
+ * @description The translation resources for the supported languages
  */
 const resources = {
     en: { translation: en },
@@ -19,21 +32,69 @@ const resources = {
 };
 
 /**
- * @constant savedLanguage
- * @description Retrieves the user's preferred language from localStorage using the defined STORAGE_KEY. If a valid language is found (either 'en' or 'fr'), it will be used as the default language for the application. If no valid language is found, the application defaults to French ('fr').
+ * @function isLanguage
+ * @description Type guard checking whether a value is a supported language
+ *
+ * @param {unknown} value The value to check
  */
-const savedLanguage = localStorage.getItem(STORAGE_KEY);
+export function isLanguage(value: unknown): value is Language {
+    return value === 'en' || value === 'fr';
+}
 
 /**
- * @constant defaultLanguage
- * @description Determines the default language for the application based on the value retrieved from localStorage. If the saved language is not 'en' or 'fr', it defaults to 'fr'. This ensures that the application has a valid language setting even if the user has not explicitly chosen one or if an invalid value is stored in localStorage.
+ * @function readStoredLanguage
+ * @description Reads the stored language preference, ignoring storage access errors (private mode, blocked storage)
  */
-const defaultLanguage = (savedLanguage !== 'en' && savedLanguage !== 'fr') ? 'fr' : savedLanguage;
+function readStoredLanguage(): Maybe<string> {
+    try {
+        return window.localStorage.getItem(STORAGE_KEY);
+    } catch {
+        return null;
+    }
+}
 
-i18n.use(initReactI18next).init({
+/**
+ * @function storeLanguage
+ * @description Persists the language preference, ignoring storage access errors (private mode, blocked storage)
+ *
+ * @param {Language} language The language to persist
+ */
+export function storeLanguage(language: Language): void {
+    try {
+        window.localStorage.setItem(STORAGE_KEY, language);
+    } catch {
+        return;
+    }
+}
+
+/**
+ * @function syncDocumentLanguage
+ * @description Keeps the lang attribute of the document in sync with the active language, for accessibility and SEO
+ *
+ * @param {string} language The active language
+ */
+function syncDocumentLanguage(language: string): void {
+    document.documentElement.lang = language;
+}
+
+/**
+ * @constant storedLanguage
+ * @description The user's stored language preference, if any
+ */
+const storedLanguage: Maybe<string> = readStoredLanguage();
+
+/**
+ * @constant initialLanguage
+ * @description The language the application starts with
+ */
+const initialLanguage: Language = isLanguage(storedLanguage) ? storedLanguage : DEFAULT_LANGUAGE;
+
+i18n.on('languageChanged', syncDocumentLanguage);
+
+void i18n.use(initReactI18next).init({
     resources,
-    lng: defaultLanguage,
-    fallbackLng: 'fr',
+    lng: initialLanguage,
+    fallbackLng: DEFAULT_LANGUAGE,
     supportedLngs: ['en', 'fr'],
     nonExplicitSupportedLngs: true,
     load: 'languageOnly',
@@ -41,5 +102,7 @@ i18n.use(initReactI18next).init({
         escapeValue: false,
     },
 });
+
+syncDocumentLanguage(initialLanguage);
 
 export default i18n;
