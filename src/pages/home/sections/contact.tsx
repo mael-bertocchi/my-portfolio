@@ -1,6 +1,5 @@
 import { SOCIAL_LINKS } from '@/data/portfolio';
 import type { Maybe } from '@/models';
-import { LinkedinIcon } from '@components/brand-icons';
 import { ArrowRight, MapPin, Phone } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -35,13 +34,7 @@ function HomeContactSection(): Maybe<JSX.Element> {
                         <ArrowRight className='h-5 w-5 flex-shrink-0 transition-transform group-hover:translate-x-1' />
                     </a>
 
-                    <ul className='mt-12 grid gap-4 border-t border-white/20 pt-8 text-sm text-white/75 sm:grid-cols-3'>
-                        <li>
-                            <a href={SOCIAL_LINKS.linkedin} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 transition-colors hover:text-white'>
-                                <LinkedinIcon className='h-4 w-4' />
-                                <span>linkedin.com/in/mael-bertocchi</span>
-                            </a>
-                        </li>
+                    <ul className='mt-12 grid gap-4 border-t border-white/20 pt-8 text-sm text-white/75 sm:grid-cols-2'>
                         <li>
                             <a href={`tel:${SOCIAL_LINKS.phone}`} className='inline-flex items-center gap-2 transition-colors hover:text-white'>
                                 <Phone className='h-4 w-4' />
