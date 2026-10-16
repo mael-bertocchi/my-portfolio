@@ -15,27 +15,27 @@ function HomeContactSection(): Maybe<JSX.Element> {
     return (
         <section id='contact' className='py-24 sm:py-32'>
             <div className='mx-auto max-w-6xl px-5 sm:px-8'>
-                <div className='reveal relative isolate overflow-hidden rounded-[2rem] border border-white/10 bg-ink-900 px-6 py-16 sm:px-14 sm:py-20'>
-                    <div className='bg-gradient-brand absolute -top-32 -right-32 -z-10 h-96 w-96 rounded-full opacity-30 blur-[120px]' aria-hidden='true'></div>
-                    <div className='bg-grid absolute inset-0 -z-10' aria-hidden='true'></div>
+                <div className='reveal relative isolate overflow-hidden rounded-[2rem] bg-accent-deep px-6 text-white py-16 sm:px-14 sm:py-20'>
+                    <div className='absolute -top-32 -right-32 -z-10 h-96 w-96 rounded-full bg-accent opacity-60 blur-[120px]' aria-hidden='true'></div>
+                    <div className='bg-grid-light absolute inset-0 -z-10' aria-hidden='true'></div>
 
-                    <p className='mb-6 flex items-center gap-3 font-mono text-xs tracking-[0.25em] text-zinc-500 uppercase'>
-                        <span className='text-accent'>06</span>
-                        <span className='h-px w-10 bg-zinc-700'></span>
+                    <p className='mb-6 flex items-center gap-3 font-mono text-xs tracking-[0.25em] text-white/60 uppercase'>
+                        <span className='text-white'>06</span>
+                        <span className='h-px w-10 bg-white/30'></span>
                         <span>{t('nav.contact')}</span>
                     </p>
 
                     <h2 className='max-w-3xl font-display text-4xl leading-tight font-bold tracking-tight text-white sm:text-6xl'>
-                        <span>{t('contact.title')}</span> <span className='text-gradient'>{t('contact.title-accent')}</span>
+                        <span>{t('contact.title')}</span> <span className='text-white/70'>{t('contact.title-accent')}</span>
                     </h2>
-                    <p className='mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400'>{t('contact.description')}</p>
+                    <p className='mt-6 max-w-2xl text-lg leading-relaxed text-white/75'>{t('contact.description')}</p>
 
-                    <a href={`mailto:${SOCIAL_LINKS.email}`} className='bg-gradient-brand group mt-10 inline-flex max-w-full items-center gap-3 rounded-full px-7 py-4 font-display text-base font-semibold text-white shadow-[0_10px_40px_-10px] shadow-accent/60 transition-transform hover:-translate-y-0.5 sm:text-lg'>
+                    <a href={`mailto:${SOCIAL_LINKS.email}`} className='group mt-10 inline-flex max-w-full items-center gap-3 rounded-full bg-white px-7 py-4 font-display text-base font-semibold text-accent-deep shadow-xl transition-transform hover:-translate-y-0.5 sm:text-lg'>
                         <span className='truncate'>{SOCIAL_LINKS.email}</span>
                         <ArrowRight className='h-5 w-5 flex-shrink-0 transition-transform group-hover:translate-x-1' />
                     </a>
 
-                    <ul className='mt-12 grid gap-4 border-t border-white/10 pt-8 text-sm text-zinc-400 sm:grid-cols-3'>
+                    <ul className='mt-12 grid gap-4 border-t border-white/20 pt-8 text-sm text-white/75 sm:grid-cols-3'>
                         <li>
                             <a href={SOCIAL_LINKS.linkedin} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 transition-colors hover:text-white'>
                                 <LinkedinIcon className='h-4 w-4' />

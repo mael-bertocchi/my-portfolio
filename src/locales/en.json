@@ -21,21 +21,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "status": "Currently in Seoul · Exchange year at Chung-Ang University",
     "role": "Software Engineer",
     "description": "I design, ship and run robust web applications, from architecture to production.",
     "location": "Seoul, South Korea",
     "download-cv": "Download my CV",
-    "contact-me": "Contact me",
-    "badge": {
-      "label": "Currently",
-      "value": "Co-Founder & CTO · SafeLedger"
-    },
-    "stats": {
-      "experiences": "professional experiences",
-      "projects": "shipped projects",
-      "languages": "working languages"
-    }
+    "contact-me": "Contact me"
   },
   "about": {
     "title": "About",

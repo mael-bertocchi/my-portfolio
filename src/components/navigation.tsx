@@ -68,23 +68,23 @@ function NavigationComponent(): Maybe<JSX.Element> {
     const isOpaque: boolean = isScrolled || isMenuOpen;
 
     return (
-        <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isOpaque ? 'border-b border-white/10 bg-ink-950/80 backdrop-blur-xl' : 'border-b border-transparent'}`}>
+        <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isOpaque ? 'border-b border-zinc-200 bg-paper/85 backdrop-blur-xl' : 'border-b border-transparent'}`}>
             <nav className='mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8' aria-label={t('nav.label')}>
                 {isHome ? (
                     <a href='#hero' onClick={closeMenu} className='font-display text-xl font-bold tracking-tight' aria-label={t('nav.home')}>
-                        <span className='text-gradient'>M</span><span className='text-white'>B</span><span className='text-accent'>.</span>
+                        <span className='text-gradient'>M</span><span className='text-zinc-900'>B</span><span className='text-accent'>.</span>
                     </a>
                 ) : (
                     <Link to='/' className='font-display text-xl font-bold tracking-tight' aria-label={t('nav.home')}>
-                        <span className='text-gradient'>M</span><span className='text-white'>B</span><span className='text-accent'>.</span>
+                        <span className='text-gradient'>M</span><span className='text-zinc-900'>B</span><span className='text-accent'>.</span>
                     </Link>
                 )}
 
                 {isHome && (
-                    <ul className='hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1 md:flex'>
+                    <ul className='hidden items-center gap-1 rounded-full border border-zinc-200 bg-white p-1 md:flex'>
                         {NAVIGATION_ITEMS.map((item: NavigationItem) => (
                             <li key={item.id}>
-                                <a href={`#${item.id}`} className='block rounded-full px-4 py-1.5 text-sm font-medium text-zinc-400 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                                <a href={`#${item.id}`} className='block rounded-full px-4 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900'>
                                     {t(item.labelKey)}
                                 </a>
                             </li>
@@ -93,13 +93,13 @@ function NavigationComponent(): Maybe<JSX.Element> {
                 )}
 
                 <div className='flex items-center gap-2'>
-                    <button type='button' onClick={toggleLanguage} className='flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 text-sm font-medium text-zinc-300 transition-colors hover:border-white/25 hover:text-white' aria-label={t('language.toggle')} title={isEnglish ? 'Français' : 'English'}>
+                    <button type='button' onClick={toggleLanguage} className='flex items-center gap-2 rounded-full border border-zinc-200 px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:border-zinc-400 hover:text-zinc-900' aria-label={t('language.toggle')} title={isEnglish ? 'Français' : 'English'}>
                         <Languages className='h-4 w-4' />
                         <span>{isEnglish ? 'FR' : 'EN'}</span>
                     </button>
 
                     {isHome && (
-                        <button type='button' onClick={toggleMenu} className='flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-zinc-300 md:hidden' aria-label={t(isMenuOpen ? 'nav.close-menu' : 'nav.open-menu')} aria-expanded={isMenuOpen} aria-controls='mobile-menu'>
+                        <button type='button' onClick={toggleMenu} className='flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 md:hidden' aria-label={t(isMenuOpen ? 'nav.close-menu' : 'nav.open-menu')} aria-expanded={isMenuOpen} aria-controls='mobile-menu'>
                             {isMenuOpen ? <X className='h-4 w-4' /> : <Menu className='h-4 w-4' />}
                         </button>
                     )}
@@ -110,7 +110,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
                 <ul id='mobile-menu' className='mx-auto flex max-w-6xl flex-col gap-1 px-5 pb-6 sm:px-8 md:hidden'>
                     {NAVIGATION_ITEMS.map((item: NavigationItem) => (
                         <li key={item.id}>
-                            <a href={`#${item.id}`} onClick={closeMenu} className='block rounded-xl px-4 py-3 font-display text-lg font-medium text-zinc-300 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                            <a href={`#${item.id}`} onClick={closeMenu} className='block rounded-xl px-4 py-3 font-display text-lg font-medium text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-900'>
                                 {t(item.labelKey)}
                             </a>
                         </li>

@@ -6,31 +6,15 @@
     --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
     --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
 
-    --color-ink-950: #08080a;
-    --color-ink-900: #0f0f13;
-    --color-ink-800: #17171d;
-    --color-ink-700: #23232b;
+    --color-paper: #fbfaf8;
 
-    --color-accent: #ff3b5c;
+    --color-accent: #d62845;
     --color-accent-deep: #821b29;
-    --color-ember: #ff8a3d;
-
-    --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
-
-    @keyframes pulse-dot {
-        0%, 100% {
-            opacity: 1;
-            transform: scale(1);
-        }
-        50% {
-            opacity: 0.4;
-            transform: scale(0.8);
-        }
-    }
+    --color-ember: #f2733a;
 }
 
 @utility text-gradient {
-    background-image: linear-gradient(100deg, var(--color-accent) 0%, var(--color-ember) 100%);
+    background-image: linear-gradient(100deg, var(--color-accent-deep) 0%, var(--color-accent) 55%, var(--color-ember) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -42,34 +26,47 @@
 
 @utility bg-grid {
     background-image:
-        linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+        linear-gradient(to right, rgb(0 0 0 / 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(0 0 0 / 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+@utility bg-grid-light {
+    background-image:
+        linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
     background-size: 64px 64px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
 }
 
 @utility card-surface {
-    background-color: rgb(255 255 255 / 0.03);
-    border: 1px solid rgb(255 255 255 / 0.08);
+    background-color: white;
+    border: 1px solid var(--color-zinc-200);
     border-radius: 1.5rem;
-    transition: border-color 300ms ease, background-color 300ms ease, transform 300ms ease;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(0 0 0 / 0.08);
+    transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+
+    &:hover {
+        box-shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 20px 40px -16px rgb(0 0 0 / 0.16);
+    }
 }
 
 @layer base {
     :root {
-        color-scheme: dark;
+        color-scheme: light;
     }
 
     html {
         scroll-behavior: smooth;
         overflow-x: hidden;
-        background-color: var(--color-ink-950);
+        background-color: var(--color-paper);
     }
 
     body {
         overflow-x: hidden;
-        background-color: var(--color-ink-950);
-        color: var(--color-zinc-100);
+        background-color: var(--color-paper);
+        color: var(--color-zinc-900);
         font-family: var(--font-sans);
         -webkit-font-smoothing: antialiased;
     }

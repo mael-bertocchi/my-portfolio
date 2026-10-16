@@ -17,10 +17,10 @@ function NotFoundPage(): JSX.Element {
 
             <div className='max-w-2xl text-center'>
                 <p className='text-gradient font-display text-8xl font-bold sm:text-9xl'>404</p>
-                <h1 className='mt-6 font-display text-3xl font-bold text-white sm:text-5xl'>
+                <h1 className='mt-6 font-display text-3xl font-bold text-zinc-900 sm:text-5xl'>
                     <span>{t('notfound.title')}</span> <span className='text-gradient'>{t('notfound.title-accent')}</span>
                 </h1>
-                <p className='mt-6 text-lg text-zinc-400'>{t('notfound.description')}</p>
+                <p className='mt-6 text-lg text-zinc-600'>{t('notfound.description')}</p>
                 <Link to='/' className='bg-gradient-brand mt-10 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5'>
                     <ArrowLeft className='h-4 w-4' />
                     <span>{t('notfound.back-home')}</span>

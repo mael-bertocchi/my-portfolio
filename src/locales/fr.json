@@ -21,21 +21,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "status": "Actuellement à Séoul · Échange à Chung-Ang University",
     "role": "Ingénieur Logiciel",
     "description": "Je conçois, déploie et fais vivre des applications web robustes, de l'architecture à la mise en production.",
     "location": "Séoul, Corée du Sud",
     "download-cv": "Télécharger mon CV",
-    "contact-me": "Me contacter",
-    "badge": {
-      "label": "Actuellement",
-      "value": "Co-fondateur & CTO · SafeLedger"
-    },
-    "stats": {
-      "experiences": "expériences professionnelles",
-      "projects": "projets livrés",
-      "languages": "langues de travail"
-    }
+    "contact-me": "Me contacter"
   },
   "about": {
     "title": "À propos",
