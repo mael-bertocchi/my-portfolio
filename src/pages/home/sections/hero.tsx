@@ -15,12 +15,12 @@ function HomeHeroSection(): Maybe<JSX.Element> {
     const cvFileName: string = i18n.language.startsWith('fr') ? 'cv-mael-bertocchi-fr.pdf' : 'cv-mael-bertocchi-en.pdf';
 
     return (
-        <section id='hero' className='relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 lg:pb-24'>
+        <section id='hero' className='relative isolate overflow-hidden pt-28 pb-20 sm:pt-40 lg:pb-24'>
             <div className='bg-grid absolute inset-0 -z-10' aria-hidden='true'></div>
             <div className='absolute -top-40 left-1/2 -z-10 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-accent/10 blur-[140px]' aria-hidden='true'></div>
             <div className='absolute top-1/3 -right-40 -z-10 h-[28rem] w-[28rem] rounded-full bg-ember/10 blur-[120px]' aria-hidden='true'></div>
 
-            <div className='mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.4fr_1fr]'>
+            <div className='mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-8 lg:gap-14 lg:grid-cols-[1.4fr_1fr]'>
                 <div>
                     <h1 className='font-display text-5xl leading-[1.02] font-bold tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl'>
                         <span className='block'>Maël Bertocchi</span>
@@ -61,7 +61,7 @@ function HomeHeroSection(): Maybe<JSX.Element> {
                     </div>
                 </div>
 
-                <div className='relative mx-auto w-full max-w-sm lg:max-w-none'>
+                <div className='relative order-first mx-auto w-full max-w-[15rem] sm:max-w-xs lg:order-none lg:max-w-none'>
                     <div className='bg-gradient-brand absolute -inset-px rounded-[2.5rem] opacity-25 blur-2xl' aria-hidden='true'></div>
                     <div className='bg-gradient-brand relative rounded-[2.5rem] p-px'>
                         <div className='overflow-hidden rounded-[calc(2.5rem-1px)] bg-zinc-100'>
