@@ -4,10 +4,6 @@
     "name": "English",
     "toggle": "Switch language"
   },
-  "common": {
-    "current": "Current",
-    "in-progress": "In progress"
-  },
   "nav": {
     "label": "Main navigation",
     "home": "Home",
@@ -32,7 +28,7 @@
     "title-accent": "me",
     "statement": "I build useful, solid, production-ready products, always keeping the user at the center.",
     "description": [
-      "I am a passionate and motivated computer science student, always ready to take on new challenges and keep learning. I've had the opportunity to work on a variety of projects, which has helped me develop both my technical skills and my ability to collaborate effectively, even under pressure.",
+      "I am a passionate and motivated engineering student, always ready to take on new challenges and keep learning. I've had the opportunity to work on a variety of projects, which has helped me develop both my technical skills and my ability to collaborate effectively, even under pressure.",
       "I'm particularly passionate about web and software development. I love discovering new technologies, experimenting, and sharing my knowledge with others so we can grow together.",
       "A fourth-year student in Epitech's Grande École Program, I am currently spending an academic exchange year at Chung-Ang University in Seoul. Alongside my studies, I lead the technical development of SafeLedger, the startup I co-founded."
     ],
@@ -92,7 +88,7 @@
     "subtitle": "My professional journey and contributions to the development world",
     "jobs": {
       "safeledger": {
-        "title": "Co-Founder & CTO",
+        "title": "Co-Founder",
         "company": "SafeLedger",
         "location": "France · Hybrid",
         "period": "February 2026 - Present",
@@ -104,7 +100,6 @@
         ],
         "tags": [
           "Co-founding",
-          "CTO",
           "Architecture",
           "Mobile & Web",
           "DevOps"
@@ -135,7 +130,7 @@
         "company": "Epitech",
         "location": "Mulhouse, France",
         "period": "February 2025 - March 2026",
-        "description": "Mentoring and technical support for computer science students, focusing on adapting teaching methods to individual student needs.",
+        "description": "Mentoring and technical support for Epitech students, focusing on adapting teaching methods to individual student needs.",
         "tasks": [
           "Supervision and organization of educational activities and exams.",
           "Technical and pedagogical assistance with projects.",
@@ -243,8 +238,8 @@
     "subtitle": "My academic background and specialized training",
     "schools": {
       "chung-ang": {
-        "degree": "Undergraduate Exchange Year, Computer Science",
-        "school": "Chung-Ang University (중앙대학교)",
+        "degree": "Exchange Year in Software Engineering",
+        "school": "Chung-Ang University",
         "location": "Seoul, South Korea",
         "period": "August 2026 - August 2027",
         "description": "A transformative academic year in Seoul, combining intensive studies in software engineering with cultural and linguistic immersion, while developing cross-cultural communication skills, a global mindset, and technical competencies suited for international engineering teams."

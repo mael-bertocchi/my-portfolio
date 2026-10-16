@@ -4,10 +4,6 @@
     "name": "Français",
     "toggle": "Changer de langue"
   },
-  "common": {
-    "current": "En poste",
-    "in-progress": "En cours"
-  },
   "nav": {
     "label": "Navigation principale",
     "home": "Accueil",
@@ -32,7 +28,7 @@
     "title-accent": "de moi",
     "statement": "Je construis des produits utiles, solides et prêts pour la production, en gardant toujours l'utilisateur au centre.",
     "description": [
-      "Je suis un étudiant en informatique passionné et motivé, toujours prêt à relever de nouveaux défis et à apprendre en continu. J'ai eu l'occasion de travailler sur des projets variés, ce qui m'a permis de développer autant mes compétences techniques que ma capacité à collaborer efficacement, même sous pression.",
+      "Je suis un étudiant ingénieur passionné et motivé, toujours prêt à relever de nouveaux défis et à apprendre en continu. J'ai eu l'occasion de travailler sur des projets variés, ce qui m'a permis de développer autant mes compétences techniques que ma capacité à collaborer efficacement, même sous pression.",
       "Le développement web et logiciel me passionne particulièrement. J'aime découvrir de nouvelles technologies, expérimenter, et partager mes connaissances avec les autres pour qu'on progresse ensemble.",
       "Étudiant en quatrième année du Programme Grande École d'Epitech, je passe actuellement une année d'échange académique à Chung-Ang University, à Séoul. En parallèle, je pilote le développement technique de SafeLedger, la startup que j'ai cofondée."
     ],
@@ -92,7 +88,7 @@
     "subtitle": "Mon parcours professionnel et mes contributions au monde du développement",
     "jobs": {
       "safeledger": {
-        "title": "Co-fondateur & CTO",
+        "title": "Co-fondateur",
         "company": "SafeLedger",
         "location": "France · Hybride",
         "period": "Février 2026 - Aujourd'hui",
@@ -104,7 +100,6 @@
         ],
         "tags": [
           "Co-fondation",
-          "CTO",
           "Architecture",
           "Mobile & Web",
           "DevOps"
@@ -135,7 +130,7 @@
         "company": "Epitech",
         "location": "Mulhouse, France",
         "period": "Février 2025 - Mars 2026",
-        "description": "Mentorat et soutien technique pour les étudiants en informatique, avec un accent sur l'adaptation des méthodes d'enseignement aux besoins individuels des étudiants.",
+        "description": "Mentorat et soutien technique pour les étudiants d'Epitech, avec un accent sur l'adaptation des méthodes d'enseignement aux besoins individuels des étudiants.",
         "tasks": [
           "Supervision et encadrement d'activités éducatives et d'examens.",
           "Assistance technique et pédagogique sur les projets.",
@@ -243,8 +238,8 @@
     "subtitle": "Mon parcours académique et mes formations spécialisées",
     "schools": {
       "chung-ang": {
-        "degree": "Année d'échange en informatique",
-        "school": "Chung-Ang University (중앙대학교)",
+        "degree": "Année d'échange en ingénierie logicielle",
+        "school": "Chung-Ang University",
         "location": "Séoul, Corée du Sud",
         "period": "Août 2026 - Août 2027",
         "description": "Une année académique à Séoul qui combine des études intensives en génie logiciel avec une immersion culturelle et linguistique, pour développer une communication interculturelle, une ouverture internationale et des compétences techniques adaptées aux équipes d'ingénierie internationales."

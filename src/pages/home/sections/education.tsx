@@ -33,12 +33,6 @@ function HomeEducationSection(): Maybe<JSX.Element> {
                                     <MapPin className='h-3.5 w-3.5' />
                                     <span>{t(`education.schools.${item.key}.location`)}</span>
                                 </span>
-                                {item.current && (
-                                    <span className='inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600'>
-                                        <span className='h-1.5 w-1.5 rounded-full bg-emerald-500'></span>
-                                        <span>{t('common.in-progress')}</span>
-                                    </span>
-                                )}
                             </p>
 
                             <p className='mt-5 leading-relaxed text-zinc-600'>{t(`education.schools.${item.key}.description`)}</p>

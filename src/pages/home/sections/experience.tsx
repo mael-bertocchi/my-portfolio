@@ -25,16 +25,10 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                         <li key={item.key} className='reveal relative grid gap-4 md:grid-cols-[12rem_1fr] md:gap-12'>
                             <div className='hidden pt-7 text-right md:block'>
                                 <p className='font-mono text-xs tracking-wide text-zinc-500 uppercase'>{t(`experience.jobs.${item.key}.period`)}</p>
-                                {item.current && (
-                                    <p className='mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600'>
-                                        <span className='h-1.5 w-1.5 rounded-full bg-emerald-500'></span>
-                                        <span>{t('common.current')}</span>
-                                    </p>
-                                )}
                             </div>
 
                             <article className='card-surface group relative p-6 hover:border-zinc-300 sm:p-8'>
-                                <span className={`absolute top-8 -left-[1.875rem] hidden h-3 w-3 rounded-full ring-4 ring-paper md:block ${item.current ? 'bg-accent' : 'bg-zinc-300'}`} aria-hidden='true'></span>
+                                <span className='absolute top-8 -left-[1.875rem] hidden h-3 w-3 rounded-full bg-accent ring-4 ring-paper md:block' aria-hidden='true'></span>
 
                                 <div className='flex items-start gap-4'>
                                     <img src={item.logo} alt='' className='h-12 w-12 flex-shrink-0 rounded-xl border border-zinc-200 bg-white object-cover' />

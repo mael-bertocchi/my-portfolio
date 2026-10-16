@@ -27,7 +27,6 @@ export interface ExpertiseItem {
 export interface ExperienceItem {
     key: string; /*!< Translation key under 'experience.jobs' */
     logo: string; /*!< Path of the company logo */
-    current: boolean; /*!< Whether the position is still held */
 }
 
 /**
@@ -37,7 +36,6 @@ export interface ExperienceItem {
 export interface EducationItem {
     key: string; /*!< Translation key under 'education.schools' */
     logo: string; /*!< Path of the school logo */
-    current: boolean; /*!< Whether the program is in progress */
 }
 
 /**
@@ -97,10 +95,10 @@ export const EXPERTISE: ExpertiseItem[] = [
  * @description Professional experiences, most recent first
  */
 export const EXPERIENCES: ExperienceItem[] = [
-    { key: 'safeledger', logo: '/logos/safeledger.webp', current: true },
-    { key: 'jet-aviation', logo: '/logos/jet-aviation.webp', current: false },
-    { key: 'epitech', logo: '/logos/epitech.webp', current: false },
-    { key: 'cap-vision', logo: '/logos/cap-vision.webp', current: false },
+    { key: 'safeledger', logo: '/logos/safeledger.webp' },
+    { key: 'jet-aviation', logo: '/logos/jet-aviation.webp' },
+    { key: 'epitech', logo: '/logos/epitech.webp' },
+    { key: 'cap-vision', logo: '/logos/cap-vision.webp' },
 ];
 
 /**
@@ -108,9 +106,9 @@ export const EXPERIENCES: ExperienceItem[] = [
  * @description Academic programs, most recent first
  */
 export const EDUCATION: EducationItem[] = [
-    { key: 'chung-ang', logo: '/logos/chung-ang.webp', current: true },
-    { key: 'epitech', logo: '/logos/epitech.webp', current: true },
-    { key: 'ionis-stm', logo: '/logos/ionis-stm.webp', current: false },
+    { key: 'chung-ang', logo: '/logos/chung-ang.webp' },
+    { key: 'epitech', logo: '/logos/epitech.webp' },
+    { key: 'ionis-stm', logo: '/logos/ionis-stm.webp' },
 ];
 
 /**
