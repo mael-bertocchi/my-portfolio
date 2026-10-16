@@ -62,7 +62,7 @@
         ]
       },
       "systems": {
-        "title": "Programmes C, C++ & Python",
+        "title": "Programmation système & automatisation",
         "value": "Des programmes performants et fiables, au plus près de la machine quand il le faut.",
         "outcomes": [
           "Gestion fine de la mémoire et des performances",
@@ -71,7 +71,7 @@
         ]
       },
       "data": {
-        "title": "Données & ORM",
+        "title": "Données",
         "value": "Des modèles de données solides, choisis selon l'usage, et un accès aux données typé de bout en bout.",
         "outcomes": [
           "Conception de schémas relationnels et documentaires",

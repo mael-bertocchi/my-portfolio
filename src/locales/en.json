@@ -62,7 +62,7 @@
         ]
       },
       "systems": {
-        "title": "C, C++ & Python programs",
+        "title": "Systems programming & automation",
         "value": "Fast and reliable programs, close to the metal when it matters.",
         "outcomes": [
           "Fine-grained memory and performance management",
@@ -71,7 +71,7 @@
         ]
       },
       "data": {
-        "title": "Data & ORM",
+        "title": "Data",
         "value": "Solid data models picked for the use case, with type-safe data access end to end.",
         "outcomes": [
           "Relational and document schema design",
