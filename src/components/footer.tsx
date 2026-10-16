@@ -1,6 +1,4 @@
-import { SOCIAL_LINKS } from '@/data/portfolio';
 import type { Maybe } from '@/models';
-import { GithubIcon, LinkedinIcon } from '@components/brand-icons';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router';
@@ -13,7 +11,7 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 /**
  * @function FooterComponent
- * @description Renders the footer of the website, with copyright information, social links and a link to the legal notice page (or back home outside of it)
+ * @description Renders the footer of the website, with copyright information and a link to the legal notice page (or back home outside of it)
  */
 function FooterComponent(): Maybe<JSX.Element> {
     const { t } = useTranslation();
@@ -25,17 +23,9 @@ function FooterComponent(): Maybe<JSX.Element> {
         <footer className='border-t border-zinc-200 bg-paper'>
             <div className='mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row sm:px-8'>
                 <p className='text-sm text-zinc-500'>© {CURRENT_YEAR} Maël Bertocchi. <span>{t('footer.rights')}</span></p>
-                <div className='flex items-center gap-5'>
-                    <a href={SOCIAL_LINKS.github} target='_blank' rel='noopener noreferrer' className='text-zinc-500 transition-colors hover:text-zinc-900' aria-label='GitHub'>
-                        <GithubIcon className='h-4 w-4' />
-                    </a>
-                    <a href={SOCIAL_LINKS.linkedin} target='_blank' rel='noopener noreferrer' className='text-zinc-500 transition-colors hover:text-zinc-900' aria-label='LinkedIn'>
-                        <LinkedinIcon className='h-4 w-4' />
-                    </a>
-                    <Link to={isHome ? '/legal' : '/'} className='text-sm text-zinc-500 transition-colors hover:text-zinc-900'>
-                        {isHome ? t('footer.legal-notice') : t('legal.back-to-home')}
-                    </Link>
-                </div>
+                <Link to={isHome ? '/legal' : '/'} className='text-sm text-zinc-500 transition-colors hover:text-zinc-900'>
+                    {isHome ? t('footer.legal-notice') : t('legal.back-to-home')}
+                </Link>
             </div>
         </footer>
     );

@@ -1,7 +1,7 @@
 import { SOCIAL_LINKS } from '@/data/portfolio';
 import type { Maybe } from '@/models';
 import { GithubIcon, LinkedinIcon } from '@components/brand-icons';
-import { ArrowRight, Download, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Download, Mail } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -29,11 +29,6 @@ function HomeHeroSection(): Maybe<JSX.Element> {
 
                     <p className='mt-7 max-w-xl text-lg leading-relaxed text-zinc-600 sm:text-xl'>
                         {t('hero.description')}
-                    </p>
-
-                    <p className='mt-6 flex items-center gap-2 text-sm text-zinc-500'>
-                        <MapPin className='h-4 w-4 text-accent' />
-                        <span>{t('hero.location')}</span>
                     </p>
 
                     <div className='mt-10 flex flex-col gap-3 sm:flex-row'>
