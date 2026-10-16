@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM caddy:alpine
+FROM caddy:2-alpine
 
 # Copy the built files to Caddy's web root
 COPY --from=builder /app/dist /usr/share/caddy
