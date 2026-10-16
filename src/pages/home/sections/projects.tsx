@@ -1,5 +1,6 @@
 import type { Maybe } from '@/models';
-import { Calendar, ExternalLink, Github, Lock } from 'lucide-react';
+import { GithubIcon } from '@components/brand-icons';
+import { Calendar, ExternalLink, Lock } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -156,7 +157,7 @@ function HomeProjectSection(): Maybe<JSX.Element> {
 
                                 <div className='flex gap-3 pt-2'>
                                     <a href='https://github.com/mael-bertocchi/baselhack-2025' target='_blank' rel='noopener noreferrer' className='flex-1 inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-md'>
-                                        <Github className='w-4 h-4' />
+                                        <GithubIcon className='w-4 h-4' />
                                         <span>
                                             {t('projects.view-github')}
                                         </span>

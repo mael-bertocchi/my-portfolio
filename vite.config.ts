@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import sitemap from 'vite-plugin-sitemap';
@@ -5,6 +6,7 @@ import sitemap from 'vite-plugin-sitemap';
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     sitemap({
       hostname: 'https://mael-bertocchi.fr',
       changefreq: {

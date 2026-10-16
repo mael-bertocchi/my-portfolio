@@ -2,7 +2,7 @@ import type { Maybe } from '@/models';
 import { Globe } from 'lucide-react';
 import { useEffect, useState, type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router';
 
 /**
  * @interface NavigationItem

@@ -8,7 +8,7 @@ import LegalPage from '@pages/legal/legal'
 import NotFoundPage from '@pages/not-found/not-found'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
 
 /**
  * @function Layout

@@ -1,5 +1,6 @@
 import type { Maybe } from '@/models';
-import { Download, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from '@components/brand-icons';
+import { Download, Mail, MapPin } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -97,10 +98,10 @@ function HomeHeroSection(): Maybe<JSX.Element> {
                             </p>
                             <div className='flex gap-3 sm:gap-4 justify-center lg:justify-start'>
                                 <a href='https://github.com/mael-bertocchi' target='_blank' rel='noopener noreferrer' className='w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-gray-100 rounded-xl hover:bg-accent hover:text-white transition-all duration-200' aria-label='GitHub'>
-                                    <Github className='w-5 h-5 sm:w-6 sm:h-6' />
+                                    <GithubIcon className='w-5 h-5 sm:w-6 sm:h-6' />
                                 </a>
                                 <a href='https://www.linkedin.com/in/mael-bertocchi' target='_blank' rel='noopener noreferrer' className='w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-gray-100 rounded-xl hover:bg-accent hover:text-white transition-all duration-200' aria-label='LinkedIn'>
-                                    <Linkedin className='w-5 h-5 sm:w-6 sm:h-6' />
+                                    <LinkedinIcon className='w-5 h-5 sm:w-6 sm:h-6' />
                                 </a>
                                 <a href='mailto:contact@mael-bertocchi.fr' className='w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-gray-100 rounded-xl hover:bg-accent hover:text-white transition-all duration-200' aria-label='Email'>
                                     <Mail className='w-5 h-5 sm:w-6 sm:h-6' />

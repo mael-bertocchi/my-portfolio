@@ -1,6 +1,6 @@
 import type { Maybe } from '@/models';
 import { useEffect, type JSX } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 /**
  * @function ScrollManagerComponent
