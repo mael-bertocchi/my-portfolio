@@ -97,6 +97,7 @@ export const EXPERTISE: ExpertiseItem[] = [
  * @description Professional experiences, most recent first
  */
 export const EXPERIENCES: ExperienceItem[] = [
+    { key: 'safeledger', logo: '/logos/safeledger.webp', current: true },
     { key: 'jet-aviation', logo: '/logos/jet-aviation.webp', current: false },
     { key: 'epitech', logo: '/logos/epitech.webp', current: false },
     { key: 'cap-vision', logo: '/logos/cap-vision.webp', current: false },
@@ -107,6 +108,7 @@ export const EXPERIENCES: ExperienceItem[] = [
  * @description Academic programs, most recent first
  */
 export const EDUCATION: EducationItem[] = [
+    { key: 'chung-ang', logo: '/logos/chung-ang.webp', current: true },
     { key: 'epitech', logo: '/logos/epitech.webp', current: true },
     { key: 'ionis-stm', logo: '/logos/ionis-stm.webp', current: false },
 ];
@@ -116,8 +118,9 @@ export const EDUCATION: EducationItem[] = [
  * @description Showcased projects, most recent first
  */
 export const PROJECTS: ProjectItem[] = [
+    { key: 'walence', url: 'https://walence.com', linkKind: 'website' },
     { key: 'baselhack', url: 'https://github.com/mael-bertocchi/baselhack-2025', linkKind: 'github' },
     { key: 'hungry-no', url: 'https://www.hungryno.fr', linkKind: 'website' },
     { key: 'logeler-finka', url: 'https://www.logelerfinka.fr', linkKind: 'website' },
-    { key: 'france-equipement', url: undefined, linkKind: 'website' },
+    { key: 'france-equipement', url: 'https://www.franceequipement.fr/', linkKind: 'website' },
 ];

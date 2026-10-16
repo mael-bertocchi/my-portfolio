@@ -21,15 +21,15 @@
     "contact": "Contact"
   },
   "hero": {
-    "status": "Open to new opportunities",
+    "status": "Currently in Seoul · Exchange year at Chung-Ang University",
     "role": "Software Engineer",
     "description": "I design, ship and run robust web applications, from architecture to production.",
-    "location": "Mulhouse, Grand Est, France",
+    "location": "Seoul, South Korea",
     "download-cv": "Download my CV",
     "contact-me": "Contact me",
     "badge": {
-      "label": "Focus",
-      "value": "Web · DevOps · Systems"
+      "label": "Currently",
+      "value": "Co-Founder & CTO · SafeLedger"
     },
     "stats": {
       "experiences": "professional experiences",
@@ -44,7 +44,7 @@
     "description": [
       "I am a passionate and motivated computer science student, always ready to take on new challenges and keep learning. I've had the opportunity to work on a variety of projects, which has helped me develop both my technical skills and my ability to collaborate effectively, even under pressure.",
       "I'm particularly passionate about web and software development. I love discovering new technologies, experimenting, and sharing my knowledge with others so we can grow together.",
-      "Currently a third-year student at Epitech in the Grande École Program, I'm constantly looking for opportunities to apply what I've learned and contribute to real-world projects."
+      "A fourth-year student in Epitech's Grande École Program, I am currently spending an academic exchange year at Chung-Ang University in Seoul. Alongside my studies, I lead the technical development of SafeLedger, the startup I co-founded."
     ],
     "traits": {
       "motivated": "Motivated",
@@ -101,6 +101,25 @@
     "title-accent": "experience",
     "subtitle": "My professional journey and contributions to the development world",
     "jobs": {
+      "safeledger": {
+        "title": "Co-Founder & CTO",
+        "company": "SafeLedger",
+        "location": "France · Hybrid",
+        "period": "February 2026 - Present",
+        "description": "I lead the technical development of SafeLedger and its core solution, from design through to production. SafeLedger is a mobile and web application that lets individuals catalog, organize and protect their physical belongings along with the associated documents in a secure digital vault, and automatically generates an insurance claim file ready to be submitted to insurers.",
+        "tasks": [
+          "Responsible for the architecture and technology stack of the solution.",
+          "Owning deployment, production rollout and infrastructure monitoring.",
+          "Reached a functional beta, with the full scope tested and validated."
+        ],
+        "tags": [
+          "Co-founding",
+          "CTO",
+          "Architecture",
+          "Mobile & Web",
+          "DevOps"
+        ]
+      },
       "jet-aviation": {
         "title": "Software Engineer Intern",
         "company": "Jet Aviation",
@@ -169,6 +188,12 @@
     "view-website": "View website",
     "view-github": "View on GitHub",
     "items": {
+      "walence": {
+        "title": "Walence",
+        "period": "2026",
+        "description": "Design and development of the Walence Therapeutics website.",
+        "tags": []
+      },
       "baselhack": {
         "title": "BaselHack 2025",
         "period": "October 2025",
@@ -209,7 +234,7 @@
       },
       "france-equipement": {
         "title": "France Équipement",
-        "period": "April 2025 - Present",
+        "period": "April 2025 - July 2025",
         "description": "Development of an AI-powered chatbot to improve product search and customer support on an e-commerce website.",
         "tags": [
           "React",
@@ -227,6 +252,13 @@
     "title-accent": "education",
     "subtitle": "My academic background and specialized training",
     "schools": {
+      "chung-ang": {
+        "degree": "Undergraduate Exchange Year, Computer Science",
+        "school": "Chung-Ang University (중앙대학교)",
+        "location": "Seoul, South Korea",
+        "period": "August 2026 - August 2027",
+        "description": "A transformative academic year in Seoul, combining intensive studies in software engineering with cultural and linguistic immersion, while developing cross-cultural communication skills, a global mindset, and technical competencies suited for international engineering teams."
+      },
       "epitech": {
         "degree": "Expert in Information Technology",
         "school": "Epitech",
@@ -247,7 +279,7 @@
     "title": "A project, an opportunity?",
     "title-accent": "Let's talk.",
     "description": "Feel free to contact me to discuss professional opportunities or project collaborations.",
-    "location-value": "Mulhouse, France"
+    "location-value": "Seoul, South Korea"
   },
   "footer": {
     "rights": "All rights reserved.",

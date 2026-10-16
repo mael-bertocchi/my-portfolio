@@ -21,15 +21,15 @@
     "contact": "Contact"
   },
   "hero": {
-    "status": "Ouvert aux nouvelles opportunités",
+    "status": "Actuellement à Séoul · Échange à Chung-Ang University",
     "role": "Ingénieur Logiciel",
     "description": "Je conçois, déploie et fais vivre des applications web robustes, de l'architecture à la mise en production.",
-    "location": "Mulhouse, Grand Est, France",
+    "location": "Séoul, Corée du Sud",
     "download-cv": "Télécharger mon CV",
     "contact-me": "Me contacter",
     "badge": {
-      "label": "Spécialités",
-      "value": "Web · DevOps · Systèmes"
+      "label": "Actuellement",
+      "value": "Co-fondateur & CTO · SafeLedger"
     },
     "stats": {
       "experiences": "expériences professionnelles",
@@ -44,7 +44,7 @@
     "description": [
       "Je suis un étudiant en informatique passionné et motivé, toujours prêt à relever de nouveaux défis et à apprendre en continu. J'ai eu l'occasion de travailler sur des projets variés, ce qui m'a permis de développer autant mes compétences techniques que ma capacité à collaborer efficacement, même sous pression.",
       "Le développement web et logiciel me passionne particulièrement. J'aime découvrir de nouvelles technologies, expérimenter, et partager mes connaissances avec les autres pour qu'on progresse ensemble.",
-      "Actuellement étudiant en troisième année à Epitech dans le Programme Grande École, je suis constamment à la recherche d'opportunités pour mettre en pratique mes apprentissages et contribuer à des projets concrets."
+      "Étudiant en quatrième année du Programme Grande École d'Epitech, je passe actuellement une année d'échange académique à Chung-Ang University, à Séoul. En parallèle, je pilote le développement technique de SafeLedger, la startup que j'ai cofondée."
     ],
     "traits": {
       "motivated": "Motivé",
@@ -101,6 +101,25 @@
     "title-accent": "professionnelle",
     "subtitle": "Mon parcours professionnel et mes contributions au monde du développement",
     "jobs": {
+      "safeledger": {
+        "title": "Co-fondateur & CTO",
+        "company": "SafeLedger",
+        "location": "France · Hybride",
+        "period": "Février 2026 - Aujourd'hui",
+        "description": "Je dirige le développement technique de SafeLedger et de sa solution cœur, de la conception jusqu'à la production. SafeLedger est une application mobile et web qui permet aux particuliers de cataloguer, organiser et protéger leurs biens et les documents associés dans un coffre-fort numérique sécurisé, puis de générer automatiquement un dossier de sinistre prêt à être transmis aux assureurs.",
+        "tasks": [
+          "Responsable de l'architecture et de la stack technique de la solution.",
+          "Pilotage du déploiement, de la mise en production et de la supervision de l'infrastructure.",
+          "Bêta fonctionnelle atteinte, avec l'ensemble du périmètre testé et validé."
+        ],
+        "tags": [
+          "Co-fondation",
+          "CTO",
+          "Architecture",
+          "Mobile & Web",
+          "DevOps"
+        ]
+      },
       "jet-aviation": {
         "title": "Ingénieur Logiciel Stagiaire",
         "company": "Jet Aviation",
@@ -169,10 +188,16 @@
     "view-website": "Voir le site",
     "view-github": "Voir sur GitHub",
     "items": {
+      "walence": {
+        "title": "Walence",
+        "period": "2026",
+        "description": "Conception et développement du site web de Walence Therapeutics.",
+        "tags": []
+      },
       "baselhack": {
         "title": "BaselHack 2025",
         "period": "Octobre 2025",
-        "description": "Participation à la hackathon BaselHack 2025, développement d'un prototype d'application web en 48 heures permettant de recuillir des centaines d'opinions différentes puis d'utiliser l'IA pour faire émerger un consensus.",
+        "description": "Participation au hackathon BaselHack 2025 : développement en 48 heures d'un prototype d'application web permettant de recueillir des centaines d'opinions différentes, puis d'utiliser l'IA pour faire émerger un consensus.",
         "tags": [
           "Flutter",
           "Node.js",
@@ -209,8 +234,8 @@
       },
       "france-equipement": {
         "title": "France Équipement",
-        "period": "Avril 2025 - Aujourd'hui",
-        "description": "Développement d'un chatbot intelligent alimentée par l'IA pour améliorer la recherche de produits et l'assistance client sur un site e-commerce.",
+        "period": "Avril 2025 - Juillet 2025",
+        "description": "Développement d'un chatbot intelligent alimenté par l'IA pour améliorer la recherche de produits et l'assistance client sur un site e-commerce.",
         "tags": [
           "React",
           "Node.js",
@@ -227,6 +252,13 @@
     "title-accent": "académique",
     "subtitle": "Mon parcours académique et mes formations spécialisées",
     "schools": {
+      "chung-ang": {
+        "degree": "Année d'échange en informatique",
+        "school": "Chung-Ang University (중앙대학교)",
+        "location": "Séoul, Corée du Sud",
+        "period": "Août 2026 - Août 2027",
+        "description": "Une année académique à Séoul qui combine des études intensives en génie logiciel avec une immersion culturelle et linguistique, pour développer une communication interculturelle, une ouverture internationale et des compétences techniques adaptées aux équipes d'ingénierie internationales."
+      },
       "epitech": {
         "degree": "Expert en Technologie de l'Information",
         "school": "Epitech",
@@ -247,7 +279,7 @@
     "title": "Un projet, une opportunité ?",
     "title-accent": "Parlons-en.",
     "description": "N'hésitez pas à me contacter pour discuter d'opportunités professionnelles ou de collaboration sur des projets.",
-    "location-value": "Mulhouse, France"
+    "location-value": "Séoul, Corée du Sud"
   },
   "footer": {
     "rights": "Tous droits réservés.",
