@@ -1,4 +1,6 @@
+import { SOCIAL_LINKS } from '@/data/portfolio';
 import type { Maybe } from '@/models';
+import { GithubIcon, LinkedinIcon } from '@components/brand-icons';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router';
@@ -11,21 +13,27 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 /**
  * @function FooterComponent
- * @description Renders the footer of the website, which includes copyright information and a link to the legal notice page. The content and styling of the footer can be adjusted based on whether it is rendered on the legal notice page or not, using the 'isLegal' prop.
+ * @description Renders the footer of the website, with copyright information, social links and a link to the legal notice page (or back home outside of it)
  */
 function FooterComponent(): Maybe<JSX.Element> {
     const { t } = useTranslation();
     const { pathname } = useLocation();
 
-    const isLegalPage: boolean = pathname !== '/';
+    const isHome: boolean = pathname === '/';
 
     return (
-        <footer className='bg-gray-50 py-6'>
-            <div className='max-w-7xl mx-auto px-10 sm:px-14 md:px-18 lg:px-22'>
-                <div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
-                    <p className='text-sm text-gray-600'>© {CURRENT_YEAR} Maël Bertocchi. <span>{t('footer.rights')}</span></p>
-                    <Link to={isLegalPage ? '/' : '/legal'} className='text-sm text-gray-600 hover:text-accent transition-colors duration-200'>
-                        {isLegalPage ? t('legal.back-to-home') : t('footer.legal-notice')}
+        <footer className='border-t border-white/10 bg-ink-950'>
+            <div className='mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row sm:px-8'>
+                <p className='text-sm text-zinc-500'>© {CURRENT_YEAR} Maël Bertocchi. <span>{t('footer.rights')}</span></p>
+                <div className='flex items-center gap-5'>
+                    <a href={SOCIAL_LINKS.github} target='_blank' rel='noopener noreferrer' className='text-zinc-500 transition-colors hover:text-white' aria-label='GitHub'>
+                        <GithubIcon className='h-4 w-4' />
+                    </a>
+                    <a href={SOCIAL_LINKS.linkedin} target='_blank' rel='noopener noreferrer' className='text-zinc-500 transition-colors hover:text-white' aria-label='LinkedIn'>
+                        <LinkedinIcon className='h-4 w-4' />
+                    </a>
+                    <Link to={isHome ? '/legal' : '/'} className='text-sm text-zinc-500 transition-colors hover:text-white'>
+                        {isHome ? t('footer.legal-notice') : t('legal.back-to-home')}
                     </Link>
                 </div>
             </div>

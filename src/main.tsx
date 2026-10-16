@@ -17,7 +17,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router'
  */
 export function Layout(): JSX.Element {
     return (
-        <div className="font-sans text-gray-900">
+        <div className="min-h-screen bg-ink-950 font-sans text-zinc-100">
             <NavigationComponent />
             <ScrollManager />
             <Outlet />

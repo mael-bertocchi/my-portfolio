@@ -1,5 +1,21 @@
+import { translateList } from '@utils/translation';
 import { type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
+
+/**
+ * @constant LEGAL_SECTIONS
+ * @description Keys of the legal notice sections, in display order
+ */
+const LEGAL_SECTIONS: string[] = [
+    'publisher',
+    'hosting',
+    'intellectual-property',
+    'personal-data',
+    'cookies',
+    'external-links',
+    'liability',
+    'applicable-law',
+];
 
 /**
  * @function LegalPage
@@ -9,101 +25,29 @@ function LegalPage(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <div className="px-10 sm:px-14 md:px-18 lg:px-22 py-20 bg-gray-50 min-h-screen">
-            <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-16">
-                    <div className="inline-block relative">
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                            <span>{t('legal.title')}</span> <span className="text-accent">{t('legal.title-accent')}</span>
-                        </h1>
-                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent"></div>
-                    </div>
-                </div>
+        <main className='px-5 pt-36 pb-24 sm:px-8'>
+            <div className='mx-auto max-w-3xl'>
+                <h1 className='mb-14 font-display text-4xl font-bold tracking-tight text-white sm:text-6xl'>
+                    <span>{t('legal.title')}</span> <span className='text-gradient'>{t('legal.title-accent')}</span>
+                </h1>
 
-                <div className="prose prose-lg max-w-none">
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            1. {t('legal.sections.publisher.title')}
-                        </h2>
-                        <p className="text-gray-600">
-                            {t('legal.sections.publisher.content')}
-                        </p>
-                    </div>
-
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            2. {t('legal.sections.hosting.title')}
-                        </h2>
-                        <p className="text-gray-600">
-                            {t('legal.sections.hosting.content')}
-                        </p>
-                    </div>
-
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            3. {t('legal.sections.intellectual-property.title')}
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                            {t('legal.sections.intellectual-property.content.0')}
-                        </p>
-                        <p className="text-gray-600">
-                            {t('legal.sections.intellectual-property.content.1')}
-                        </p>
-                    </div>
-
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            4. {t('legal.sections.personal-data.title')}
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                            {t('legal.sections.personal-data.content.0')}
-                        </p>
-                        <p className="text-gray-600 mb-4">
-                            {t('legal.sections.personal-data.content.1')}
-                        </p>
-                    </div>
-
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            5. {t('legal.sections.cookies.title')}
-                        </h2>
-                        <p className="text-gray-600">
-                            {t('legal.sections.cookies.content')}
-                        </p>
-                    </div>
-
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            6. {t('legal.sections.external-links.title')}
-                        </h2>
-                        <p className="text-gray-600">
-                            {t('legal.sections.external-links.content')}
-                        </p>
-                    </div>
-
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            7. {t('legal.sections.liability.title')}
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                            {t('legal.sections.liability.content.0')}
-                        </p>
-                        <p className="text-gray-600">
-                            {t('legal.sections.liability.content.1')}
-                        </p>
-                    </div>
-
-                    <div className="mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                            8. {t('legal.sections.applicable-law.title')}
-                        </h2>
-                        <p className="text-gray-600">
-                            {t('legal.sections.applicable-law.content')}
-                        </p>
-                    </div>
+                <div className='space-y-10'>
+                    {LEGAL_SECTIONS.map((key: string, index: number) => (
+                        <section key={key}>
+                            <h2 className='mb-4 flex items-baseline gap-3 font-display text-xl font-bold text-white sm:text-2xl'>
+                                <span className='font-mono text-sm text-accent'>{String(index + 1).padStart(2, '0')}</span>
+                                <span>{t(`legal.sections.${key}.title`)}</span>
+                            </h2>
+                            <div className='space-y-4 leading-relaxed text-zinc-400'>
+                                {translateList(t, `legal.sections.${key}.content`).map((paragraph: string) => (
+                                    <p key={paragraph}>{paragraph}</p>
+                                ))}
+                            </div>
+                        </section>
+                    ))}
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

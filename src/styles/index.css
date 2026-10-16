@@ -1,74 +1,124 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/space-grotesk';
 @import 'tailwindcss';
 
 @theme {
-    --color-accent: #821b29;
+    --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+
+    --color-ink-950: #08080a;
+    --color-ink-900: #0f0f13;
+    --color-ink-800: #17171d;
+    --color-ink-700: #23232b;
+
+    --color-accent: #ff3b5c;
+    --color-accent-deep: #821b29;
+    --color-ember: #ff8a3d;
+
+    --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
+
+    @keyframes pulse-dot {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.4;
+            transform: scale(0.8);
+        }
+    }
 }
 
-:root {
-    color-scheme: light;
+@utility text-gradient {
+    background-image: linear-gradient(100deg, var(--color-accent) 0%, var(--color-ember) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+@utility bg-gradient-brand {
+    background-image: linear-gradient(120deg, var(--color-accent) 0%, var(--color-ember) 100%);
 }
 
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    background-color: rgb(249, 250, 251);
-    height: 100%;
+@utility bg-grid {
+    background-image:
+        linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
 }
 
-body {
-    position: relative;
-    overflow-x: hidden;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+@utility card-surface {
+    background-color: rgb(255 255 255 / 0.03);
+    border: 1px solid rgb(255 255 255 / 0.08);
+    border-radius: 1.5rem;
+    transition: border-color 300ms ease, background-color 300ms ease, transform 300ms ease;
 }
 
-[data-tooltip] {
-    position: relative;
-    cursor: pointer;
+@layer base {
+    :root {
+        color-scheme: dark;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        background-color: var(--color-ink-950);
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: var(--color-ink-950);
+        color: var(--color-zinc-100);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+        background-color: var(--color-accent);
+        color: white;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 3px;
+    }
+
+    section[id] {
+        scroll-margin-top: 5rem;
+    }
 }
 
-[data-tooltip]::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-8px);
-    padding: 8px 12px;
-    background-color: #1f2937;
-    color: white;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    border-radius: 6px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    z-index: 1000;
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .reveal {
+            animation: reveal linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 35%;
+        }
+    }
 }
 
-[data-tooltip]::after {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-2px);
-    border: 6px solid transparent;
-    border-top-color: #1f2937;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    z-index: 1000;
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-[data-tooltip]:hover::before,
-[data-tooltip]:hover::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
 }

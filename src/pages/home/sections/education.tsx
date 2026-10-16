@@ -1,5 +1,7 @@
+import { EDUCATION, type EducationItem } from '@/data/portfolio';
 import type { Maybe } from '@/models';
-import { Calendar, MapPin } from 'lucide-react';
+import SectionHeading from '@components/section-heading';
+import { MapPin } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -11,104 +13,37 @@ function HomeEducationSection(): Maybe<JSX.Element> {
     const { t } = useTranslation();
 
     return (
-        <section id='education' className='px-10 sm:px-14 md:px-18 lg:px-22 py-20 bg-gradient-to-b from-gray-50 to-white'>
-            <div className='max-w-7xl mx-auto'>
-                <div className='text-center mb-16'>
-                    <div className='inline-block relative'>
-                        <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4'>
-                            <span className='text-accent'>{t('education.title')}</span> <span>{t('education.title-accent')}</span>
-                        </h2>
-                        <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent'></div>
-                    </div>
-                    <p className='mt-6 text-lg text-gray-600 max-w-2xl mx-auto'>
-                        {t('education.subtitle')}
-                    </p>
-                </div>
+        <section id='education' className='relative py-24 sm:py-32'>
+            <div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent' aria-hidden='true'></div>
+            <div className='mx-auto max-w-6xl px-5 sm:px-8'>
+                <SectionHeading index='05' eyebrow={t('nav.education')} title={t('education.title')} accent={t('education.title-accent')} subtitle={t('education.subtitle')} />
 
-                <div className='max-w-5xl mx-auto space-y-8'>
-                    <div className='group relative'>
-                        <div className='bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-accent/20'>
-                            <div className='p-6 sm:p-8'>
-                                <div className='flex flex-col sm:flex-row items-start gap-6'>
-                                    <div className='flex-shrink-0 w-14 h-14 sm:w-18 sm:h-18 rounded-xl overflow-hidden shadow-md'>
-                                        <img src='/logos/epitech.webp' alt='Epitech Logo' className='w-full h-full object-cover' />
-                                    </div>
-
-                                    <div className='flex-1 min-w-0'>
-                                        <div className='flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4'>
-                                            <div>
-                                                <h3 className='text-xl sm:text-2xl font-bold text-gray-900 mb-2'>
-                                                    {t('education.schools.epitech.degree')}
-                                                </h3>
-                                                <p className='text-lg text-accent font-semibold mb-2'>
-                                                    {t('education.schools.epitech.school')}
-                                                </p>
-                                                <div className='flex items-center gap-2 text-sm text-gray-500'>
-                                                    <MapPin className='w-4 h-4 flex-shrink-0' />
-                                                    <span>
-                                                        {t('education.schools.epitech.location')}
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            <div className='inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-4 py-2 rounded-full border border-accent/20 whitespace-nowrap self-start'>
-                                                <Calendar className='w-4 h-4 flex-shrink-0' />
-                                                <span>
-                                                    {t('education.schools.epitech.period')}
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <p className='text-gray-600 leading-relaxed'>
-                                            {t('education.schools.epitech.description')}
-                                        </p>
-                                    </div>
-                                </div>
+                <div className='grid gap-5 lg:grid-cols-2'>
+                    {EDUCATION.map((item: EducationItem) => (
+                        <article key={item.key} className='card-surface reveal flex flex-col p-7 hover:border-white/20 hover:bg-white/[0.05] sm:p-8'>
+                            <div className='flex items-start justify-between gap-4'>
+                                <img src={item.logo} alt='' className='h-14 w-14 flex-shrink-0 rounded-2xl bg-white object-contain' />
+                                <p className='text-right font-mono text-xs tracking-wide text-zinc-500 uppercase'>{t(`education.schools.${item.key}.period`)}</p>
                             </div>
-                        </div>
-                    </div>
 
-                    <div className='group relative'>
-                        <div className='bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-accent/20'>
-                            <div className='p-6 sm:p-8'>
-                                <div className='flex flex-col sm:flex-row items-start gap-6'>
-                                    <div className='flex-shrink-0 w-14 h-14 sm:w-18 sm:h-18 rounded-xl overflow-hidden shadow-md'>
-                                        <img src='/logos/ionis-stm.webp' alt='Ionis-STM Logo' className='w-full h-full object-contain' />
-                                    </div>
+                            <h3 className='mt-6 font-display text-xl font-bold text-white sm:text-2xl'>{t(`education.schools.${item.key}.degree`)}</h3>
+                            <p className='mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-zinc-400'>
+                                <span className='font-semibold text-gradient'>{t(`education.schools.${item.key}.school`)}</span>
+                                <span className='inline-flex items-center gap-1'>
+                                    <MapPin className='h-3.5 w-3.5' />
+                                    <span>{t(`education.schools.${item.key}.location`)}</span>
+                                </span>
+                                {item.current && (
+                                    <span className='inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400'>
+                                        <span className='h-1.5 w-1.5 rounded-full bg-emerald-400'></span>
+                                        <span>{t('common.in-progress')}</span>
+                                    </span>
+                                )}
+                            </p>
 
-                                    <div className='flex-1 min-w-0'>
-                                        <div className='flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4'>
-                                            <div>
-                                                <h3 className='text-xl sm:text-2xl font-bold text-gray-900 mb-2'>
-                                                    {t('education.schools.ionis-stm.degree')}
-                                                </h3>
-                                                <p className='text-lg text-accent font-semibold mb-2'>
-                                                    {t('education.schools.ionis-stm.school')}
-                                                </p>
-                                                <div className='flex items-center gap-2 text-sm text-gray-500'>
-                                                    <MapPin className='w-4 h-4 flex-shrink-0' />
-                                                    <span>
-                                                        {t('education.schools.ionis-stm.location')}
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            <div className='inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-4 py-2 rounded-full border border-accent/20 whitespace-nowrap self-start'>
-                                                <Calendar className='w-4 h-4 flex-shrink-0' />
-                                                <span>
-                                                    {t('education.schools.ionis-stm.period')}
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <p className='text-gray-600 leading-relaxed'>
-                                            {t('education.schools.ionis-stm.description')}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            <p className='mt-5 leading-relaxed text-zinc-400'>{t(`education.schools.${item.key}.description`)}</p>
+                        </article>
+                    ))}
                 </div>
             </div>
         </section>

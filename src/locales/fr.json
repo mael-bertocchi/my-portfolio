@@ -2,31 +2,50 @@
   "language": {
     "id": "fr",
     "name": "Français",
-    "label": "Langue"
+    "toggle": "Changer de langue"
+  },
+  "common": {
+    "current": "En poste",
+    "in-progress": "En cours"
   },
   "nav": {
+    "label": "Navigation principale",
+    "home": "Accueil",
+    "open-menu": "Ouvrir le menu",
+    "close-menu": "Fermer le menu",
     "about": "À propos",
+    "expertise": "Expertise",
     "experience": "Expérience",
-    "education": "Éducation",
-    "skills": "Compétences",
     "projects": "Projets",
+    "education": "Éducation",
     "contact": "Contact"
   },
   "hero": {
+    "status": "Ouvert aux nouvelles opportunités",
     "role": "Ingénieur Logiciel",
-    "description": "Je conçois et développe des applications modernes et performantes.",
+    "description": "Je conçois, déploie et fais vivre des applications web robustes, de l'architecture à la mise en production.",
+    "location": "Mulhouse, Grand Est, France",
     "download-cv": "Télécharger mon CV",
     "contact-me": "Me contacter",
-    "find-me-on": "Me retrouver sur"
+    "badge": {
+      "label": "Spécialités",
+      "value": "Web · DevOps · Systèmes"
+    },
+    "stats": {
+      "experiences": "expériences professionnelles",
+      "projects": "projets livrés",
+      "languages": "langues de travail"
+    }
   },
   "about": {
     "title": "À propos",
     "title-accent": "de moi",
-    "description": {
-      "0": "Je suis un étudiant en informatique passionné et motivé, toujours prêt à relever de nouveaux défis et à apprendre en continu. J'ai eu l'occasion de travailler sur des projets variés, ce qui m'a permis de développer autant mes compétences techniques que ma capacité à collaborer efficacement, même sous pression.",
-      "1": "Le développement web et logiciel me passionne particulièrement. J'aime découvrir de nouvelles technologies, expérimenter, et partager mes connaissances avec les autres pour qu'on progresse ensemble.",
-      "2": "Actuellement étudiant en troisième année à Epitech dans le Programme Grande École, je suis constamment à la recherche d'opportunités pour mettre en pratique mes apprentissages et contribuer à des projets concrets."
-    },
+    "statement": "Je construis des produits utiles, solides et prêts pour la production, en gardant toujours l'utilisateur au centre.",
+    "description": [
+      "Je suis un étudiant en informatique passionné et motivé, toujours prêt à relever de nouveaux défis et à apprendre en continu. J'ai eu l'occasion de travailler sur des projets variés, ce qui m'a permis de développer autant mes compétences techniques que ma capacité à collaborer efficacement, même sous pression.",
+      "Le développement web et logiciel me passionne particulièrement. J'aime découvrir de nouvelles technologies, expérimenter, et partager mes connaissances avec les autres pour qu'on progresse ensemble.",
+      "Actuellement étudiant en troisième année à Epitech dans le Programme Grande École, je suis constamment à la recherche d'opportunités pour mettre en pratique mes apprentissages et contribuer à des projets concrets."
+    ],
     "traits": {
       "motivated": "Motivé",
       "team-spirit": "Esprit d'équipe",
@@ -34,11 +53,53 @@
       "learner": "Apprenant"
     }
   },
+  "expertise": {
+    "title": "Ce que",
+    "title-accent": "j'apporte",
+    "subtitle": "Plutôt qu'une liste d'outils, voici les domaines où je crée de la valeur, de la conception jusqu'à la production.",
+    "items": {
+      "web": {
+        "title": "Applications web full-stack",
+        "value": "Des produits web rapides, typés et maintenables, de l'interface utilisateur jusqu'à l'API.",
+        "outcomes": [
+          "Architecture front et back pensée pour évoluer avec le produit",
+          "Interfaces réactives, accessibles et soignées",
+          "APIs sécurisées, documentées et testées"
+        ]
+      },
+      "devops": {
+        "title": "DevOps & Cloud",
+        "value": "Du commit à la production : des déploiements automatisés, reproductibles et supervisés.",
+        "outcomes": [
+          "Conteneurisation et environnements reproductibles",
+          "Pipelines CI/CD et déploiements continus",
+          "Mise en production, hébergement et monitoring"
+        ]
+      },
+      "systems": {
+        "title": "Programmes C, C++ & Python",
+        "value": "Des programmes performants et fiables, au plus près de la machine quand il le faut.",
+        "outcomes": [
+          "Gestion fine de la mémoire et des performances",
+          "Outils, scripts et automatisations en Python",
+          "Code robuste, lisible et portable"
+        ]
+      },
+      "data": {
+        "title": "Données & ORM",
+        "value": "Des modèles de données solides, choisis selon l'usage, et un accès aux données typé de bout en bout.",
+        "outcomes": [
+          "Conception de schémas relationnels et documentaires",
+          "Accès aux données type-safe avec un ORM",
+          "Migrations maîtrisées et requêtes optimisées"
+        ]
+      }
+    }
+  },
   "experience": {
     "title": "Expérience",
     "title-accent": "professionnelle",
     "subtitle": "Mon parcours professionnel et mes contributions au monde du développement",
-    "key-contributions": "Contributions techniques clés :",
     "jobs": {
       "jet-aviation": {
         "title": "Ingénieur Logiciel Stagiaire",
@@ -46,11 +107,19 @@
         "location": "Bâle, Suisse",
         "period": "Avril 2026 - Août 2026",
         "description": "Lead technique sur le développement d'une plateforme interne d'automatisation des processus, un projet stratégique visant à améliorer la productivité au sein de Jet Aviation à l'échelle mondiale.",
-        "tasks": {
-          "0": "Conception d'un écosystème permettant aux utilisateurs autorisés de déployer des agents autonomes capables d'orchestrer des chaînes d'automatisation complexes sous une politique de permissions stricte.",
-          "1": "Architecture d'une solution full-stack scalable avec TypeScript et React pour garantir des performances optimales sous forte charge utilisateur.",
-          "2": "Pilotage du déploiement end-to-end sur Microsoft Azure pour un accès rapide, sécurisé et fluide à toutes les entités de Jet Aviation dans le monde."
-        }
+        "tasks": [
+          "Conception d'un écosystème permettant aux utilisateurs autorisés de déployer des agents autonomes capables d'orchestrer des chaînes d'automatisation complexes sous une politique de permissions stricte.",
+          "Architecture d'une solution full-stack scalable avec TypeScript et React pour garantir des performances optimales sous forte charge utilisateur.",
+          "Pilotage du déploiement end-to-end sur Microsoft Azure pour un accès rapide, sécurisé et fluide à toutes les entités de Jet Aviation dans le monde."
+        ],
+        "tags": [
+          "TypeScript",
+          "React",
+          "Azure",
+          "Cloud",
+          "Full-stack",
+          "AI Agents"
+        ]
       },
       "epitech": {
         "title": "Assistant Pédagogique",
@@ -58,16 +127,16 @@
         "location": "Mulhouse, France",
         "period": "Février 2025 - Mars 2026",
         "description": "Mentorat et soutien technique pour les étudiants en informatique, avec un accent sur l'adaptation des méthodes d'enseignement aux besoins individuels des étudiants.",
-        "tasks": {
-          "0": "Supervision et encadrement d'activités éducatives et d'examens.",
-          "1": "Assistance technique et pédagogique sur les projets.",
-          "2": "Adaptation des méthodes d'enseignement aux besoins individuels des étudiants."
-        },
-        "tags": {
-          "0": "Mentorat",
-          "1": "Pédagogie",
-          "2": "Support technique"
-        }
+        "tasks": [
+          "Supervision et encadrement d'activités éducatives et d'examens.",
+          "Assistance technique et pédagogique sur les projets.",
+          "Adaptation des méthodes d'enseignement aux besoins individuels des étudiants."
+        ],
+        "tags": [
+          "Mentorat",
+          "Pédagogie",
+          "Support technique"
+        ]
       },
       "cap-vision": {
         "title": "Ingénieur Logiciel Stagiaire",
@@ -75,12 +144,81 @@
         "location": "Rouffach, France",
         "period": "Juillet 2024 - Décembre 2024",
         "description": "Stage complet de 6 mois qui m'a permis de renforcer mes compétences techniques et interpersonnelles tout en acquérant une expérience de gestion de projet dans un environnement de développement professionnel.",
-        "tasks": {
-          "0": "Développement d'applications web avec Razor en C# et intégration de systèmes de paiement en ligne.",
-          "1": "Collaboration sur le développement d'applications mobiles avec Angular et Ionic.",
-          "2": "Création d'une extension d'automatisation de factures alimentée par l'IA pour Microsoft Dynamics 365 Business Central avec Azure Foundry.",
-          "3": "Mise en place de pipelines avec Azure DevOps pour l'intégration et le déploiement continus."
-        }
+        "tasks": [
+          "Développement d'applications web avec Razor en C# et intégration de systèmes de paiement en ligne.",
+          "Collaboration sur le développement d'applications mobiles avec Angular et Ionic.",
+          "Création d'une extension d'automatisation de factures alimentée par l'IA pour Microsoft Dynamics 365 Business Central avec Azure Foundry.",
+          "Mise en place de pipelines avec Azure DevOps pour l'intégration et le déploiement continus."
+        ],
+        "tags": [
+          "C#",
+          "Razor",
+          "Angular",
+          "Ionic",
+          "Azure DevOps",
+          "Business Central",
+          "IA"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Mes",
+    "title-accent": "projets",
+    "subtitle": "Découvrez les projets sur lesquels j'ai travaillé et les technologies que j'ai utilisées",
+    "view-website": "Voir le site",
+    "view-github": "Voir sur GitHub",
+    "items": {
+      "baselhack": {
+        "title": "BaselHack 2025",
+        "period": "Octobre 2025",
+        "description": "Participation à la hackathon BaselHack 2025, développement d'un prototype d'application web en 48 heures permettant de recuillir des centaines d'opinions différentes puis d'utiliser l'IA pour faire émerger un consensus.",
+        "tags": [
+          "Flutter",
+          "Node.js",
+          "Fastify",
+          "FastAPI",
+          "Mistral",
+          "MongoDB"
+        ]
+      },
+      "hungry-no": {
+        "title": "HungryNo",
+        "period": "Juin 2025 - Novembre 2025",
+        "description": "Site vitrine permettant à l'influenceur culinaire HungryNo de gérer et partager ses dernières découvertes gastronomiques et de publier des articles de blog.",
+        "tags": [
+          "React",
+          "Express",
+          "MongoDB",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      "logeler-finka": {
+        "title": "Logeler Finka",
+        "period": "Août 2024 - Septembre 2025",
+        "description": "Application web complète pour une compagnie de théâtre alsacienne. Infrastructure complète avec un systèmes avancés d'intégration et de déploiement continus.",
+        "tags": [
+          "React",
+          "Vite",
+          "Fastify",
+          "MongoDB",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      "france-equipement": {
+        "title": "France Équipement",
+        "period": "Avril 2025 - Aujourd'hui",
+        "description": "Développement d'un chatbot intelligent alimentée par l'IA pour améliorer la recherche de produits et l'assistance client sur un site e-commerce.",
+        "tags": [
+          "React",
+          "Node.js",
+          "FastAPI",
+          "Express",
+          "Mistral",
+          "MongoDB"
+        ]
       }
     }
   },
@@ -105,93 +243,10 @@
       }
     }
   },
-  "skills": {
-    "title": "Compétences",
-    "title-accent": "techniques",
-    "subtitle": "Technologies et outils que je maîtrise",
-    "categories": {
-      "languages": "Langages de programmation",
-      "frameworks": "Frameworks & Runtime",
-      "tools-methodologies": "Outils & Méthodologies",
-      "databases": "Base de données",
-      "devops-cloud": "DevOps & Cloud"
-    },
-    "tooltips": {
-      "javascript": "Langage de programmation polyvalent du web.",
-      "typescript": "Surensemble de JavaScript avec typage statique.",
-      "csharp": "Langage orienté objet pour l'écosystème Microsoft.",
-      "c": "Langage bas niveau utilisé pour les systèmes et performances.",
-      "python": "Langage polyvalent pour le scripting, la data et le web.",
-      "cplusplus": "Langage orienté performance et développement système.",
-      "html": "Langage de balisage pour structurer le contenu web.",
-      "css": "Langage de styles pour la mise en forme du web.",
-      "rust": "Langage moderne axé sur la sécurité et la performance.",
-      "bash": "Shell Unix et langage de scripting.",
-      "go": "Langage de programmation rapide et efficace pour le backend.",
-      "react": "Bibliothèque JavaScript pour interfaces web interactives.",
-      "angular": "Framework web complet pour applications dynamiques.",
-      "vite": "Bundler et serveur de développement rapide pour le frontend.",
-      "ionic": "Framework pour créer des applications mobiles hybrides.",
-      "node": "Environnement d'exécution JavaScript côté serveur.",
-      "fastify": "Framework web axé sur la performance.",
-      "razor": "Framework de templates pour applications .NET.",
-      "express": "Framework web minimaliste pour Node.js.",
-      "actix-web": "Framework web performant en Rust.",
-      "fastapi": "Framework web Python asynchrone et rapide.",
-      "mongodb": "Base de données NoSQL orientée documents.",
-      "postgresql": "Base de données relationnelle avancée et open-source.",
-      "mysql": "Système de gestion de bases de données relationnelles.",
-      "prisma": "Toolkit de base de données type-safe et ORM.",
-      "azure": "Plateforme cloud de Microsoft.",
-      "git": "Système de contrôle de version distribué.",
-      "github": "Plateforme d'hébergement de code et CI/CD.",
-      "azure-devops": "Plateforme DevOps et CI/CD de Microsoft.",
-      "jenkins": "Serveur d'intégration et de déploiement continu.",
-      "docker": "Outil de conteneurisation d'applications.",
-      "jira": "Outil de suivi de tickets et gestion agile.",
-      "vscode": "Éditeur de code léger, rapide et extensible.",
-      "visual-studio": "Environnement de développement complet pour .NET et C++.",
-      "zed": "Éditeur de code minimaliste et ultra-rapide."
-    }
-  },
-  "projects": {
-    "title": "Mes",
-    "title-accent": "projets",
-    "subtitle": "Découvrez les projets sur lesquels j'ai travaillé et les technologies que j'ai utilisées",
-    "view-website": "Voir le site",
-    "view-github": "Voir sur GitHub",
-    "technologies-used": "Technologies utilisées :",
-    "private-project": "Projet privé",
-    "items": {
-      "logeler-finka": {
-        "title": "Logeler Finka",
-        "period": "Août 2024 - Septembre 2025",
-        "description": "Application web complète pour une compagnie de théâtre alsacienne. Infrastructure complète avec un systèmes avancés d'intégration et de déploiement continus."
-      },
-      "hungry-no": {
-        "title": "HungryNo",
-        "period": "Juin 2025 - Novembre 2025",
-        "description": "Site vitrine permettant à l'influenceur culinaire HungryNo de gérer et partager ses dernières découvertes gastronomiques et de publier des articles de blog."
-      },
-      "baselhack": {
-        "title": "BaselHack 2025",
-        "period": "Octobre 2025",
-        "description": "Participation à la hackathon BaselHack 2025, développement d'un prototype d'application web en 48 heures permettant de recuillir des centaines d'opinions différentes puis d'utiliser l'IA pour faire émerger un consensus."
-      },
-      "france-equipement": {
-        "title": "France Équipement",
-        "period": "Avril 2025 - Aujourd'hui",
-        "description": "Développement d'un chatbot intelligent alimentée par l'IA pour améliorer la recherche de produits et l'assistance client sur un site e-commerce."
-      }
-    }
-  },
   "contact": {
-    "title": "Restons en",
-    "title-accent": "contact",
+    "title": "Un projet, une opportunité ?",
+    "title-accent": "Parlons-en.",
     "description": "N'hésitez pas à me contacter pour discuter d'opportunités professionnelles ou de collaboration sur des projets.",
-    "email": "Email",
-    "phone": "Téléphone",
-    "location": "Localisation",
     "location-value": "Mulhouse, France"
   },
   "footer": {
@@ -207,48 +262,57 @@
   "legal": {
     "title": "Mentions",
     "title-accent": "Légales",
-    "page-title": "Maël Bertocchi - Mentions Légales",
     "sections": {
       "publisher": {
         "title": "Éditeur du site",
-        "content": "Ce site est édité par Maël Bertocchi, ingénieur logiciel indépendant afin de présenter son portfolio professionnel."
+        "content": [
+          "Ce site est édité par Maël Bertocchi, ingénieur logiciel indépendant afin de présenter son portfolio professionnel."
+        ]
       },
       "hosting": {
         "title": "Hébergement",
-        "content": "Ce site est hébergé par OVH SAS, situé au 2 rue Kellermann, 59100 Roubaix, France. Contact : +33 9 72 10 10 07."
+        "content": [
+          "Ce site est hébergé par OVH SAS, situé au 2 rue Kellermann, 59100 Roubaix, France. Contact : +33 9 72 10 10 07."
+        ]
       },
       "intellectual-property": {
         "title": "Propriété intellectuelle",
-        "content": {
-          "0": "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.",
-          "1": "La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse de l'éditeur, conformément à l'article L.122-4 du Code de la Propriété Intellectuelle."
-        }
+        "content": [
+          "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.",
+          "La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse de l'éditeur, conformément à l'article L.122-4 du Code de la Propriété Intellectuelle."
+        ]
       },
       "personal-data": {
         "title": "Protection des données personnelles",
-        "content": {
-          "0": "Conformément au Règlement Général sur la Protection des Données et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.",
-          "1": "Ce site ne collecte aucune donnée personnelle sans votre consentement explicite. Les coordonnées présentes sur le site sont uniquement destinées à faciliter la prise de contact."
-        }
+        "content": [
+          "Conformément au Règlement Général sur la Protection des Données et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.",
+          "Ce site ne collecte aucune donnée personnelle sans votre consentement explicite. Les coordonnées présentes sur le site sont uniquement destinées à faciliter la prise de contact."
+        ]
       },
       "cookies": {
         "title": "Cookies",
-        "content": "Ce site n'utilise pas de cookies de suivi ou de collecte de données. Aucune information personnelle n'est stockée lors de votre navigation."
+        "content": [
+          "Ce site n'utilise pas de cookies de suivi ou de collecte de données. Aucune information personnelle n'est stockée lors de votre navigation."
+        ]
       },
       "external-links": {
         "title": "Liens hypertextes",
-        "content": "Le site peut contenir des liens hypertextes vers d'autres sites. L'éditeur n'est pas responsable du contenu de ces sites externes ni de leur politique de confidentialité."
+        "content": [
+          "Le site peut contenir des liens hypertextes vers d'autres sites. L'éditeur n'est pas responsable du contenu de ces sites externes ni de leur politique de confidentialité."
+        ]
       },
       "liability": {
         "title": "Limitation de responsabilité",
-        "content": {
-          "0": "L'éditeur s'efforce d'assurer au mieux l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, l'éditeur ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.",
-          "1": "En conséquence, l'éditeur décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site."
-        }
+        "content": [
+          "L'éditeur s'efforce d'assurer au mieux l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, l'éditeur ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.",
+          "En conséquence, l'éditeur décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site."
+        ]
       },
       "applicable-law": {
         "title": "Droit applicable",
-        "content": "Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents."
+        "content": [
+          "Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents."
+        ]
       }
     },
     "back-to-home": "Retour à l'accueil"

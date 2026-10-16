@@ -1,3 +1,4 @@
+import { ArrowLeft } from 'lucide-react';
 import { type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
@@ -10,27 +11,22 @@ function NotFoundPage(): JSX.Element {
     const { t } = useTranslation();
 
     return (
-        <div className="px-10 sm:px-14 md:px-18 lg:px-22 py-20 bg-gray-50 min-h-screen flex items-center justify-center">
-            <div className="max-w-4xl mx-auto text-center">
-                <div className="mb-8">
-                    <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-gray-200 mb-4">404</h1>
-                    <div className="inline-block relative mb-12">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-                            <span>{t('notfound.title')}</span> <span className="text-accent">{t('notfound.title-accent')}</span>
-                        </h2>
-                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent"></div>
-                    </div>
-                </div>
+        <main className='relative isolate flex min-h-screen items-center justify-center overflow-hidden px-5 py-32 sm:px-8'>
+            <div className='bg-grid absolute inset-0 -z-10' aria-hidden='true'></div>
+            <div className='absolute top-1/2 left-1/2 -z-10 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/20 blur-[140px]' aria-hidden='true'></div>
 
-                <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                    {t('notfound.description')}
-                </p>
-
-                <Link to="/" className="inline-block px-8 py-3 bg-accent text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
-                    {t('notfound.back-home')}
+            <div className='max-w-2xl text-center'>
+                <p className='text-gradient font-display text-8xl font-bold sm:text-9xl'>404</p>
+                <h1 className='mt-6 font-display text-3xl font-bold text-white sm:text-5xl'>
+                    <span>{t('notfound.title')}</span> <span className='text-gradient'>{t('notfound.title-accent')}</span>
+                </h1>
+                <p className='mt-6 text-lg text-zinc-400'>{t('notfound.description')}</p>
+                <Link to='/' className='bg-gradient-brand mt-10 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5'>
+                    <ArrowLeft className='h-4 w-4' />
+                    <span>{t('notfound.back-home')}</span>
                 </Link>
             </div>
-        </div>
+        </main>
     );
 }
 

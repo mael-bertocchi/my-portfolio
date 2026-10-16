@@ -2,31 +2,50 @@
   "language": {
     "id": "en",
     "name": "English",
-    "label": "Language"
+    "toggle": "Switch language"
+  },
+  "common": {
+    "current": "Current",
+    "in-progress": "In progress"
   },
   "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "open-menu": "Open menu",
+    "close-menu": "Close menu",
     "about": "About",
+    "expertise": "Expertise",
     "experience": "Experience",
-    "education": "Education",
-    "skills": "Skills",
     "projects": "Projects",
+    "education": "Education",
     "contact": "Contact"
   },
   "hero": {
+    "status": "Open to new opportunities",
     "role": "Software Engineer",
-    "description": "I design and build modern, high-performance applications.",
+    "description": "I design, ship and run robust web applications, from architecture to production.",
+    "location": "Mulhouse, Grand Est, France",
     "download-cv": "Download my CV",
     "contact-me": "Contact me",
-    "find-me-on": "Find me on"
+    "badge": {
+      "label": "Focus",
+      "value": "Web · DevOps · Systems"
+    },
+    "stats": {
+      "experiences": "professional experiences",
+      "projects": "shipped projects",
+      "languages": "working languages"
+    }
   },
   "about": {
     "title": "About",
     "title-accent": "me",
-    "description": {
-      "0": "I am a passionate and motivated computer science student, always ready to take on new challenges and keep learning. I've had the opportunity to work on a variety of projects, which has helped me develop both my technical skills and my ability to collaborate effectively, even under pressure.",
-      "1": "I'm particularly passionate about web and software development. I love discovering new technologies, experimenting, and sharing my knowledge with others so we can grow together.",
-      "2": "Currently a third-year student at Epitech in the Grande École Program, I'm constantly looking for opportunities to apply what I've learned and contribute to real-world projects."
-    },
+    "statement": "I build useful, solid, production-ready products, always keeping the user at the center.",
+    "description": [
+      "I am a passionate and motivated computer science student, always ready to take on new challenges and keep learning. I've had the opportunity to work on a variety of projects, which has helped me develop both my technical skills and my ability to collaborate effectively, even under pressure.",
+      "I'm particularly passionate about web and software development. I love discovering new technologies, experimenting, and sharing my knowledge with others so we can grow together.",
+      "Currently a third-year student at Epitech in the Grande École Program, I'm constantly looking for opportunities to apply what I've learned and contribute to real-world projects."
+    ],
     "traits": {
       "motivated": "Motivated",
       "team-spirit": "Team player",
@@ -34,11 +53,53 @@
       "learner": "Learner"
     }
   },
+  "expertise": {
+    "title": "What I",
+    "title-accent": "bring",
+    "subtitle": "Rather than a list of tools, here are the areas where I create value, from design all the way to production.",
+    "items": {
+      "web": {
+        "title": "Full-stack web applications",
+        "value": "Fast, typed and maintainable web products, from the user interface down to the API.",
+        "outcomes": [
+          "Front-end and back-end architecture built to grow with the product",
+          "Responsive, accessible and polished interfaces",
+          "Secure, documented and tested APIs"
+        ]
+      },
+      "devops": {
+        "title": "DevOps & Cloud",
+        "value": "From commit to production: automated, reproducible and monitored deployments.",
+        "outcomes": [
+          "Containerization and reproducible environments",
+          "CI/CD pipelines and continuous delivery",
+          "Production rollout, hosting and monitoring"
+        ]
+      },
+      "systems": {
+        "title": "C, C++ & Python programs",
+        "value": "Fast and reliable programs, close to the metal when it matters.",
+        "outcomes": [
+          "Fine-grained memory and performance management",
+          "Python tools, scripts and automation",
+          "Robust, readable and portable code"
+        ]
+      },
+      "data": {
+        "title": "Data & ORM",
+        "value": "Solid data models picked for the use case, with type-safe data access end to end.",
+        "outcomes": [
+          "Relational and document schema design",
+          "Type-safe data access with an ORM",
+          "Controlled migrations and optimized queries"
+        ]
+      }
+    }
+  },
   "experience": {
     "title": "Professional",
     "title-accent": "experience",
     "subtitle": "My professional journey and contributions to the development world",
-    "key-contributions": "Key technical contributions:",
     "jobs": {
       "jet-aviation": {
         "title": "Software Engineer Intern",
@@ -46,11 +107,19 @@
         "location": "Basel, Switzerland",
         "period": "April 2026 - August 2026",
         "description": "Technical lead on the development of an internal process automation platform, a strategic initiative aimed at boosting productivity across Jet Aviation entities worldwide.",
-        "tasks": {
-          "0": "Designed an ecosystem letting authorized users deploy autonomous agents capable of orchestrating complex automation chains under a strict permissions policy.",
-          "1": "Architected a scalable full-stack solution with TypeScript and React to ensure optimal performance under heavy user load.",
-          "2": "Owned the end-to-end deployment on Microsoft Azure for fast, secure, and seamless access across all Jet Aviation entities worldwide."
-        }
+        "tasks": [
+          "Designed an ecosystem letting authorized users deploy autonomous agents capable of orchestrating complex automation chains under a strict permissions policy.",
+          "Architected a scalable full-stack solution with TypeScript and React to ensure optimal performance under heavy user load.",
+          "Owned the end-to-end deployment on Microsoft Azure for fast, secure, and seamless access across all Jet Aviation entities worldwide."
+        ],
+        "tags": [
+          "TypeScript",
+          "React",
+          "Azure",
+          "Cloud",
+          "Full-stack",
+          "AI Agents"
+        ]
       },
       "epitech": {
         "title": "Teaching Assistant",
@@ -58,16 +127,16 @@
         "location": "Mulhouse, France",
         "period": "February 2025 - March 2026",
         "description": "Mentoring and technical support for computer science students, focusing on adapting teaching methods to individual student needs.",
-        "tasks": {
-          "0": "Supervision and organization of educational activities and exams.",
-          "1": "Technical and pedagogical assistance with projects.",
-          "2": "Adapting teaching methods to students' individual needs."
-        },
-        "tags": {
-          "0": "Mentoring",
-          "1": "Pedagogy",
-          "2": "Technical Support"
-        }
+        "tasks": [
+          "Supervision and organization of educational activities and exams.",
+          "Technical and pedagogical assistance with projects.",
+          "Adapting teaching methods to students' individual needs."
+        ],
+        "tags": [
+          "Mentoring",
+          "Pedagogy",
+          "Technical Support"
+        ]
       },
       "cap-vision": {
         "title": "Software Engineer Intern",
@@ -75,12 +144,81 @@
         "location": "Rouffach, France",
         "period": "July 2024 - December 2024",
         "description": "A full 6-month internship that allowed me to strengthen my technical and interpersonal skills while gaining project management experience in a professional development environment.",
-        "tasks": {
-          "0": "Developed web applications using Razor in C# and integrated online payment systems.",
-          "1": "Collaborated on mobile app development with Angular and Ionic.",
-          "2": "Created an AI-powered invoice automation extension for Microsoft Dynamics 365 Business Central using Azure Foundry.",
-          "3": "Implemented DevOps practices with Azure DevOps."
-        }
+        "tasks": [
+          "Developed web applications using Razor in C# and integrated online payment systems.",
+          "Collaborated on mobile app development with Angular and Ionic.",
+          "Created an AI-powered invoice automation extension for Microsoft Dynamics 365 Business Central using Azure Foundry.",
+          "Implemented DevOps practices with Azure DevOps."
+        ],
+        "tags": [
+          "C#",
+          "Razor",
+          "Angular",
+          "Ionic",
+          "Azure DevOps",
+          "Business Central",
+          "AI"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "My",
+    "title-accent": "projects",
+    "subtitle": "Discover the projects I've worked on and the technologies I've used",
+    "view-website": "View website",
+    "view-github": "View on GitHub",
+    "items": {
+      "baselhack": {
+        "title": "BaselHack 2025",
+        "period": "October 2025",
+        "description": "Participation in the BaselHack 2025 hackathon, developing a web app prototype in 48 hours to collect hundreds of opinions and use AI to generate consensus.",
+        "tags": [
+          "Flutter",
+          "Node.js",
+          "Fastify",
+          "FastAPI",
+          "Mistral",
+          "MongoDB"
+        ]
+      },
+      "hungry-no": {
+        "title": "HungryNo",
+        "period": "June 2025 - November 2025",
+        "description": "Showcase website allowing culinary influencer HungryNo to manage and share his latest gastronomic discoveries and publish blog articles.",
+        "tags": [
+          "React",
+          "Express",
+          "MongoDB",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      "logeler-finka": {
+        "title": "Logeler Finka",
+        "period": "August 2024 - September 2025",
+        "description": "Complete web application for an Alsatian theater company. Full infrastructure with advanced continuous integration and deployment systems.",
+        "tags": [
+          "React",
+          "Vite",
+          "Fastify",
+          "MongoDB",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      "france-equipement": {
+        "title": "France Équipement",
+        "period": "April 2025 - Present",
+        "description": "Development of an AI-powered chatbot to improve product search and customer support on an e-commerce website.",
+        "tags": [
+          "React",
+          "Node.js",
+          "FastAPI",
+          "Express",
+          "Mistral",
+          "MongoDB"
+        ]
       }
     }
   },
@@ -105,93 +243,10 @@
       }
     }
   },
-  "skills": {
-    "title": "Technical",
-    "title-accent": "skills",
-    "subtitle": "Technologies and tools I'm proficient with",
-    "categories": {
-      "languages": "Programming languages",
-      "frameworks": "Frameworks & Runtime",
-      "tools-methodologies": "Tools & Methodologies",
-      "databases": "Databases",
-      "devops-cloud": "DevOps & Cloud"
-    },
-    "tooltips": {
-      "javascript": "Versatile web programming language.",
-      "typescript": "Superset of JavaScript with static typing.",
-      "csharp": "Object-oriented language for the Microsoft ecosystem.",
-      "c": "Low-level language used for systems and performance.",
-      "python": "Versatile language for scripting, data, and web development.",
-      "cplusplus": "High-performance and system development language.",
-      "html": "Markup language for structuring web content.",
-      "css": "Style language for web design and layout.",
-      "rust": "Modern language focused on safety and performance.",
-      "bash": "Unix shell and scripting language.",
-      "go": "Fast and efficient programming language for backend development.",
-      "react": "JavaScript library for building interactive UIs.",
-      "angular": "Full web framework for dynamic applications.",
-      "vite": "Fast frontend bundler and development server.",
-      "ionic": "Framework for creating hybrid mobile apps.",
-      "node": "Server-side JavaScript runtime environment.",
-      "fastify": "High-performance web framework.",
-      "razor": "Template framework for .NET applications.",
-      "express": "Minimalist web framework for Node.js.",
-      "actix-web": "High-performance web framework for Rust.",
-      "fastapi": "Asynchronous and fast Python web framework.",
-      "mongodb": "Document-oriented NoSQL database.",
-      "postgresql": "Advanced open-source relational database.",
-      "mysql": "Relational database management system.",
-      "prisma": "Type-safe database toolkit and ORM.",
-      "azure": "Microsoft's cloud platform.",
-      "git": "Distributed version control system.",
-      "github": "Code hosting and CI/CD platform.",
-      "azure-devops": "Microsoft's DevOps and CI/CD platform.",
-      "jenkins": "Continuous integration and deployment server.",
-      "docker": "Application containerization tool.",
-      "jira": "Agile project and issue tracking tool.",
-      "vscode": "Lightweight, fast, and extensible code editor.",
-      "visual-studio": "Comprehensive IDE for .NET and C++ development.",
-      "zed": "Minimalist and ultra-fast code editor."
-    }
-  },
-  "projects": {
-    "title": "My",
-    "title-accent": "projects",
-    "subtitle": "Discover the projects I've worked on and the technologies I've used",
-    "view-website": "View website",
-    "view-github": "View on GitHub",
-    "technologies-used": "Technologies used:",
-    "private-project": "Private project",
-    "items": {
-      "logeler-finka": {
-        "title": "Logeler Finka",
-        "period": "August 2024 - September 2025",
-        "description": "Complete web application for an Alsatian theater company. Full infrastructure with advanced continuous integration and deployment systems."
-      },
-      "hungry-no": {
-        "title": "HungryNo",
-        "period": "June 2025 - November 2025",
-        "description": "Showcase website allowing culinary influencer HungryNo to manage and share his latest gastronomic discoveries and publish blog articles."
-      },
-      "baselhack": {
-        "title": "BaselHack 2025",
-        "period": "October 2025",
-        "description": "Participation in the BaselHack 2025 hackathon, developing a web app prototype in 48 hours to collect hundreds of opinions and use AI to generate consensus."
-      },
-      "france-equipement": {
-        "title": "France Équipement",
-        "period": "April 2025 - Present",
-        "description": "Development of an AI-powered chatbot to improve product search and customer support on an e-commerce website."
-      }
-    }
-  },
   "contact": {
-    "title": "Let's stay in",
-    "title-accent": "touch",
+    "title": "A project, an opportunity?",
+    "title-accent": "Let's talk.",
     "description": "Feel free to contact me to discuss professional opportunities or project collaborations.",
-    "email": "Email",
-    "phone": "Phone",
-    "location": "Location",
     "location-value": "Mulhouse, France"
   },
   "footer": {
@@ -207,48 +262,57 @@
   "legal": {
     "title": "Legal",
     "title-accent": "Notice",
-    "page-title": "Maël Bertocchi - Legal Notice",
     "sections": {
       "publisher": {
         "title": "Website Publisher",
-        "content": "This website is published by Maël Bertocchi, an independent software engineer, to present his professional portfolio."
+        "content": [
+          "This website is published by Maël Bertocchi, an independent software engineer, to present his professional portfolio."
+        ]
       },
       "hosting": {
         "title": "Hosting",
-        "content": "This site is hosted by OVH SAS, located at 2 rue Kellermann, 59100 Roubaix, France. Contact: +33 9 72 10 10 07."
+        "content": [
+          "This site is hosted by OVH SAS, located at 2 rue Kellermann, 59100 Roubaix, France. Contact: +33 9 72 10 10 07."
+        ]
       },
       "intellectual-property": {
         "title": "Intellectual Property",
-        "content": {
-          "0": "All content on this site is subject to French and international copyright and intellectual property law. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.",
-          "1": "The reproduction of all or part of this site on any electronic medium is strictly prohibited without the express authorization of the publisher, in accordance with Article L.122-4 of the French Intellectual Property Code."
-        }
+        "content": [
+          "All content on this site is subject to French and international copyright and intellectual property law. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.",
+          "The reproduction of all or part of this site on any electronic medium is strictly prohibited without the express authorization of the publisher, in accordance with Article L.122-4 of the French Intellectual Property Code."
+        ]
       },
       "personal-data": {
         "title": "Personal Data Protection",
-        "content": {
-          "0": "In accordance with the General Data Protection Regulation and the French Data Protection Act, you have the right to access, rectify, delete and object to personal data concerning you.",
-          "1": "This site does not collect any personal data without your explicit consent. The contact information on the site is solely intended to facilitate communication."
-        }
+        "content": [
+          "In accordance with the General Data Protection Regulation and the French Data Protection Act, you have the right to access, rectify, delete and object to personal data concerning you.",
+          "This site does not collect any personal data without your explicit consent. The contact information on the site is solely intended to facilitate communication."
+        ]
       },
       "cookies": {
         "title": "Cookies",
-        "content": "This site does not use tracking or data collection cookies. No personal information is stored during your browsing."
+        "content": [
+          "This site does not use tracking or data collection cookies. No personal information is stored during your browsing."
+        ]
       },
       "external-links": {
         "title": "External Links",
-        "content": "This site may contain hyperlinks to other websites. The publisher is not responsible for the content of these external sites or their privacy policies."
+        "content": [
+          "This site may contain hyperlinks to other websites. The publisher is not responsible for the content of these external sites or their privacy policies."
+        ]
       },
       "liability": {
         "title": "Limitation of Liability",
-        "content": {
-          "0": "The publisher strives to ensure the accuracy and currency of the information on this site. However, the publisher cannot guarantee the accuracy, precision or completeness of the information provided.",
-          "1": "Consequently, the publisher disclaims all responsibility for any inaccuracy, inexactitude or omission in the information available on the site."
-        }
+        "content": [
+          "The publisher strives to ensure the accuracy and currency of the information on this site. However, the publisher cannot guarantee the accuracy, precision or completeness of the information provided.",
+          "Consequently, the publisher disclaims all responsibility for any inaccuracy, inexactitude or omission in the information available on the site."
+        ]
       },
       "applicable-law": {
         "title": "Applicable Law",
-        "content": "These legal notices are governed by French law. In case of dispute, French courts shall have sole jurisdiction."
+        "content": [
+          "These legal notices are governed by French law. In case of dispute, French courts shall have sole jurisdiction."
+        ]
       }
     },
     "back-to-home": "Back to home"

@@ -1,7 +1,29 @@
 import type { Maybe } from '@/models';
-import { BookOpen, Lightbulb, Users, Zap } from 'lucide-react';
+import SectionHeading from '@components/section-heading';
+import { translateList } from '@utils/translation';
+import { BookOpen, Lightbulb, Users, Zap, type LucideIcon } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
+
+/**
+ * @interface Trait
+ * @description Represents a personal trait highlighted in the about section
+ */
+interface Trait {
+    icon: LucideIcon; /*!< Icon illustrating the trait */
+    labelKey: string; /*!< Translation key of the label */
+}
+
+/**
+ * @constant TRAITS
+ * @description Personal traits highlighted in the about section
+ */
+const TRAITS: Trait[] = [
+    { icon: Zap, labelKey: 'about.traits.motivated' },
+    { icon: Users, labelKey: 'about.traits.team-spirit' },
+    { icon: Lightbulb, labelKey: 'about.traits.curious' },
+    { icon: BookOpen, labelKey: 'about.traits.learner' },
+];
 
 /**
  * @function HomeAboutSection
@@ -10,50 +32,31 @@ import { useTranslation } from 'react-i18next';
 function HomeAboutSection(): Maybe<JSX.Element> {
     const { t } = useTranslation();
 
+    const paragraphs: string[] = translateList(t, 'about.description');
+
     return (
-        <section id='about' className='px-10 sm:px-14 md:px-18 lg:px-22 py-20 bg-white'>
-            <div className='max-w-7xl mx-auto'>
-                <div className='text-center mb-16'>
-                    <div className='inline-block relative'>
-                        <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4'>
-                            <span>{t('about.title')}</span> <span className='text-accent'>{t('about.title-accent')}</span>
-                        </h2>
-                        <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent'></div>
-                    </div>
-                </div>
+        <section id='about' className='py-24 sm:py-32'>
+            <div className='mx-auto max-w-6xl px-5 sm:px-8'>
+                <SectionHeading index='01' eyebrow={t('nav.about')} title={t('about.title')} accent={t('about.title-accent')} subtitle={undefined} />
 
-                <div className='max-w-4xl mx-auto space-y-8'>
-                    <div className='space-y-6 text-center'>
-                        <p className='text-lg text-gray-700 leading-relaxed'>
-                            {t('about.description.0')}
-                        </p>
+                <div className='grid gap-12 lg:grid-cols-[1fr_1.2fr]'>
+                    <p className='reveal font-display text-2xl leading-snug font-medium text-white sm:text-3xl'>
+                        {t('about.statement')}
+                    </p>
 
-                        <p className='text-lg text-gray-700 leading-relaxed'>
-                            {t('about.description.1')}
-                        </p>
+                    <div className='reveal space-y-6'>
+                        {paragraphs.map((paragraph: string) => (
+                            <p key={paragraph} className='text-lg leading-relaxed text-zinc-400'>{paragraph}</p>
+                        ))}
 
-                        <p className='text-lg text-gray-700 leading-relaxed'>
-                            {t('about.description.2')}
-                        </p>
-                    </div>
-
-                    <div className='flex flex-wrap justify-center gap-3 pt-4'>
-                        <span className='inline-flex items-center gap-2 px-4 py-2 bg-accent/5 text-accent rounded-full border border-accent/20'>
-                            <Zap className='w-4 h-4' />
-                            <span>{t('about.traits.motivated')}</span>
-                        </span>
-                        <span className='inline-flex items-center gap-2 px-4 py-2 bg-accent/5 text-accent rounded-full border border-accent/20'>
-                            <Users className='w-4 h-4' />
-                            <span>{t('about.traits.team-spirit')}</span>
-                        </span>
-                        <span className='inline-flex items-center gap-2 px-4 py-2 bg-accent/5 text-accent rounded-full border border-accent/20'>
-                            <Lightbulb className='w-4 h-4' />
-                            <span>{t('about.traits.curious')}</span>
-                        </span>
-                        <span className='inline-flex items-center gap-2 px-4 py-2 bg-accent/5 text-accent rounded-full border border-accent/20'>
-                            <BookOpen className='w-4 h-4' />
-                            <span>{t('about.traits.learner')}</span>
-                        </span>
+                        <ul className='flex flex-wrap gap-3 pt-4'>
+                            {TRAITS.map((trait: Trait) => (
+                                <li key={trait.labelKey} className='inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-zinc-200'>
+                                    <trait.icon className='h-4 w-4 text-accent' />
+                                    <span>{t(trait.labelKey)}</span>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

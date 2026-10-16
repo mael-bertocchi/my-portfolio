@@ -2,10 +2,10 @@ import HomeAboutSection from '@/pages/home/sections/about';
 import HomeContactSection from '@/pages/home/sections/contact';
 import HomeEducationSection from '@/pages/home/sections/education';
 import HomeExperienceSection from '@/pages/home/sections/experience';
+import HomeExpertiseSection from '@/pages/home/sections/expertise';
 import HomeHeroSection from '@/pages/home/sections/hero';
 import HomeProjectSection from '@/pages/home/sections/projects';
-import HomeSkillSection from '@/pages/home/sections/skills';
-import { Fragment, type JSX } from 'react';
+import { type JSX } from 'react';
 
 /**
  * @function HomePage
@@ -13,15 +13,15 @@ import { Fragment, type JSX } from 'react';
  */
 function HomePage(): JSX.Element {
     return (
-        <Fragment>
+        <main>
             <HomeHeroSection />
             <HomeAboutSection />
+            <HomeExpertiseSection />
             <HomeExperienceSection />
-            <HomeEducationSection />
-            <HomeSkillSection />
             <HomeProjectSection />
+            <HomeEducationSection />
             <HomeContactSection />
-        </Fragment>
+        </main>
     );
 }
 

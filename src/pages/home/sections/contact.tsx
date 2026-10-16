@@ -1,60 +1,58 @@
+import { SOCIAL_LINKS } from '@/data/portfolio';
 import type { Maybe } from '@/models';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { LinkedinIcon } from '@components/brand-icons';
+import { ArrowRight, MapPin, Phone } from 'lucide-react';
 import type { JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 /**
  * @function HomeContactSection
- * @description The HomeContactSection component renders a section for users to get in touch, typically including contact information and a contact form.
+ * @description The HomeContactSection component renders a call to action with the available contact channels.
  */
 function HomeContactSection(): Maybe<JSX.Element> {
     const { t } = useTranslation();
 
     return (
-        <section id='contact' className='px-10 sm:px-14 md:px-18 lg:px-22 py-20 bg-gradient-to-b from-white to-gray-50'>
-            <div className='max-w-7xl mx-auto'>
-                <div className='text-center mb-16'>
-                    <div className='inline-block relative'>
-                        <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4'>
-                            <span>{t('contact.title')}</span> <span className='text-accent'>{t('contact.title-accent')}</span>
-                        </h2>
-                        <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent'></div>
-                    </div>
-                    <p className='text-lg text-gray-600 mt-6 max-w-2xl mx-auto'>
-                        {t('contact.description')}
+        <section id='contact' className='py-24 sm:py-32'>
+            <div className='mx-auto max-w-6xl px-5 sm:px-8'>
+                <div className='reveal relative isolate overflow-hidden rounded-[2rem] border border-white/10 bg-ink-900 px-6 py-16 sm:px-14 sm:py-20'>
+                    <div className='bg-gradient-brand absolute -top-32 -right-32 -z-10 h-96 w-96 rounded-full opacity-30 blur-[120px]' aria-hidden='true'></div>
+                    <div className='bg-grid absolute inset-0 -z-10' aria-hidden='true'></div>
+
+                    <p className='mb-6 flex items-center gap-3 font-mono text-xs tracking-[0.25em] text-zinc-500 uppercase'>
+                        <span className='text-accent'>06</span>
+                        <span className='h-px w-10 bg-zinc-700'></span>
+                        <span>{t('nav.contact')}</span>
                     </p>
-                </div>
 
-                <div className='max-w-5xl mx-auto'>
-                    <div className='grid grid-cols-1 sm:grid-cols-3 gap-8'>
-                        <div className='text-center'>
-                            <div className='flex flex-col items-center gap-3'>
-                                <Mail className='w-6 h-6 text-gray-900' />
-                                <h3 className='text-xl font-bold text-gray-900'>{t('contact.email')}</h3>
-                                <a href='mailto:contact@mael-bertocchi.fr' className='text-gray-600 hover:text-accent transition-colors duration-200'>
-                                    contact@mael-bertocchi.fr
-                                </a>
-                            </div>
-                        </div>
+                    <h2 className='max-w-3xl font-display text-4xl leading-tight font-bold tracking-tight text-white sm:text-6xl'>
+                        <span>{t('contact.title')}</span> <span className='text-gradient'>{t('contact.title-accent')}</span>
+                    </h2>
+                    <p className='mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400'>{t('contact.description')}</p>
 
-                        <div className='text-center'>
-                            <div className='flex flex-col items-center gap-3'>
-                                <Phone className='w-6 h-6 text-gray-900' />
-                                <h3 className='text-xl font-bold text-gray-900'>{t('contact.phone')}</h3>
-                                <a href='tel:+33761778360' className='text-gray-600 hover:text-accent transition-colors duration-200'>
-                                    +33 7 61 77 83 60
-                                </a>
-                            </div>
-                        </div>
+                    <a href={`mailto:${SOCIAL_LINKS.email}`} className='bg-gradient-brand group mt-10 inline-flex max-w-full items-center gap-3 rounded-full px-7 py-4 font-display text-base font-semibold text-white shadow-[0_10px_40px_-10px] shadow-accent/60 transition-transform hover:-translate-y-0.5 sm:text-lg'>
+                        <span className='truncate'>{SOCIAL_LINKS.email}</span>
+                        <ArrowRight className='h-5 w-5 flex-shrink-0 transition-transform group-hover:translate-x-1' />
+                    </a>
 
-                        <div className='text-center'>
-                            <div className='flex flex-col items-center gap-3'>
-                                <MapPin className='w-6 h-6 text-gray-900' />
-                                <h3 className='text-xl font-bold text-gray-900'>{t('contact.location')}</h3>
-                                <p className='text-gray-600'>{t('contact.location-value')}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <ul className='mt-12 grid gap-4 border-t border-white/10 pt-8 text-sm text-zinc-400 sm:grid-cols-3'>
+                        <li>
+                            <a href={SOCIAL_LINKS.linkedin} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 transition-colors hover:text-white'>
+                                <LinkedinIcon className='h-4 w-4' />
+                                <span>linkedin.com/in/mael-bertocchi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={`tel:${SOCIAL_LINKS.phone}`} className='inline-flex items-center gap-2 transition-colors hover:text-white'>
+                                <Phone className='h-4 w-4' />
+                                <span>{SOCIAL_LINKS.phoneLabel}</span>
+                            </a>
+                        </li>
+                        <li className='inline-flex items-center gap-2'>
+                            <MapPin className='h-4 w-4' />
+                            <span>{t('contact.location-value')}</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>

@@ -1,25 +1,24 @@
+import { NAVIGATION_ITEMS, type NavigationItem } from '@/data/portfolio';
 import type { Maybe } from '@/models';
-import { Globe } from 'lucide-react';
+import { storeLanguage, type Language } from '@utils/i18n';
+import { Languages, Menu, X } from 'lucide-react';
 import { useEffect, useState, type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router';
-import { storeLanguage, type Language } from '@utils/i18n';
 
 /**
- * @interface NavigationItem
- * @description Represents a navigation item in the navigation bar, containing an id and a label for the corresponding section of the page.
+ * @constant SCROLL_THRESHOLD
+ * @description Scroll distance, in pixels, after which the navigation bar becomes opaque
  */
-interface NavigationItem {
-    id: string; /*!< The unique identifier for the navigation item, corresponding to the id of the section it links to. */
-    labelKey: string; /*!< Translation key for the navigation label. */
-}
+const SCROLL_THRESHOLD = 24;
 
 /**
  * @function NavigationComponent
- * @description Contains the navigation bar of the application, providing links to different sections and a language toggle button.
+ * @description Contains the navigation bar of the application, providing links to the sections of the home page and a language toggle
  */
 function NavigationComponent(): Maybe<JSX.Element> {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     const { t, i18n } = useTranslation();
     const { pathname } = useLocation();
@@ -30,7 +29,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
 
     /**
      * @function toggleLanguage
-     * @description Toggles the application's language, and saves the user's preference.
+     * @description Toggles the application's language, and saves the user's preference
      */
     const toggleLanguage = (): void => {
         const newLanguage: Language = isEnglish ? 'fr' : 'en';
@@ -39,76 +38,86 @@ function NavigationComponent(): Maybe<JSX.Element> {
     };
 
     /**
-     * @constant navItems
-     * @description An array of navigation items, each containing an id and a label for the corresponding section of the page.
+     * @function toggleMenu
+     * @description Opens or closes the mobile menu
      */
-    const navItems: NavigationItem[] = [
-        { id: 'about', labelKey: 'nav.about' },
-        { id: 'experience', labelKey: 'nav.experience' },
-        { id: 'education', labelKey: 'nav.education' },
-        { id: 'skills', labelKey: 'nav.skills' },
-        { id: 'projects', labelKey: 'nav.projects' },
-        { id: 'contact', labelKey: 'nav.contact' },
-    ];
+    const toggleMenu = (): void => {
+        setIsMenuOpen((previous: boolean) => !previous);
+    };
 
     /**
-     * @function scrollToSection
-     * @description Scrolls smoothly to the specified section of the page when a navigation item is clicked.
-     *
-     * @param {string} id The id of the section to scroll to.
+     * @function closeMenu
+     * @description Closes the mobile menu, once a link has been followed
      */
-    const scrollToSection = (id: string): void => {
-        const element: Maybe<HTMLElement> = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+    const closeMenu = (): void => {
+        setIsMenuOpen(false);
     };
 
     useEffect(() => {
         const handleScroll = (): void => {
-            setIsScrolled(window.scrollY > 50);
+            setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
         };
 
+        handleScroll();
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
-    return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-50/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
-            <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-                <div className='flex items-center justify-between h-16'>
+    const isOpaque: boolean = isScrolled || isMenuOpen;
 
-                    {isHome ? (
-                        <button onClick={() => scrollToSection('hero')} className='text-xl font-bold' aria-label='Home'>
-                            <span className='text-accent'>M</span><span className='text-gray-900'>B</span>
-                        </button>
-                    ) : (
-                        <Link to='/' className='text-xl font-bold' aria-label='Home'>
-                            <span className='text-accent'>M</span><span className='text-gray-900'>B</span>
-                        </Link>
-                    )}
+    return (
+        <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isOpaque ? 'border-b border-white/10 bg-ink-950/80 backdrop-blur-xl' : 'border-b border-transparent'}`}>
+            <nav className='mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8' aria-label={t('nav.label')}>
+                {isHome ? (
+                    <a href='#hero' onClick={closeMenu} className='font-display text-xl font-bold tracking-tight' aria-label={t('nav.home')}>
+                        <span className='text-gradient'>M</span><span className='text-white'>B</span><span className='text-accent'>.</span>
+                    </a>
+                ) : (
+                    <Link to='/' className='font-display text-xl font-bold tracking-tight' aria-label={t('nav.home')}>
+                        <span className='text-gradient'>M</span><span className='text-white'>B</span><span className='text-accent'>.</span>
+                    </Link>
+                )}
+
+                {isHome && (
+                    <ul className='hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1 md:flex'>
+                        {NAVIGATION_ITEMS.map((item: NavigationItem) => (
+                            <li key={item.id}>
+                                <a href={`#${item.id}`} className='block rounded-full px-4 py-1.5 text-sm font-medium text-zinc-400 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                                    {t(item.labelKey)}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+
+                <div className='flex items-center gap-2'>
+                    <button type='button' onClick={toggleLanguage} className='flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 text-sm font-medium text-zinc-300 transition-colors hover:border-white/25 hover:text-white' aria-label={t('language.toggle')} title={isEnglish ? 'Français' : 'English'}>
+                        <Languages className='h-4 w-4' />
+                        <span>{isEnglish ? 'FR' : 'EN'}</span>
+                    </button>
 
                     {isHome && (
-                        <div className='hidden md:flex items-center gap-1'>
-                            {navItems.map((item: NavigationItem) => (
-                                <button key={item.id} onClick={() => scrollToSection(item.id)} className='px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100'>
-                                    {t(item.labelKey)}
-                                </button>
-                            ))}
-                        </div>
+                        <button type='button' onClick={toggleMenu} className='flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-zinc-300 md:hidden' aria-label={t(isMenuOpen ? 'nav.close-menu' : 'nav.open-menu')} aria-expanded={isMenuOpen} aria-controls='mobile-menu'>
+                            {isMenuOpen ? <X className='h-4 w-4' /> : <Menu className='h-4 w-4' />}
+                        </button>
                     )}
-
-                    <button onClick={toggleLanguage} className='ml-2 px-3 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors rounded-md hover:bg-gray-100 border border-gray-300 flex items-center gap-2' aria-label='Toggle language' title={isEnglish ? 'Français' : 'English'}>
-                        <Globe className='h-4 w-4' />
-                        <span className='hidden sm:inline'>{t('language.name')}</span>
-                    </button>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+            {isHome && isMenuOpen && (
+                <ul id='mobile-menu' className='mx-auto flex max-w-6xl flex-col gap-1 px-5 pb-6 sm:px-8 md:hidden'>
+                    {NAVIGATION_ITEMS.map((item: NavigationItem) => (
+                        <li key={item.id}>
+                            <a href={`#${item.id}`} onClick={closeMenu} className='block rounded-xl px-4 py-3 font-display text-lg font-medium text-zinc-300 transition-colors hover:bg-white/[0.06] hover:text-white'>
+                                {t(item.labelKey)}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </header>
     );
 }
 
