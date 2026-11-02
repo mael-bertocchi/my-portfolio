@@ -19,7 +19,7 @@ function HomeEducationSection(): Maybe<JSX.Element> {
                 <SectionHeading index='05' eyebrow={t('nav.education')} title={t('education.title')} accent={t('education.title-accent')} subtitle={t('education.subtitle')} />
 
                 <div className='grid gap-5 lg:grid-cols-2'>
-                    {EDUCATION.map((item: EducationItem) => (
+                    {EDUCATION.map((item: EducationItem): JSX.Element => (
                         <article key={item.key} className='card-surface reveal flex flex-col p-7 hover:border-zinc-300 sm:p-8'>
                             <div className='flex items-start justify-between gap-4'>
                                 <img src={item.logo} alt='' className='h-14 w-14 flex-shrink-0 rounded-2xl border border-zinc-200 bg-white object-contain' />

@@ -45,12 +45,12 @@ function HomeAboutSection(): Maybe<JSX.Element> {
                     </p>
 
                     <div className='reveal space-y-6'>
-                        {paragraphs.map((paragraph: string) => (
+                        {paragraphs.map((paragraph: string): JSX.Element => (
                             <p key={paragraph} className='text-lg leading-relaxed text-zinc-600'>{paragraph}</p>
                         ))}
 
                         <ul className='flex flex-wrap gap-3 pt-4'>
-                            {TRAITS.map((trait: Trait) => (
+                            {TRAITS.map((trait: Trait): JSX.Element => (
                                 <li key={trait.labelKey} className='inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-800'>
                                     <trait.icon className='h-4 w-4 text-accent' />
                                     <span>{t(trait.labelKey)}</span>

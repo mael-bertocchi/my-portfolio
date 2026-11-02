@@ -20,7 +20,7 @@ function HomeExpertiseSection(): Maybe<JSX.Element> {
                 <SectionHeading index='02' eyebrow={t('nav.expertise')} title={t('expertise.title')} accent={t('expertise.title-accent')} subtitle={t('expertise.subtitle')} />
 
                 <div className='grid gap-5 md:grid-cols-2'>
-                    {EXPERTISE.map((item: ExpertiseItem, index: number) => (
+                    {EXPERTISE.map((item: ExpertiseItem, index: number): JSX.Element => (
                         <article key={item.key} className='card-surface reveal group relative flex flex-col overflow-hidden p-7 hover:-translate-y-1 hover:border-accent/40 sm:p-9'>
                             <div className='bg-gradient-brand absolute -top-24 -right-24 h-48 w-48 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-25' aria-hidden='true'></div>
 
@@ -35,7 +35,7 @@ function HomeExpertiseSection(): Maybe<JSX.Element> {
                             <p className='mt-3 text-zinc-600 leading-relaxed'>{t(`expertise.items.${item.key}.value`)}</p>
 
                             <ul className='mt-6 flex-1 space-y-3'>
-                                {translateList(t, `expertise.items.${item.key}.outcomes`).map((outcome: string) => (
+                                {translateList(t, `expertise.items.${item.key}.outcomes`).map((outcome: string): JSX.Element => (
                                     <li key={outcome} className='flex items-start gap-3 text-sm text-zinc-700'>
                                         <Check className='mt-0.5 h-4 w-4 flex-shrink-0 text-accent' />
                                         <span>{outcome}</span>

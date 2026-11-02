@@ -32,14 +32,14 @@ function LegalPage(): JSX.Element {
                 </h1>
 
                 <div className='space-y-10'>
-                    {LEGAL_SECTIONS.map((key: string, index: number) => (
+                    {LEGAL_SECTIONS.map((key: string, index: number): JSX.Element => (
                         <section key={key}>
                             <h2 className='mb-4 flex items-baseline gap-3 font-display text-xl font-bold text-zinc-900 sm:text-2xl'>
                                 <span className='font-mono text-sm text-accent'>{String(index + 1).padStart(2, '0')}</span>
                                 <span>{t(`legal.sections.${key}.title`)}</span>
                             </h2>
                             <div className='space-y-4 leading-relaxed text-zinc-600'>
-                                {translateList(t, `legal.sections.${key}.content`).map((paragraph: string) => (
+                                {translateList(t, `legal.sections.${key}.content`).map((paragraph: string): JSX.Element => (
                                     <p key={paragraph}>{paragraph}</p>
                                 ))}
                             </div>

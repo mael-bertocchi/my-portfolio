@@ -22,7 +22,7 @@ function HomeProjectSection(): Maybe<JSX.Element> {
                 <SectionHeading index='04' eyebrow={t('nav.projects')} title={t('projects.title')} accent={t('projects.title-accent')} subtitle={t('projects.subtitle')} />
 
                 <div className='grid gap-5 md:grid-cols-2'>
-                    {PROJECTS.map((item: ProjectItem) => (
+                    {PROJECTS.map((item: ProjectItem): JSX.Element => (
                         <article key={item.key} className='card-surface reveal group relative flex flex-col p-7 hover:-translate-y-1 hover:border-accent/40 sm:p-9'>
                             <div className='flex items-start justify-between gap-4'>
                                 <div>
@@ -39,7 +39,7 @@ function HomeProjectSection(): Maybe<JSX.Element> {
                             <p className='mt-5 flex-1 leading-relaxed text-zinc-600'>{t(`projects.items.${item.key}.description`)}</p>
 
                             <div className='mt-7 flex flex-wrap gap-2'>
-                                {translateList(t, `projects.items.${item.key}.tags`).map((tag: string) => (
+                                {translateList(t, `projects.items.${item.key}.tags`).map((tag: string): JSX.Element => (
                                     <Tag key={tag} label={tag} />
                                 ))}
                             </div>

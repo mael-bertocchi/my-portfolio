@@ -7,7 +7,7 @@ import type { TFunction } from 'i18next';
  * @param {unknown} value The value to check
  */
 export function isStringArray(value: unknown): value is string[] {
-    return Array.isArray(value) && value.every((item: unknown) => typeof item === 'string');
+    return Array.isArray(value) && value.every((item: unknown): boolean => typeof item === 'string');
 }
 
 /**

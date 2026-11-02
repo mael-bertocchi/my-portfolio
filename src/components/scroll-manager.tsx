@@ -9,7 +9,7 @@ import { useLocation } from 'react-router';
 function ScrollManagerComponent(): Maybe<JSX.Element> {
     const { pathname } = useLocation();
 
-    useEffect(() => {
+    useEffect((): void => {
         window.scrollTo({
             top: 0
         });

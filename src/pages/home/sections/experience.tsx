@@ -21,7 +21,7 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                 <SectionHeading index='03' eyebrow={t('nav.experience')} title={t('experience.title')} accent={t('experience.title-accent')} subtitle={t('experience.subtitle')} />
 
                 <ol className='relative space-y-6 md:before:absolute md:before:top-2 md:before:bottom-2 md:before:left-[13.5rem] md:before:w-px md:before:bg-gradient-to-b md:before:from-accent/60 md:before:via-zinc-200 md:before:to-transparent'>
-                    {EXPERIENCES.map((item: ExperienceItem) => (
+                    {EXPERIENCES.map((item: ExperienceItem): JSX.Element => (
                         <li key={item.key} className='reveal relative grid gap-4 md:grid-cols-[12rem_1fr] md:gap-12'>
                             <div className='hidden pt-7 text-right md:block'>
                                 <p className='font-mono text-xs tracking-wide text-zinc-500 uppercase'>{t(`experience.jobs.${item.key}.period`)}</p>
@@ -48,7 +48,7 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                                 <p className='mt-6 leading-relaxed text-zinc-700'>{t(`experience.jobs.${item.key}.description`)}</p>
 
                                 <ul className='mt-5 space-y-2.5'>
-                                    {translateList(t, `experience.jobs.${item.key}.tasks`).map((task: string) => (
+                                    {translateList(t, `experience.jobs.${item.key}.tasks`).map((task: string): JSX.Element => (
                                         <li key={task} className='flex items-start gap-3 text-sm leading-relaxed text-zinc-600'>
                                             <ArrowUpRight className='mt-0.5 h-4 w-4 flex-shrink-0 text-accent' />
                                             <span>{task}</span>
@@ -57,7 +57,7 @@ function HomeExperienceSection(): Maybe<JSX.Element> {
                                 </ul>
 
                                 <div className='mt-6 flex flex-wrap gap-2'>
-                                    {translateList(t, `experience.jobs.${item.key}.tags`).map((tag: string) => (
+                                    {translateList(t, `experience.jobs.${item.key}.tags`).map((tag: string): JSX.Element => (
                                         <Tag key={tag} label={tag} />
                                     ))}
                                 </div>
