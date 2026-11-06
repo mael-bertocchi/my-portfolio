@@ -4,7 +4,7 @@ import { storeLanguage, type Language } from '@utils/i18n';
 import { Languages, Menu, X } from 'lucide-react';
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type JSX } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 
 /**
  * @constant SCROLL_THRESHOLD
@@ -17,12 +17,6 @@ const SCROLL_THRESHOLD = 24;
  * @description Distance, in pixels, from the top of the viewport at which a section is considered as the one being read
  */
 const ACTIVE_SECTION_OFFSET = 120;
-
-/**
- * @constant LOGO_CLASS_NAME
- * @description Rounded tile holding the logo, matching the favicon
- */
-const LOGO_CLASS_NAME = 'flex h-9 w-9 items-center justify-center rounded-[10px] border border-zinc-200 bg-white font-display text-xl font-bold shadow-sm';
 
 /**
  * @interface Indicator
@@ -165,16 +159,6 @@ function NavigationComponent(): Maybe<JSX.Element> {
     return (
         <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isOpaque ? 'border-b border-zinc-200 bg-paper/85 backdrop-blur-xl' : 'border-b border-transparent'}`}>
             <nav className='mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8' aria-label={t('nav.label')}>
-                {isHome ? (
-                    <a href='#hero' onClick={closeMenu} className={LOGO_CLASS_NAME} aria-label={t('nav.home')}>
-                        <span className='text-gradient'>M</span>
-                    </a>
-                ) : (
-                    <Link to='/' className={LOGO_CLASS_NAME} aria-label={t('nav.home')}>
-                        <span className='text-gradient'>M</span>
-                    </Link>
-                )}
-
                 {isHome && (
                     <ul ref={listRef} className='relative hidden items-center gap-1 rounded-full border border-zinc-200 bg-white p-1 md:flex'>
                         <li aria-hidden='true' className={`pointer-events-none absolute top-1 bottom-1 rounded-full bg-zinc-900 transition-all duration-300 ease-out ${indicator ? 'opacity-100' : 'opacity-0'}`} style={indicatorStyle} />
@@ -188,7 +172,7 @@ function NavigationComponent(): Maybe<JSX.Element> {
                     </ul>
                 )}
 
-                <div className='flex items-center gap-2'>
+                <div className='ml-auto flex items-center gap-2'>
                     <button type='button' onClick={toggleLanguage} className='flex items-center gap-2 rounded-full border border-zinc-200 px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:border-zinc-400 hover:text-zinc-900' aria-label={t('language.toggle')} title={isEnglish ? 'Français' : 'English'}>
                         <Languages className='h-4 w-4' />
                         <span>{isEnglish ? 'FR' : 'EN'}</span>
