@@ -23,7 +23,7 @@ function HomeProjectSection(): Maybe<JSX.Element> {
 
                 <div className='grid gap-5 md:grid-cols-2'>
                     {PROJECTS.map((item: ProjectItem): JSX.Element => (
-                        <article key={item.key} className='card-surface reveal group relative flex flex-col p-7 hover:-translate-y-1 hover:border-accent/40 sm:p-9'>
+                        <article key={item.key} className='card-surface reveal group relative flex flex-col p-7 hover:border-accent/40 sm:p-9'>
                             <div className='flex items-start justify-between gap-4'>
                                 <div>
                                     <p className='font-mono text-xs tracking-wide text-zinc-500 uppercase'>{t(`projects.items.${item.key}.period`)}</p>

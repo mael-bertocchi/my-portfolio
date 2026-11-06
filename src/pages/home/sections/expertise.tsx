@@ -21,7 +21,7 @@ function HomeExpertiseSection(): Maybe<JSX.Element> {
 
                 <div className='grid gap-5 md:grid-cols-2'>
                     {EXPERTISE.map((item: ExpertiseItem, index: number): JSX.Element => (
-                        <article key={item.key} className='card-surface reveal group relative flex flex-col overflow-hidden p-7 hover:-translate-y-1 hover:border-accent/40 sm:p-9'>
+                        <article key={item.key} className='card-surface reveal group relative flex flex-col overflow-hidden p-7 hover:border-accent/40 sm:p-9'>
                             <div className='bg-gradient-brand absolute -top-24 -right-24 h-48 w-48 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-25' aria-hidden='true'></div>
 
                             <div className='mb-8 flex items-start justify-between'>
